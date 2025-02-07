@@ -12,6 +12,7 @@ export enum DividerVariant {
 export interface DividerProps extends React.HTMLProps<HTMLElement> {
   /** Additional classes added to the divider */
   className?: string;
+  testing?: string;
   /** The component type to use */
   component?: 'hr' | 'li' | 'div';
   /** Insets at various breakpoints. */
@@ -21,7 +22,6 @@ export interface DividerProps extends React.HTMLProps<HTMLElement> {
     md?: 'insetNone' | 'insetXs' | 'insetSm' | 'insetMd' | 'insetLg' | 'insetXl' | 'inset2xl' | 'inset3xl';
     lg?: 'insetNone' | 'insetXs' | 'insetSm' | 'insetMd' | 'insetLg' | 'insetXl' | 'inset2xl' | 'inset3xl';
     xl?: 'insetNone' | 'insetXs' | 'insetSm' | 'insetMd' | 'insetLg' | 'insetXl' | 'inset2xl' | 'inset3xl';
-    '2xl'?: 'insetNone' | 'insetXs' | 'insetSm' | 'insetMd' | 'insetLg' | 'insetXl' | 'inset2xl' | 'inset3xl';
   };
   /** Indicates how the divider will display at various breakpoints. Vertical divider must be in a flex layout. */
   orientation?: {

@@ -16,6 +16,8 @@ import ExclamationTriangleIcon from '@patternfly/react-icons/dist/esm/icons/excl
 import InfoCircleIcon from '@patternfly/react-icons/dist/esm/icons/info-circle-icon';
 import BellIcon from '@patternfly/react-icons/dist/esm/icons/bell-icon';
 
+export const FIGMA_BASE_URL = 'https://www.figma.com/design/VMEX8Xg2nzhBX8rfBx53jp/PatternFly-6';
+
 export const SIDE = { RIGHT: 'right', LEFT: 'left', BOTH: 'both', NONE: 'none' };
 
 export const KEYHANDLER_DIRECTION = { UP: 'up', DOWN: 'down', RIGHT: 'right', LEFT: 'left' };
