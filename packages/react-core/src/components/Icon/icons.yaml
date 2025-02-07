@@ -1,0 +1,14 @@
+# src/components/Icon/icons.yaml
+icons:
+  - name: CogsIcon
+    nodeId: 25229-2108
+    props:
+      size: md
+
+  - name: UpRightAndDownLeftFromCenterSolidIcon
+    nodeId: 25229-2109
+    props:
+      size: lg
+
+  - name: NotStartedIcon
+    nodeId: 25229-2110

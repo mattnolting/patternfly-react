@@ -2,7 +2,7 @@
 id: Table
 cssPrefix: pf-c-table
 section: components
-propComponents: ['Table', 'TableHeader', 'TableBody', 'ISortBy']
+propComponents: ['Table', 'TableHeader', 'TableBody']
 ouia: true
 deprecated: true
 ---

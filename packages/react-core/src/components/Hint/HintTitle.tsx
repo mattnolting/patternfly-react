@@ -3,6 +3,7 @@ import styles from '@patternfly/react-styles/css/components/Hint/hint';
 import { css } from '@patternfly/react-styles';
 
 export interface HintTitleProps {
+  textTitle?: string;
   /** Content rendered inside the hint title. */
   children?: React.ReactNode;
   /** Additional classes applied to the hint title. */

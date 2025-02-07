@@ -19,7 +19,7 @@ figma.connect(Hint, 'https://www.figma.com/design/YqvMyyV4G347jSOgfYXi29/test-co
     titleText: figma.string('✏️ Title'),
     // bodyText: figma.string('✏️ Body'),
     hintTitle: figma.boolean('Show Title ', {
-      true: <HintTitle>{titleText}</HintTitle>,
+      true: <HintTitle>{}</HintTitle>,
       false: undefined
     }),
     showBody: figma.boolean('Show Body', {

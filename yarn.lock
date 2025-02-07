@@ -3730,11 +3730,13 @@ __metadata:
     "@patternfly/react-icons": "workspace:^"
     "@patternfly/react-styles": "workspace:^"
     "@patternfly/react-tokens": "workspace:^"
+    "@types/node": "npm:^22.13.1"
     case-anything: "npm:^2.1.13"
     css: "npm:^3.0.0"
     focus-trap: "npm:7.6.2"
     fs-extra: "npm:^11.2.0"
     react-dropzone: "npm:^14.3.5"
+    ts-node: "npm:^10.9.2"
     tslib: "npm:^2.8.1"
   peerDependencies:
     react: ^17 || ^18
@@ -3826,10 +3828,12 @@ __metadata:
     "@testing-library/react": "npm:^16.0.1"
     "@testing-library/user-event": "npm:^14.5.2"
     "@types/jest": "npm:29.5.14"
-    "@types/node": "npm:^20.17.6"
+    "@types/js-yaml": "npm:^4.0.9"
+    "@types/node": "npm:^22.13.1"
     "@types/react": "npm:^18.3.12"
     "@types/react-dom": "npm:^18.3.1"
     babel-jest: "npm:^29.7.0"
+    case-anything: "npm:^3.1.0"
     concurrently: "npm:^8.2.2"
     eslint: "npm:^9.11.1"
     eslint-config-prettier: "npm:^9.1.0"
@@ -3839,6 +3843,7 @@ __metadata:
     eslint-plugin-react-compiler: "npm:19.0.0-beta-a7bf2bd-20241110"
     eslint-plugin-react-hooks: "npm:^4.6.2"
     eslint-plugin-testing-library: "npm:^6.5.0"
+    fs: "npm:^0.0.1-security"
     fs-extra: "npm:^11.2.0"
     glob: "npm:^10.4.5"
     globals: "npm:^15.12.0"
@@ -3846,6 +3851,7 @@ __metadata:
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
     jest-transform-stub: "npm:^2.0.0"
+    js-yaml: "npm:^4.1.0"
     lerna: "npm:^8.1.9"
     lint-staged: "npm:^15.2.10"
     mutation-observer: "npm:^1.0.3"
@@ -5076,6 +5082,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/js-yaml@npm:^4.0.9":
+  version: 4.0.9
+  resolution: "@types/js-yaml@npm:4.0.9"
+  checksum: 10c0/24de857aa8d61526bbfbbaa383aa538283ad17363fcd5bb5148e2c7f604547db36646440e739d78241ed008702a8920665d1add5618687b6743858fae00da211
+  languageName: node
+  linkType: hard
+
 "@types/jsdom@npm:^20.0.0":
   version: 20.0.1
   resolution: "@types/jsdom@npm:20.0.1"
@@ -5191,12 +5204,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.17.6":
-  version: 20.17.6
-  resolution: "@types/node@npm:20.17.6"
+"@types/node@npm:^22.13.1":
+  version: 22.13.1
+  resolution: "@types/node@npm:22.13.1"
   dependencies:
-    undici-types: "npm:~6.19.2"
-  checksum: 10c0/5918c7ff8368bbe6d06d5e739c8ae41a9db41628f28760c60cda797be7d233406f07c4d0e6fdd960a0a342ec4173c2217eb6624e06bece21c1f1dd1b92805c15
+    undici-types: "npm:~6.20.0"
+  checksum: 10c0/d4e56d41d8bd53de93da2651c0a0234e330bd7b1b6d071b1a94bd3b5ee2d9f387519e739c52a15c1faa4fb9d97e825b848421af4b2e50e6518011e7adb4a34b7
   languageName: node
   linkType: hard
 
@@ -7347,6 +7360,13 @@ __metadata:
   version: 2.1.13
   resolution: "case-anything@npm:2.1.13"
   checksum: 10c0/b02ffa51d7d58b9a32df7b40973836e16afad131eae7d343e64cb3ca7be57a936bf3d6c9d57a7aa242cf2f545d9a33990b755e93bcac2517761d77773a4a6a30
+  languageName: node
+  linkType: hard
+
+"case-anything@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "case-anything@npm:3.1.0"
+  checksum: 10c0/b913c530169f2ff9a1046f604855593095a9ea2674121a6a8323ecd226ef983e2b908b5e3c7adbeb349656a299ab60a4f3e51dda38cfef970acaba3af25a4208
   languageName: node
   linkType: hard
 
@@ -11260,6 +11280,13 @@ __metadata:
   version: 1.0.0
   resolution: "fs.realpath@npm:1.0.0"
   checksum: 10c0/444cf1291d997165dfd4c0d58b69f0e4782bfd9149fd72faa4fe299e68e0e93d6db941660b37dd29153bf7186672ececa3b50b7e7249477b03fdf850f287c948
+  languageName: node
+  linkType: hard
+
+"fs@npm:^0.0.1-security":
+  version: 0.0.1-security
+  resolution: "fs@npm:0.0.1-security"
+  checksum: 10c0/e0c0b585ec6f7483d63d067215d9d6bb2e0dba5912060d32554c8e566a0e22ee65e4c2a2b0567476efbbfb47682554b4711d69cab49950d01f227a3dfa7d671a
   languageName: node
   linkType: hard
 
@@ -21614,10 +21641,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~6.19.2":
-  version: 6.19.8
-  resolution: "undici-types@npm:6.19.8"
-  checksum: 10c0/078afa5990fba110f6824823ace86073b4638f1d5112ee26e790155f481f2a868cc3e0615505b6f4282bdf74a3d8caad715fd809e870c2bb0704e3ea6082f344
+"undici-types@npm:~6.20.0":
+  version: 6.20.0
+  resolution: "undici-types@npm:6.20.0"
+  checksum: 10c0/68e659a98898d6a836a9a59e6adf14a5d799707f5ea629433e025ac90d239f75e408e2e5ff086afc3cace26f8b26ee52155293564593fbb4a2f666af57fc59bf
   languageName: node
   linkType: hard
 
