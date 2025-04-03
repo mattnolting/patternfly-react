@@ -1,0 +1,28 @@
+{
+  "codeConnect": {
+    "parser": "react",
+    "include": [
+      "components/*.tsx",
+      "codeConnect/*.tsx",
+      "codeConnect/**/*.tsx"
+    ],
+    "paths": {
+      "src/components": ["src/components"]
+    },
+    "aliases": {
+      "@patternfly/react-core": "."
+    },
+    "options": {
+      "instanceSwapper": {
+        "enabled": true
+      },
+      "development": {
+        "enabled": true,
+        "verbose": true
+      },
+      "production": {
+        "enabled": false
+      }
+    }
+  }
+}
