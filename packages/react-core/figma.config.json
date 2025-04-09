@@ -2,9 +2,10 @@
   "codeConnect": {
     "parser": "react",
     "include": [
-      "components/*.tsx",
-      "codeConnect/*.tsx",
-      "codeConnect/**/*.tsx"
+      "codeConnect/components/Tabs/*.tsx",
+      "codeConnect/components/ToggleGroup/*.tsx",
+      "codeConnect/components/Pagination/*.tsx",
+      "codeConnect/components/TimeStamp/*.tsx"
     ],
     "paths": {
       "src/components": ["src/components"]

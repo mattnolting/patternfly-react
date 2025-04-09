@@ -1,4 +1,4 @@
-import { Divider } from 'src/components/Divider';
+import { Divider } from '@patternfly/react-core';
 import figma from '@figma/code-connect';
 
 figma.connect(

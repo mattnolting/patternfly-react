@@ -1,87 +1,28 @@
-import { ActionList } from '@patternfly/react-core/dist/js/components/ActionList';
 import figma from '@figma/code-connect';
-
+import { ActionList } from '@patternfly/react-core';
 
 /**
-  * Overflow footer example
-  */
+ * PatternFly ActionList integration for Figma Code Connect
+ */
+
 figma.connect(
   ActionList,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6%3A-Components-Test?node-id=6780-15839&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=6780-15839&m=dev',
   {
     props: {
-      // Map Type variant to component props
-      typeVariant: figma.enum('Type', {
-        'Single group': {
-          variant: 'single-group',
-          hasKebab: false,
-          isWizard: false,
-          isModal: false,
-          iconsOnly: false
-        },
-        'Single w Kebab': {
-          variant: 'single-group',
-          hasKebab: true,
-          isWizard: false,
-          isModal: false,
-          iconsOnly: false
-        },
-        'Action icons only': {
-          variant: 'icons-only',
-          hasKebab: false,
-          isWizard: false,
-          isModal: false,
-          iconsOnly: true
-        },
-        'Wizard (Default)': {
-          variant: 'wizard',
-          hasKebab: false,
-          isWizard: true,
-          isModal: false,
-          iconsOnly: false
-        },
-        'modal form list': {
-          variant: 'modal',
-          hasKebab: false,
-          isWizard: false,
-          isModal: true,
-          iconsOnly: false
-        },
-        'Multiple groups': {
-          variant: 'multiple-groups',
-          hasKebab: false,
-          isWizard: false,
-          isModal: false,
-          iconsOnly: false
-        }
+      content: figma.enum('Type', {
+        'Single group': '<Button variant="primary">Primary</Button><Button variant="secondary">Secondary</Button>',
+        'Single w Kebab': '<Button variant="primary">Primary</Button><Button variant="secondary">Secondary</Button><Dropdown toggle={<KebabToggle />} />',
+        'Action icons only': '<Button variant="plain" aria-label="Close"><TimesIcon /></Button><Button variant="plain" aria-label="Accept"><CheckIcon /></Button>',
+        'Wizard (Default)': '<Button variant="primary">Next</Button><Button variant="secondary">Back</Button><Button variant="link">Cancel</Button>',
+        'Modal form list': '<Button>Submit form</Button><Button variant="link">Cancel</Button>',
+        'Multiple groups': '<ActionList.Group><Button variant="primary">Save</Button><Button variant="secondary">Cancel</Button></ActionList.Group><ActionList.Group><Button variant="link">Delete</Button></ActionList.Group>'
       })
-
-      // If the component needs more options, add them here
-      // colorScheme: figma.enum('Semantic Color Tokens', {
-      //   'Auto (Light)': 'light',
-      //   Dark: 'dark'
-      // })
     },
-    example: (props) => {
-      // Extract individual props from the variant
-      const { variant, hasKebab, isWizard, isModal, iconsOnly } = props.typeVariant;
-
-      // Here we create a simple example for preview
-      // Modify this to match the actual component API
-      return (
-        <ActionList variant={variant} hasKebab={hasKebab} isWizard={isWizard} isModal={isModal} iconsOnly={iconsOnly}>
-          {/* Conditionally render different action items based on the variant */}
-          {(variant === 'multiple-groups' || variant === 'single-group') && (
-            <>
-              <button>Back</button>
-              <button>Next</button>
-              <button>Submit</button>
-              <button>Cancel</button>
-            </>
-          )}
-          {/* Add other conditional content for different variants */}
-        </ActionList>
-      );
-    }
+    example: (props) => (
+      <ActionList>
+        {props.content}
+      </ActionList>
+    )
   }
 );
