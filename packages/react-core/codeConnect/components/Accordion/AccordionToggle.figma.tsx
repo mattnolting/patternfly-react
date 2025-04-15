@@ -17,9 +17,7 @@ figma.connect(
         Bordered: 'bordered'
       }),
       state: figma.enum('State', {
-        Default: 'default',
-        Expanded: 'expanded',
-        Hover: 'hover'
+        Expanded: 'expanded'
       }),
       togglePosition: figma.enum('Caret position', {
         Right: 'right',
@@ -34,11 +32,15 @@ figma.connect(
         Expanded: true,
         Default: false,
         Hover: false
-      }),
-      id: figma.string('ID', 'accordion-toggle-example')
+      })
     },
     example: (props) => (
-      <AccordionToggle id="accordion-toggle-example" togglePosition="right" component="h4">
+      <AccordionToggle
+        type={props.type}
+        state={props.state}
+        togglePosition={props.togglePosition}
+        component={props.component}
+      >
         Accordion item
       </AccordionToggle>
     )

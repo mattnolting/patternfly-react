@@ -2,7 +2,8 @@
   "codeConnect": {
     "parser": "react",
     "include": [
-      "codeConnect/components/Table/*.tsx"
+      "codeConnect/components/Table/*.tsx",
+      "codeConnect/components/Accordion/*.tsx"
     ],
     "paths": {
       "src/components": ["src/components"]

@@ -1,12 +1,12 @@
 import figma from '@figma/code-connect';
-import { ColumnHeaderHeaderCell } from './ColumnHeaderHeaderCell';
+import { Th } from '@patternfly/react-table';
 
 /**
- * PatternFly ColumnHeaderHeaderCell component integration for Figma Code Connect
+ * PatternFly Column Header Cell integration for Figma Code Connect
  */
 
 figma.connect(
-  ColumnHeaderHeaderCell,
+  Th,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=14-623&m=dev',
   {
     props: {
@@ -25,12 +25,9 @@ figma.connect(
       })
     },
     example: (props) => (
-      <ColumnHeaderHeaderCell
-        showHelpIcon={props.showHelpIcon}
-        sortable={props.sortable}
-        state={props.state}
-        size={props.size}
-      />
+      <Th showHelpIcon={props.showHelpIcon} sortable={props.sortable} state={props.state} size={props.size}>
+        Header
+      </Th>
     )
   }
 );
