@@ -1,45 +1,24 @@
-// import { Alert } from '@patternfly/react-core';
-// import figma from '@figma/code-connect';
+import figma from '@figma/code-connect';
+import { Alert } from '@patternfly/react-core';
 
-// /**
-//  * InlinePlainAlert component - an inline plain variant of the Alert component
-//  */
-// figma.connect(
-//   Alert,
-//   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1110-2754&m=dev',
-//   {
-//     props: {
-//       // Alert variant
-//       variant: figma.enum(
-//         'Type',
-//         {
-//           Info: 'info',
-//           Success: 'success',
-//           Warning: 'warning',
-//           Danger: 'danger',
-//           Custom: 'custom'
-//         },
-//         'Info'
-//       ),
+/**
+ * PatternFly InlinePlainAlert integration for Figma Code Connect
+ */
 
-//       // Alert title (required)
-//       title: figma.string('Title', 'Alert title'),
-
-//       // Optional description
-//       description: figma.boolean('Description', {
-//         true: figma.string('Description Text', 'Alert description goes here'),
-//         false: null
-//       })
-//     },
-//     example: (props) => (
-//       <Alert
-//         variant={props.variant}
-//         title={props.title}
-//         isInline={true} // Always true for InlinePlainAlert
-//         isPlain={true} // Always true for InlinePlainAlert
-//       >
-//         {props.description}
-//       </Alert>
-//     )
-//   }
-// );
+figma.connect(
+  Alert,
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1110-2754&m=dev',
+  {
+    props: {
+      variant: figma.enum('Type', {
+        Info: 'info',
+        Success: 'success',
+        Warning: 'warning',
+        Danger: 'danger',
+        Custom: 'custom'
+      }),
+      title: figma.string('Title', 'Alert title')
+    },
+    example: (props) => <Alert variant={props.variant} title={props.title} isInline={true} isPlain={true} />
+  }
+);

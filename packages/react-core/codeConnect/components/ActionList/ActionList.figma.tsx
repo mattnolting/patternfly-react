@@ -12,17 +12,17 @@ figma.connect(
     props: {
       content: figma.enum('Type', {
         'Single group': '<Button variant="primary">Primary</Button><Button variant="secondary">Secondary</Button>',
-        'Single w Kebab': '<Button variant="primary">Primary</Button><Button variant="secondary">Secondary</Button><Dropdown toggle={<KebabToggle />} />',
-        'Action icons only': '<Button variant="plain" aria-label="Close"><TimesIcon /></Button><Button variant="plain" aria-label="Accept"><CheckIcon /></Button>',
-        'Wizard (Default)': '<Button variant="primary">Next</Button><Button variant="secondary">Back</Button><Button variant="link">Cancel</Button>',
+        'Single w Kebab':
+          '<Button variant="primary">Primary</Button><Button variant="secondary">Secondary</Button><Dropdown toggle={<KebabToggle />} />',
+        'Action icons only':
+          '<Button variant="plain" aria-label="Close"><TimesIcon /></Button><Button variant="plain" aria-label="Accept"><CheckIcon /></Button>',
+        'Wizard (Default)':
+          '<Button variant="primary">Next</Button><Button variant="secondary">Back</Button><Button variant="link">Cancel</Button>',
         'Modal form list': '<Button>Submit form</Button><Button variant="link">Cancel</Button>',
-        'Multiple groups': '<ActionList.Group><Button variant="primary">Save</Button><Button variant="secondary">Cancel</Button></ActionList.Group><ActionList.Group><Button variant="link">Delete</Button></ActionList.Group>'
+        'Multiple groups':
+          '<ActionList.Group><Button variant="primary">Save</Button><Button variant="secondary">Cancel</Button></ActionList.Group><ActionList.Group><Button variant="link">Delete</Button></ActionList.Group>'
       })
     },
-    example: (props) => (
-      <ActionList>
-        {props.content}
-      </ActionList>
-    )
+    example: (props) => <ActionList>{props.content}</ActionList>
   }
 );

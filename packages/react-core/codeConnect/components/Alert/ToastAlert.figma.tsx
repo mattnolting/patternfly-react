@@ -1,56 +1,39 @@
-import { Alert } from '@patternfly/react-core';
 import figma from '@figma/code-connect';
+import { Alert } from '@patternfly/react-core';
 
 /**
- * PatternFly Alert (Toast variant) component integration for Figma Code Connect
- *
- * This file maps Figma properties to the PatternFly Alert component,
- * allowing designers to generate React code directly from Figma's Dev Mode.
- *
- * @see https://www.patternfly.org/components/alert
+ * PatternFly Toast Alert integration for Figma Code Connect
  */
 
 figma.connect(
   Alert,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1110-2587&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1110-2670&m=dev',
   {
     props: {
-      type: figma.enum('Type', {
+      variant: figma.enum('Type', {
         Info: 'info',
         Success: 'success',
         Warning: 'warning',
         Danger: 'danger',
         Custom: 'custom'
+
       }),
-      title: figma.string('✏️ Title'),
-      description: figma.boolean('Description', {
-        true: true,
-        false: false
-      }),
+      title: figma.string('Title', 'Alert title'),
+      description: figma.boolean('Description'),
       descriptionText: figma.string('Description', 'Description'),
-      expandable: figma.boolean('Expandable', {
-        true: true,
-        false: false
-      }),
-      actions: figma.boolean('Actions', {
-        true: true,
-        false: false
-      })
+      isExpandable: figma.boolean('Expandable'),
+      actions: figma.boolean('Actions')
     },
     example: (props) => (
       <Alert
-        variant={props.type}
-        title={props.title}
-        isExpandable={props.expandable}
+        variant="info"
+        title="Alert title"
+        isExpandable
         actionLinks={
-          props.actions ? (
-            <>
-              <a href="#">Action</a> <a href="#">Action</a>
-            </>
-          ) : undefined
+          <><a href="#">Action</a> <a href="#">Action</a></>
         }
       >
-        {props.description ? props.descriptionText : null}
+        Description
       </Alert>
     )
   }

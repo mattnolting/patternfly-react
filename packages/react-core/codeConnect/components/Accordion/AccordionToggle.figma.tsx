@@ -10,35 +10,36 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1423-687&m=dev',
   {
     props: {
-      // Map toggle text with priority based on state and type
-      toggleText: figma.string('Toggle Text', 'Accordion toggle'),
-
-      // Map component type based on Type enum
-      component: figma.enum('Type', {
-        'Large Bordered': 'h3'
-        // Regular and Bordered will be undefined, defaulting to h4
+      toggleText: figma.string('Toggle Text', 'Accordion item'),
+      type: figma.enum('Type', {
+        Regular: 'regular',
+        'Large Bordered': 'large-bordered',
+        Bordered: 'bordered'
       }),
-
-      // Map isExpanded directly from State enum
-      isExpanded: figma.enum('State', {
-        'Expanded': true
-        // Default and Hover will be undefined (falsy)
+      state: figma.enum('State', {
+        Default: 'default',
+        Expanded: 'expanded',
+        Hover: 'hover'
       }),
-
-      // Map togglePosition directly from Caret position
       togglePosition: figma.enum('Caret position', {
         Right: 'right',
         Left: 'left'
-      })
+      }),
+      component: figma.enum('Type', {
+        'Large Bordered': 'h3',
+        Regular: 'h4',
+        Bordered: 'h4'
+      }),
+      isExpanded: figma.enum('State', {
+        Expanded: true,
+        Default: false,
+        Hover: false
+      }),
+      id: figma.string('ID', 'accordion-toggle-example')
     },
     example: (props) => (
-      <AccordionToggle
-        id="accordion-toggle-example"
-        isExpanded={props.isExpanded}
-        togglePosition={props.togglePosition}
-        component={props.component || 'h4'}
-      >
-        {props.toggleText}
+      <AccordionToggle id="accordion-toggle-example" togglePosition="right" component="h4">
+        Accordion item
       </AccordionToggle>
     )
   }

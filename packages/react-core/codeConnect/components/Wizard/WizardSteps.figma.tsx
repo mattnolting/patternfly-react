@@ -7,12 +7,11 @@ import { WizardSteps } from '@patternfly/react-core';
 
 figma.connect(
   WizardSteps,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=14628-17304&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=17034-13708&m=dev',
   {
     props: {
       semantic: figma.enum('Semantic Color Tokens', {
-        'Auto (Light)': 'auto-light',
-        'Auto (Dark)': 'auto-dark'
+        'Auto (Light)': 'auto-light'
       })
     }
   }

@@ -1,5 +1,5 @@
-import { Accordion, AccordionItem, AccordionContent, AccordionToggle } from '@patternfly/react-core';
 import figma from '@figma/code-connect';
+import { Accordion, AccordionItem, AccordionContent, AccordionToggle } from '@patternfly/react-core';
 
 /**
  * PatternFly Accordion component integration for Figma Code Connect
