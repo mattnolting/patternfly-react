@@ -6,14 +6,7 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1521-958&m=dev',
   {
     props: {
-      text: figma.string('Text'),
-      theme: figma.enum('Theme', {
-        Light: 'light'
-      }),
-      state: figma.enum('State', {
-        Default: 'default',
-        Hover: 'hover'
-      })
+      text: figma.string('Text')
     },
     example: (props) => <BackToTop title={props.text} />
   }

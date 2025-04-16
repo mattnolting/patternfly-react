@@ -2,15 +2,27 @@ import figma from '@figma/code-connect';
 import { Alert } from '@patternfly/react-core';
 
 /**
- * PatternFly Alert integration for Figma Code Connect
+ * PatternFly Alert component integration for Figma Code Connect
+ * @see https://www.patternfly.org/components/Alert
  */
 
 figma.connect(
   Alert,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1110-2587&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1110-2698&m=dev',
   {
     props: {
-      // Direct mapping of Type to variant
+      // strings
+      title: figma.string('✏️ Title', 'Alert title'),
+      description: figma.enum('Description', {
+        true: 'Alert description goes here',
+        false: ''
+      }),
+
+      // booleans
+      actionsLinks: figma.boolean('Actions'),
+      isExpandable: figma.boolean('Expandable'),
+
+      // variants
       variant: figma.enum('Type', {
         Info: 'info',
         Success: 'success',
@@ -19,33 +31,17 @@ figma.connect(
         Custom: 'custom'
       }),
 
-      // Title text
-      title: figma.string('✏️ Title', 'Alert title'),
-
-      // Content based on Description toggle
-      description: figma.enum('Description', {
-        true: 'Alert description goes here',
-        false: ''
-      }),
-
-      // Map expandable toggle to isExpandable prop
-      isExpandable: figma.boolean('Expandable'),
-
-      // ActionClose configuration
-      actionClose: figma.enum('Actions', {
-        true: '{}',
-        false: 'undefined'
-      })
+      // children
+      actionLinks: figma.boolean('Actions'),
+      children: figma.children('*')
     },
     example: (props) => (
       <Alert
-        variant={props.variant}
-        title={props.title}
         isExpandable={props.isExpandable}
-        actionClose={props.actionClose}
-      >
-        {props.description}
-      </Alert>
+        title={props.title}
+        variant={props.variant}
+        actionLinks={props.actionLinks}
+      />
     )
   }
 );

@@ -1,13 +1,9 @@
-import { Alert } from '@patternfly/react-core';
 import figma from '@figma/code-connect';
+import { Alert } from '@patternfly/react-core';
 
 /**
  * PatternFly Alert component integration for Figma Code Connect
- *
- * This file maps Figma properties to the PatternFly Alert component,
- * allowing designers to generate React code directly from Figma's Dev Mode.
- *
- * @see https://www.patternfly.org/components/alert
+ * @see https://www.patternfly.org/components/Alert
  */
 
 figma.connect(
@@ -15,8 +11,12 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1110-2784&m=dev',
   {
     props: {
-      text: figma.string('✏️ Text', 'View 3 more notifications')
+      // strings
+      title: figma.string('✏️ Title'),
+
+      // children
+      children: figma.children('*')
     },
-    example: (props) => <Alert title={props.text} />
+    example: (props) => <Alert title={props.title}>{props.children}</Alert>
   }
 );

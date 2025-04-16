@@ -1,7 +1,12 @@
 import figma from '@figma/code-connect';
 import { AboutModal } from '@patternfly/react-core';
 
-// Connect AboutModal component to Figma
+/**
+ * PatternFly About Modal component integration for Figma Code Connect
+ * @see https://www.patternfly.org/components/AboutModal
+ */
+
+
 figma.connect(
   AboutModal,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2879-13973&m=dev',
@@ -14,13 +19,13 @@ figma.connect(
       backgroundImageSrc: '/assets/images/background.png',
       children: figma.children('*')
     },
-    example: ({ productName, trademark, brandImageSrc, brandImageAlt, backgroundImageSrc, children }) => (
+    example: (props) => (
       <AboutModal
-        productName={productName}
-        trademark={trademark}
-        brandImageSrc={brandImageSrc}
-        brandImageAlt={brandImageAlt}
-        backgroundImageSrc={backgroundImageSrc}
+        productName={props.productName}
+        trademark={props.trademark}
+        brandImageSrc={props.brandImageSrc}
+        brandImageAlt={props.brandImageAlt}
+        backgroundImageSrc={props.backgroundImageSrc}
       >
         {children}
       </AboutModal>

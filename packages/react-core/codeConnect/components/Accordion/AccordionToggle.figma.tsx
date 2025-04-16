@@ -2,7 +2,8 @@ import figma from '@figma/code-connect';
 import { AccordionToggle } from '@patternfly/react-core';
 
 /**
- * PatternFly AccordionToggle component integration for Figma Code Connect
+ * PatternFly Accordion component integration for Figma Code Connect
+ * @see https://www.patternfly.org/components/Accordion
  */
 
 figma.connect(
@@ -15,9 +16,6 @@ figma.connect(
         Regular: 'regular',
         'Large Bordered': 'large-bordered',
         Bordered: 'bordered'
-      }),
-      state: figma.enum('State', {
-        Expanded: 'expanded'
       }),
       togglePosition: figma.enum('Caret position', {
         Right: 'right',
@@ -32,16 +30,18 @@ figma.connect(
         Expanded: true,
         Default: false,
         Hover: false
-      })
+      }),
+      expandText: figma.string('Expand Text')
     },
     example: (props) => (
       <AccordionToggle
         type={props.type}
-        state={props.state}
+        expandText={props.expandText}
+        isExpanded={props.isExpanded}
         togglePosition={props.togglePosition}
         component={props.component}
       >
-        Accordion item
+        {props.toggleText}
       </AccordionToggle>
     )
   }

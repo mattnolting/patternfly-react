@@ -9,12 +9,6 @@ figma.connect(
   Brand,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2104-3644&m=dev',
   {
-    props: {
-      type: figma.enum('Type', {
-        'Logo only': 'logo-only',
-        'Logo + Text': 'logo---text'
-      })
-    },
-    example: (props) => <Brand alt="Brand" />
+    example: () => <Brand alt="Brand" />
   }
 );

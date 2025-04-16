@@ -2,39 +2,46 @@ import figma from '@figma/code-connect';
 import { Alert } from '@patternfly/react-core';
 
 /**
- * PatternFly Toast Alert integration for Figma Code Connect
+ * PatternFly Alert component integration for Figma Code Connect
+ * @see https://www.patternfly.org/components/Alert
  */
 
 figma.connect(
   Alert,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1110-2670&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1110-2587&m=dev',
   {
     props: {
+      // strings
+      title: figma.string('✏️ Title', ''),
+
+      // booleans
+      actionLinks: figma.boolean('Actions'),
+      alertDescription: figma.boolean('Description', {
+        true: figma.string('✏️ Description', '')
+      }),
+
+      // states
+      isExpandable: figma.boolean('Expandable'),
+
+      // variants
       variant: figma.enum('Type', {
         Info: 'info',
         Success: 'success',
         Warning: 'warning',
         Danger: 'danger',
         Custom: 'custom'
-
       }),
-      title: figma.string('Title', 'Alert title'),
-      description: figma.boolean('Description'),
-      descriptionText: figma.string('Description', 'Description'),
-      isExpandable: figma.boolean('Expandable'),
-      actions: figma.boolean('Actions')
+
+      // children
+      children: figma.children('*')
     },
     example: (props) => (
       <Alert
-        variant="info"
-        title="Alert title"
-        isExpandable
-        actionLinks={
-          <><a href="#">Action</a> <a href="#">Action</a></>
-        }
-      >
-        Description
-      </Alert>
+        title={props.title}
+        variant={props.variant}
+        actionLinks={props.actionLinks}
+        isExpandable={props.isExpandable}
+      />
     )
   }
 );
