@@ -11,6 +11,7 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2621-623&m=dev',
   {
     props: {
+      // enums
       isBordered: figma.enum('Type', {
         Bordered: true,
         'Large Bordered': true
@@ -18,11 +19,12 @@ figma.connect(
       displaySize: figma.enum('Type', {
         'Large Bordered': 'lg'
       }),
-      // Map Figma's "Caret position" directly to React prop
       togglePosition: figma.enum('Caret position', {
         Right: 'right',
         Left: 'left'
       }),
+
+      // children
       children: figma.children('*')
     },
     example: (props) => (

@@ -18,17 +18,15 @@ figma.connect(
       text: figma.string('✏️ Text'),
 
       // enums
-      size: figma.enum('Size', {
-        Small: 'sm',
-        Default: 'md'
-      }),
-
-      // state
       isClicked: figma.enum('State', {
         Clicked: true
       }),
       isDisabled: figma.enum('State', {
         Disabled: true
+      }),
+      size: figma.enum('Size', {
+        Small: 'sm',
+        Default: 'md'
       }),
 
       // variants

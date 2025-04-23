@@ -14,6 +14,7 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=19922-43760&t=TMTA4Fpy1ljK4qQP-11',
   {
     props: {
+      // enums
       state: figma.enum('State', {
         Default: 'default',
         Hover: undefined,

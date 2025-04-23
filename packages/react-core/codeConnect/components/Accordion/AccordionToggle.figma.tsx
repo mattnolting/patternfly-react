@@ -11,7 +11,11 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1423-687&m=dev',
   {
     props: {
+      // strings
       toggleText: figma.string('Toggle Text', 'Accordion item'),
+      expandText: figma.string('Expand Text'),
+
+      // enums
       type: figma.enum('Type', {
         Regular: 'regular',
         'Large Bordered': 'large-bordered',
@@ -30,8 +34,7 @@ figma.connect(
         Expanded: true,
         Default: false,
         Hover: false
-      }),
-      expandText: figma.string('Expand Text')
+      })
     },
     example: (props) => (
       <AccordionToggle

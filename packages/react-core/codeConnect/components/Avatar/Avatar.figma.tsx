@@ -15,8 +15,10 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6%3A-Components-Test?node-id=1561-4342&m=dev',
   {
     props: {
+      // booleans
       isBordered: figma.boolean('Bordered'),
 
+      // enums
       size: figma.enum('Size', {
         small: 'sm',
         med: 'md',

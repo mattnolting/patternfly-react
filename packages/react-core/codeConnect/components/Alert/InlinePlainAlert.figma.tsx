@@ -27,7 +27,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
-      <Alert variant={props.variant} title={props.title} isInline={true} isPlain={true} variantLabel={props.type} />
+      <Alert variant={props.variant} title={props.title} isInline={true} isPlain={true} variantLabel={props.variant} />
     )
   }
 );

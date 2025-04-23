@@ -17,6 +17,8 @@ figma.connect(
       brandImageSrc: 'Brand Image Source',
       brandImageAlt: 'Brand Image Alt Text',
       backgroundImageSrc: '/assets/images/background.png',
+
+      // children
       children: figma.children('*')
     },
     example: (props) => (

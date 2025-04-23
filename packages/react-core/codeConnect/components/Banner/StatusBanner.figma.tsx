@@ -7,6 +7,7 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6%3A-Components-Test?node-id=221-937&m=dev',
   {
     props: {
+      // enums
       status: figma.enum('Status', {
         Success: 'success',
         Warning: 'warning',

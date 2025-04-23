@@ -6,6 +6,7 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6%3A-Components-Test?node-id=221-1443&m=dev',
   {
     props: {
+      // enums
       color: figma.enum('Color', {
         Red: 'red',
         Orangered: 'orangered',

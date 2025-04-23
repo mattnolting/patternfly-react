@@ -14,6 +14,7 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6%3A-Components-Test?node-id=3362-283&m=dev',
   {
     props: {
+      // enums
       type: figma.enum('Type', {
         'No home link': 'no-home-link',
         'No home link collapsed': 'no-home-link-collapsed',

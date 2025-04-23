@@ -14,7 +14,10 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=3362-74&t=TMTA4Fpy1ljK4qQP-11',
   {
     props: {
+      // strings
       text: figma.string('Text'),
+
+      // enums
       type: figma.enum('Type', {
         Home: 'home',
         'Breadcrumb item': 'breadcrumb-item'

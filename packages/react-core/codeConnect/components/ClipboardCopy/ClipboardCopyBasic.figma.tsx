@@ -1,5 +1,5 @@
 import React from 'react';
-import { ClipboardCopyBasic } from './ClipboardCopyBasic';
+import { ClipBoardCopy } from './ClipBoardCopy';
 import figma from '@figma/code-connect';
 
 /**
@@ -11,7 +11,7 @@ import figma from '@figma/code-connect';
  */
 
 figma.connect(
-  ClipboardCopyBasic,
+  ClipBoardCopy,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=9914-75835&t=IzSunfrnw18ti37Y-11',
   {
     props: {
@@ -24,6 +24,6 @@ figma.connect(
         Active: 'active'
       })
     },
-    example: (props) => <ClipboardCopyBasic />
+    example: (props) => <ClipBoardCopy />
   }
 );
