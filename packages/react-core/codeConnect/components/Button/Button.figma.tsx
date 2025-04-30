@@ -1,9 +1,14 @@
 import figma from '@figma/code-connect';
-import { Button } from '@patternfly/react-core';
+import { Button, Badge, IconWrapper } from '@patternfly/react-core';
 
 /**
  * PatternFly Button component integration for Figma Code Connect
  * @see https://www.patternfly.org/components/Button
+ */
+
+/**
+ * TODO: Convert to variants, rather than dedicated components (Button, Icon Button, Link Button, Inline link, CTA Button, Block Button, Split Button Components, Stateful Button)
+ * TODO: Consolidate all dedicated components
  */
 
 figma.connect(
@@ -12,23 +17,28 @@ figma.connect(
   {
     props: {
       // booleans
-      iconEnd: figma.boolean('Icon right'),
-      iconStart: figma.boolean('Icon left'),
+      iconStart: figma.boolean('Icon left', {
+        true: figma.children('IconWrapper')
+      }),
+      iconEnd: figma.boolean('Icon right', {
+        true: figma.children('IconWrapper')
+      }),
       showCount: figma.boolean('Show Count'),
-      text: figma.string('✏️ Text'),
+      buttonText: figma.string('Button text'),
 
       // enums
       isClicked: figma.enum('State', {
         Clicked: true
       }),
+
       isDisabled: figma.enum('State', {
         Disabled: true
       }),
+
       size: figma.enum('Size', {
         Small: 'sm',
         Default: 'md'
       }),
-
       // variants
       variant: figma.enum('Type', {
         Primary: 'primary',
@@ -39,18 +49,15 @@ figma.connect(
         Warning: 'warning',
         Progress: 'progress',
         'Secondary Progress': 'secondary-progress'
-      })
+      }),
+      children: figma.children('*')
     },
     example: (props) => (
-      <Button
-        icon={props.iconStart}
-        isClicked={props.isClicked}
-        isDisabled={props.isDisabled}
-        showBadge={props.showCount}
-        size={props.size}
-        variant={props.variant}
-        text={props.text}
-      />
+      <Button isClicked={props.isClicked} isDisabled={props.isDisabled} size={props.size} variant={props.variant}>
+        {props.iconStart}
+        {props.buttonText}
+        {props.iconEnd}
+      </Button>
     )
   }
 );

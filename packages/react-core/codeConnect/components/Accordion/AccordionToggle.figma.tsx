@@ -1,5 +1,5 @@
 import figma from '@figma/code-connect';
-import { AccordionToggle } from '@patternfly/react-core';
+import { AccordionItem, AccordionToggle, AccordionContent } from '@patternfly/react-core';
 
 /**
  * PatternFly Accordion component integration for Figma Code Connect
@@ -12,40 +12,25 @@ figma.connect(
   {
     props: {
       // strings
-      toggleText: figma.string('Toggle Text', 'Accordion item'),
       expandText: figma.string('Expand Text'),
 
       // enums
-      type: figma.enum('Type', {
-        Regular: 'regular',
-        'Large Bordered': 'large-bordered',
-        Bordered: 'bordered'
-      }),
-      togglePosition: figma.enum('Caret position', {
-        Right: 'right',
-        Left: 'left'
-      }),
-      component: figma.enum('Type', {
-        'Large Bordered': 'h3',
-        Regular: 'h4',
-        Bordered: 'h4'
+      toggleText: figma.enum('Type', {
+        Regular: figma.string('Toggle Text'),
+        'Large Bordered': figma.string('Toggle Text Large')
       }),
       isExpanded: figma.enum('State', {
-        Expanded: true,
-        Default: false,
-        Hover: false
-      })
+        Expanded: true
+      }),
+      children: figma.children('*')
     },
     example: (props) => (
-      <AccordionToggle
-        type={props.type}
-        expandText={props.expandText}
-        isExpanded={props.isExpanded}
-        togglePosition={props.togglePosition}
-        component={props.component}
-      >
-        {props.toggleText}
-      </AccordionToggle>
+      <AccordionItem isExpanded={props.isExpanded}>
+        <AccordionToggle>{props.toggleText}</AccordionToggle>
+        <AccordionContent>
+          <p>{props.expandText}</p>
+        </AccordionContent>
+      </AccordionItem>
     )
   }
 );

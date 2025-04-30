@@ -29,7 +29,7 @@ figma.connect(
         brandImageAlt={props.brandImageAlt}
         backgroundImageSrc={props.backgroundImageSrc}
       >
-        {children}
+        {props.children}
       </AboutModal>
     )
   }

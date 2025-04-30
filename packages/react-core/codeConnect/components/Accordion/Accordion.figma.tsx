@@ -20,15 +20,13 @@ figma.connect(
         'Large Bordered': 'lg'
       }),
       togglePosition: figma.enum('Caret position', {
-        Right: 'right',
-        Left: 'left'
+        Left: 'start'
       }),
-
       // children
       children: figma.children('*')
     },
     example: (props) => (
-      <Accordion isBordered={props.isBordered} displaySize={props.displaySize} togglePosition={props.togglePosition}>
+      <Accordion isBordered={props.isBordered} displaySize={props.displaySize}>
         {props.children}
       </Accordion>
     )
