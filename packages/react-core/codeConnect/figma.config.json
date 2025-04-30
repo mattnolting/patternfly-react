@@ -1,14 +1,18 @@
 {
   "codeConnect": {
     "parser": "react",
+    "label": "React",
     "include": [
-      "codeConnect/components/Card/*.tsx"
+      "components/Alert/*.tsx"
     ],
     "paths": {
-      "src/components": ["src/components"]
+      "src/components": "src/components"
     },
     "aliases": {
       "@patternfly/react-core": "."
+    },
+    "importPaths": {
+      "src/components": "src/components"
     },
     "options": {
       "instanceSwapper": {
