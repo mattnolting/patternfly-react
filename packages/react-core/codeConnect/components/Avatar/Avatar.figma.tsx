@@ -3,11 +3,6 @@ import { Avatar } from '@patternfly/react-core';
 
 /**
  * PatternFly Avatar component integration for Figma Code Connect
- *
- * This file maps Figma properties to the PatternFly Avatar component,
- * allowing designers to generate React code directly from Figma's Dev Mode.
- *
- * @see https://www.patternfly.org/components/avatar
  */
 
 figma.connect(

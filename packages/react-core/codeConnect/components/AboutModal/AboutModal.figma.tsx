@@ -3,7 +3,6 @@ import { AboutModal } from '@patternfly/react-core';
 
 /**
  * PatternFly About Modal component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/AboutModal
  */
 
 

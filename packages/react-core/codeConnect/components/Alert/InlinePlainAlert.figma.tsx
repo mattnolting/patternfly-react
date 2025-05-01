@@ -3,7 +3,6 @@ import { Alert } from '@patternfly/react-core';
 
 /**
  * PatternFly Alert component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/Alert
  */
 
 figma.connect(
@@ -27,7 +26,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
-      <Alert variant={props.variant} title={props.title} isInline={true} isPlain={true} variantLabel={props.variant} />
+      <Alert variant={props.variant} title={props.title} variantLabel={props.variant} isInline isPlain />
     )
   }
 );

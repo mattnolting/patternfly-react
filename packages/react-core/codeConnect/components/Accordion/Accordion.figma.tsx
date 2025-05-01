@@ -3,7 +3,6 @@ import { Accordion } from '@patternfly/react-core';
 
 /**
  * PatternFly Accordion component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/Accordion
  */
 
 figma.connect(

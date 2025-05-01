@@ -20,8 +20,12 @@ figma.connect(
         'No home link collapsed': 'no-home-link-collapsed',
         'Home link': 'home-link',
         'Home link collapsed': 'home-link-collapsed'
-      })
+      }),
+      children: figma.children('*')
     },
-    example: (props) => <Breadcrumbs type={props.type} />
+    example: (props) =>
+      <Breadcrumbs type={props.type}>
+        {props.children}
+      </Breadcrumbs>
   }
 );

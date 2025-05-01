@@ -3,13 +3,6 @@ import { BackgroundImage } from '@patternfly/react-core';
 
 /**
  * PatternFly BackgroundImage component integration for Figma Code Connect
- *
- * This file maps Figma properties to the PatternFly BackgroundImage component,
- * allowing designers to generate React code directly from Figma's Dev Mode.
- * The BackgroundImage component is used to display a background image, typically
- * for login pages, error pages, or other full-page layouts.
- *
- * @see https://www.patternfly.org/components/background-image
  */
 
 figma.connect(

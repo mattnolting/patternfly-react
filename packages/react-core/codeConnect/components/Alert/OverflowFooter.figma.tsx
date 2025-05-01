@@ -3,7 +3,6 @@ import { Alert } from '@patternfly/react-core';
 
 /**
  * PatternFly Alert component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/Alert
  */
 
 figma.connect(

@@ -3,7 +3,6 @@ import { AccordionItem, AccordionToggle, AccordionContent } from '@patternfly/re
 
 /**
  * PatternFly Accordion component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/Accordion
  */
 
 figma.connect(

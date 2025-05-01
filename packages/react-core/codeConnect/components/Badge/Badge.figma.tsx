@@ -3,12 +3,6 @@ import { Badge } from '@patternfly/react-core';
 
 /**
  * PatternFly Badge component integration for Figma Code Connect
- *
- * This file maps Figma properties to the PatternFly Badge component,
- * allowing designers to generate React code directly from Figma's Dev Mode.
- * The Badge component is used to highlight counts or statuses.
- *
- * @see https://www.patternfly.org/components/badge
  */
 
 figma.connect(

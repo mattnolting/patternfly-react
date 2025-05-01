@@ -1,9 +1,8 @@
 import figma from '@figma/code-connect';
-import { Alert, AlertActionLink } from '@patternfly/react-core';
+import { Alert } from '@patternfly/react-core';
 
 /**
  * PatternFly Alert component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/Alert
  */
 
 figma.connect(
@@ -12,14 +11,16 @@ figma.connect(
   {
     props: {
       // booleans
-      actionsLinks: figma.boolean('Actions'),
       description: figma.boolean('Description', {
-        true: figma.string('✏️ Description')
+        true: figma.string('✏️ Description'),
+        false: undefined
       }),
+      hasActions: figma.boolean('Actions'),
+      isDismissable: figma.boolean('Dismissable'),
       isExpandable: figma.boolean('Expandable'),
 
       // strings
-      title: figma.string('✏️ Title', 'Alert title'),
+      title: figma.string('✏️ Title'),
 
       // enums
       variant: figma.enum('Type', {
@@ -28,20 +29,18 @@ figma.connect(
         Warning: 'warning',
         Danger: 'danger',
         Custom: 'custom'
-      }),
-
-      // children
-      children: figma.children('*')
+      })
     },
     example: (props) => (
       <Alert
+        actionClose={props.isDismissable}
+        actionLinks={props.hasActions}
         isExpandable={props.isExpandable}
+        isInline
         title={props.title}
         variant={props.variant}
-        isInline
       >
-        <p>{props.description}</p>
-        {props.children}
+        {props.description}
       </Alert>
     )
   }

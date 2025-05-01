@@ -3,12 +3,6 @@ import { Backdrop } from '@patternfly/react-core';
 
 /**
  * PatternFly Backdrop component integration for Figma Code Connect
- *
- * This file maps Figma properties to the PatternFly Backdrop component,
- * allowing designers to generate React code directly from Figma's Dev Mode.
- * The Backdrop component creates a backdrop behind elements like modals and drawers.
- *
- * @see https://www.patternfly.org/components/backdrop
  */
 
 figma.connect(

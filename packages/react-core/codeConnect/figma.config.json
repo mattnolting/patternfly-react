@@ -1,9 +1,8 @@
 {
   "codeConnect": {
     "parser": "react",
-    "label": "React",
     "include": [
-      "components/Alert/*.tsx"
+      "components/Breadcrumbs/*.tsx"
     ],
     "paths": {
       "src/components": "src/components"

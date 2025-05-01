@@ -3,7 +3,6 @@ import { Alert } from '@patternfly/react-core';
 
 /**
  * PatternFly Alert component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/Alert
  */
 
 figma.connect(
@@ -14,7 +13,8 @@ figma.connect(
       // booleans
       actionLinks: figma.boolean('Actions'),
       alertDescription: figma.boolean('Description', {
-        true: figma.string('✏️ Description')
+        true: figma.string('✏️ Description'),
+        false: undefined
       }),
       isExpandable: figma.boolean('Expandable'),
 
@@ -28,10 +28,7 @@ figma.connect(
         Info: 'info',
         Success: 'success',
         Warning: 'warning'
-      }),
-
-      // children
-      children: figma.children('*')
+      })
     },
     example: (props) => (
       <Alert
@@ -39,7 +36,9 @@ figma.connect(
         variant={props.variant}
         actionLinks={props.actionLinks}
         isExpandable={props.isExpandable}
-      />
+      >
+        {props.alertDescription}
+      </Alert>
     )
   }
 );
