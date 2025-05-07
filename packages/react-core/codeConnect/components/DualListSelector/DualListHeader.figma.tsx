@@ -1,5 +1,5 @@
 import React from "react"
-import { MenuSplitButton } from "./MenuSplitButton"
+import { DualListHeader } from "./DualListHeader"
 import figma from "@figma/code-connect"
 
 /**
@@ -11,16 +11,14 @@ import figma from "@figma/code-connect"
  */
 
 figma.connect(
-  MenuSplitButton,
-  "https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=3100-80141&m=dev",
+  DualListHeader,
+  "https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=21279-116172&t=IzSunfrnw18ti37Y-11",
   {
     props: {
-      style: figma.enum("Style", {
-        Primary: "primary",
-        Secondary: "secondary",
-        Disabled: "disabled",
-      }),
+      itemInformation: figma.string("Item information"),
+      headerText: figma.string("Header text"),
+      hasSearchBar: figma.boolean("Has search bar"),
     },
-    example: (props) => <MenuSplitButton />,
+    example: (props) => <DualListHeader />,
   },
 )

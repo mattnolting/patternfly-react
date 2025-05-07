@@ -1,6 +1,5 @@
 import figma from '@figma/code-connect';
 import { TreeView } from '@patternfly/react-core';
-import { TreeNodeBaseComponent } from './TreeNodeBaseComponent';
 
 /**
  * PatternFly TreeView - Compact Node integration for Figma Code Connect
@@ -11,76 +10,8 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=12615-3260&m=dev',
   {
     props: {
-      state: figma.enum('State', {
-        Default: 'default',
-        Hover: 'hover',
-        Selected: 'selected',
-        'Expanded - Not Selected': 'expanded-not-selected'
-      }),
-      expandable: figma.boolean('Expandable'),
-      hasIcons: figma.boolean('With Icon'),
-      hasActions: figma.boolean('With Actions'),
-      hasCheckboxes: figma.boolean('With Checkbox'),
-      hasBadges: figma.boolean('Show Badge')
+      children: '*'
     },
-    example: (props) => (
-      <TreeView variant="compact">
-        <TreeNodeBaseComponent
-          text="Tree node"
-          showCaret
-          withIcon={props.hasIcons}
-          withActions={props.hasActions}
-          withCheckbox={props.hasCheckboxes}
-          showBadge={props.hasBadges}
-          nodeGuide
-          endNodeGuide
-        />
-        <TreeNodeBaseComponent
-          text="Tree node"
-          showCaret
-          withIcon={props.hasIcons}
-          withActions={props.hasActions}
-          withCheckbox={props.hasCheckboxes}
-          showBadge={props.hasBadges}
-          nodeGuide
-        >
-          <TreeNodeBaseComponent
-            text="Tree node"
-            showCaret
-            withIcon={props.hasIcons}
-            withActions={props.hasActions}
-            withCheckbox={props.hasCheckboxes}
-            showBadge={props.hasBadges}
-            nodeGuide
-          />
-          <TreeNodeBaseComponent
-            text="Tree node"
-            withIcon={props.hasIcons}
-            withActions={props.hasActions}
-            withCheckbox={props.hasCheckboxes}
-            showBadge={props.hasBadges}
-            nodeGuide
-          />
-          <TreeNodeBaseComponent
-            text="Tree node"
-            showCaret
-            withIcon={props.hasIcons}
-            withActions={props.hasActions}
-            withCheckbox={props.hasCheckboxes}
-            showBadge={props.hasBadges}
-            endNodeGuide
-          />
-        </TreeNodeBaseComponent>
-        <TreeNodeBaseComponent
-          text="Tree node"
-          showCaret
-          withIcon={props.hasIcons}
-          withActions={props.hasActions}
-          withCheckbox={props.hasCheckboxes}
-          showBadge={props.hasBadges}
-          endNodeGuide
-        />
-      </TreeView>
-    )
+    example: (props) => <TreeView variant="compact">{props.children}</TreeView>
   }
 );

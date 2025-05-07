@@ -1,37 +1,34 @@
 import figma from '@figma/code-connect';
-import { WizardStepItem } from '@patternfly/react-core';
+import { WizardNavItem } from '@patternfly/react-core';
 
 /**
- * PatternFly WizardStepItem integration for Figma Code Connect
+ * PatternFly WizardNavItem component integration for Figma Code Connect
+ * @see https://www.patternfly.org/components/wizard#navigation
  */
 
 figma.connect(
-  WizardStepItem,
+  WizardNavItem,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=14628-17356&m=dev',
   {
     props: {
-      navItem: figma.string('✏️ Nav item', 'Step title'),
-      state: figma.enum('State', {
-        Default: 'default',
-        Hover: 'hover',
-        Selected: 'selected',
-        Disabled: 'disabled',
-        InActive: 'inactive'
+      // string
+      navItem: figma.string('✏️ Nav item'),
+
+      // enum
+      isDisabled: figma.enum('State', {
+        Disabled: true
       }),
-      expansion: figma.enum('Expansion', {
-        'No expansion': 'no-expansion',
-        'Expandable - Open': 'expandable---open',
-        'Expandable - closed': 'expandable---closed'
+      isExpandable: figma.enum('Expansion', {
+        'Expandable - Open': true,
+        'Expandable - closed': true
       }),
-      wizardStepNumber: figma.nestedProps('Wizard step number', {
-        state: figma.enum('State', {
-          InActive: 'inactive',
-          Active: 'active',
-          Selected: 'selected',
-          Current: 'current'
-        }),
-        number: figma.string('Wizard Step Number', '1')
-      })
-    }
+
+      children: figma.children('*')
+    },
+    example: (props) => (
+      <WizardNavItem content={props.navItem} isDisabled={props.isDisabled} isExpandable={props.isExpandable}>
+        {props.children}
+      </WizardNavItem>
+    )
   }
 );

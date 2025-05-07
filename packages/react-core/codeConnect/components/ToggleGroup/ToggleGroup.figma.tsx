@@ -2,7 +2,8 @@ import figma from '@figma/code-connect';
 import { ToggleGroup, ToggleGroupItem } from '@patternfly/react-core';
 
 /**
- * PatternFly ToggleGroup integration for Figma Code Connect
+ * PatternFly ToggleGroup component integration for Figma Code Connect
+ * @see https://www.patternfly.org/components/toggle-group
  */
 
 figma.connect(
@@ -10,26 +11,27 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=7644-56919&m=dev',
   {
     props: {
+      // enum
       size: figma.enum('Size', {
         Default: 'default',
         Compact: 'compact'
       }),
-      // Left toggle item properties
+
+      // nested props
       leftItem: figma.nestedProps('Base components/Toggle groups parts', {
         text: figma.string('Text', 'Option')
       }),
-      // Middle toggle item 1 properties
       middleItem1: figma.nestedProps('Base components/Toggle groups parts', {
         text: figma.string('Text', 'Option')
       }),
-      // Middle toggle item 2 properties
       middleItem2: figma.nestedProps('Base components/Toggle groups parts', {
         text: figma.string('Text', 'Option')
       }),
-      // Right toggle item properties
       rightItem: figma.nestedProps('Base components/Toggle groups parts', {
         text: figma.string('Text', 'Option')
-      })
+      }),
+
+      children: figma.children('*')
     },
     example: (props) => (
       <ToggleGroup aria-label="Toggle group example" size={props.size}>
@@ -37,6 +39,7 @@ figma.connect(
         <ToggleGroupItem text={props.middleItem1.text} buttonId="toggle-group-item-2middle" />
         <ToggleGroupItem text={props.middleItem2.text} buttonId="toggle-group-item-3middle" />
         <ToggleGroupItem text={props.rightItem.text} buttonId="toggle-group-item-4right" />
+        {props.children}
       </ToggleGroup>
     )
   }

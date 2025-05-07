@@ -10,7 +10,7 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=12615-3269&m=dev',
   {
     props: {
-      text: figma.string('Text', 'Tree node'),
+      text: figma.string('Text'),
       withIcon: figma.boolean('With Icon'),
       withActions: figma.boolean('With Actions'),
       withCheckbox: figma.boolean('With Checkbox'),

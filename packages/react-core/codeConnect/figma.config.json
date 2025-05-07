@@ -2,7 +2,7 @@
   "codeConnect": {
     "parser": "react",
     "include": [
-      "components/Breadcrumbs/*.tsx"
+      "components/TreeView/*.tsx"
     ],
     "paths": {
       "src/components": "src/components"

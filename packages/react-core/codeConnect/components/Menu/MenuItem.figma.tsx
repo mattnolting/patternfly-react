@@ -12,9 +12,9 @@ figma.connect(
     props: {
       showLeadingIcon: figma.boolean('Show Leading Icon'),
       showDescr: figma.boolean('Show Descr. '),
-      descrText: figma.string('Descr. Text', 'This is a description'),
+      descrText: figma.string('Descr. Text'),
       showActionIcon: figma.boolean('Show action icon'),
-      menuItemText: figma.string('Menu item Text', 'Menu item'),
+      menuItemText: figma.string('Menu item Text'),
       menuItem: figma.enum('Menu Item', {
         Basic: 'basic',
         'Checkbox select': 'checkbox-select',

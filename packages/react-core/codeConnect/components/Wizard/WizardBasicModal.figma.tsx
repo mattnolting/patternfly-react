@@ -1,21 +1,23 @@
 import figma from '@figma/code-connect';
-import { WizardBasicModal } from '@patternfly/react-core';
+import { Wizard } from '@patternfly/react-core';
 
 /**
- * PatternFly WizardBasicModal integration for Figma Code Connect
+ * PatternFly Wizard component integration for Figma Code Connect
+ * @see https://www.patternfly.org/components/wizard
  */
 
 figma.connect(
-  WizardBasicModal,
+  Wizard,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=14628-18627&m=dev',
   {
     props: {
       type: figma.enum('Type', {
-        'With Form': 'with-form',
-        'Empty': 'empty'
+        Empty: 'empty',
+        'With Form': 'with-form'
       }),
-      withDrawer: figma.boolean('With drawer'),
-      wizardStepTitle: figma.string('Wizard Step Title', 'Step title')
-    }
+
+      children: figma.children('*')
+    },
+    example: (props) => <Wizard>{props.children}</Wizard>
   }
 );

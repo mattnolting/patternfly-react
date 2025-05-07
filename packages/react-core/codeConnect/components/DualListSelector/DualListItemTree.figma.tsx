@@ -1,5 +1,5 @@
 import React from "react"
-import { SliderTrack } from "./SliderTrack"
+import { DualListItemTree } from "./DualListItemTree"
 import figma from "@figma/code-connect"
 
 /**
@@ -11,16 +11,17 @@ import figma from "@figma/code-connect"
  */
 
 figma.connect(
-  SliderTrack,
-  "https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=815-218&t=IzSunfrnw18ti37Y-11",
+  DualListItemTree,
+  "https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=21279-116342&t=IzSunfrnw18ti37Y-11",
   {
     props: {
       type: figma.enum("Type", {
-        Base: "base",
-        Filled: "filled",
-        "Filled - Disabled": "filled---disabled",
+        Default: "default",
+        "Select all": "select-all",
+        "Select mix": "select-mix",
+        "Sub items - tertiary": "sub-items---tertiary",
       }),
     },
-    example: (props) => <SliderTrack />,
+    example: (props) => <DualListItemTree />,
   },
 )
