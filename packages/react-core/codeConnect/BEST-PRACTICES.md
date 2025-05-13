@@ -22,7 +22,7 @@ react-core
 ### Basic Template
 
 ```typescript
-import figma from "@figma/code-connect";
+import figma from '@figma/code-connect';
 import { ComponentName } from '@patternfly/react-core';
 
 /**
@@ -917,7 +917,7 @@ This approach is critical for components that contain nested components with the
 
 ```typescript
 import { ErrorState, EmptyState } from '@patternfly/react-core';
-import figma from "@figma/code-connect"
+import figma from '@figma/code-connect'
 
 figma.connect(
   ErrorState,

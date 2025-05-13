@@ -1,6 +1,6 @@
 import React from "react";
 import { EmptyStateActions, Button } from '@patternfly/react-core';
-import figma from "@figma/code-connect";
+import figma from '@figma/code-connect';
 
 figma.connect(
   EmptyStateActions,

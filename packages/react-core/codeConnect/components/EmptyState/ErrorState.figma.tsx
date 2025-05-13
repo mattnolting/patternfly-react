@@ -1,5 +1,5 @@
 import figma from '@figma/code-connect';
-import { ErrorState, EmptyState } from '@patternfly/react-core';
+import { EmptyState, ErrorState } from '@patternfly/react-core';
 
 /**
  * PatternFly ErrorState component integration for Figma Code Connect
@@ -25,8 +25,8 @@ figma.connect(
         type: figma.enum('Type', {
           Error: 'error'
         }),
-        bodyText: figma.string('Body text', 'This is tester text so this is basically saying nothing important.'),
-        headerText: figma.string('Header text', 'This is an Error state')
+        bodyText: figma.string('Body text'),
+        headerText: figma.string('Header text')
       })
     },
     example: (props) => (

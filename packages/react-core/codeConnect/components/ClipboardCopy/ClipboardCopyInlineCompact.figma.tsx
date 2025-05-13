@@ -1,4 +1,3 @@
-import { type ReactElement, type JSX } from 'react';
 import figma from '@figma/code-connect';
 import { ClipboardCopy } from '@patternfly/react-core';
 

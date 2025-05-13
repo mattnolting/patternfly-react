@@ -2,28 +2,9 @@
   "codeConnect": {
     "parser": "react",
     "include": [
-      "components/Badge/*.tsx",
-      "components/Banner/*.tsx",
-      "components/Brand/*.tsx",
-      "components/Breadcrumbs/*.tsx",
-      "components/Button/*.tsx",
-      "components/Card/*.tsx",
-      "components/Checkbox/*.tsx",
-      "components/Chip/*.tsx",
-      "components/ClipboardCopy/*.tsx",
-      "components/CodeBlock/*.tsx",
-      "components/CodeEditor/*.tsx",
-      "components/DataList/*.tsx",
-      "components/DescriptionList/*.tsx",
-      "components/Divider/*.tsx",
-      "components/Drawer/*.tsx",
-      "components/Dropdown/*.tsx",
-      "components/EmptyState/*.tsx",
-      "components/Expandable/*.tsx",
-      "components/FileUpload/*.tsx"
+      "components/TreeView/*.tsx"
     ],
     "paths": {
-      "@patternfly/react-core": ["packages/react-core/src/index.ts"],
       "src/components": "src/components"
     },
     "aliases": {

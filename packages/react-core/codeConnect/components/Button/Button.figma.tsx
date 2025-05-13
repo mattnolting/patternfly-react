@@ -1,9 +1,8 @@
 import figma from '@figma/code-connect';
-import { Button, Badge, IconWrapper } from '@patternfly/react-core';
+import { Button } from '@patternfly/react-core';
 
 /**
  * PatternFly Button component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/Button
  */
 
 /**
