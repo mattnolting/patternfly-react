@@ -19,28 +19,20 @@ figma.connect(
 
       // nested props
       leftItem: figma.nestedProps('Base components/Toggle groups parts', {
-        text: figma.string('Text', 'Option')
+        text: figma.string('Text')
       }),
       middleItem1: figma.nestedProps('Base components/Toggle groups parts', {
-        text: figma.string('Text', 'Option')
+        text: figma.string('Text')
       }),
       middleItem2: figma.nestedProps('Base components/Toggle groups parts', {
-        text: figma.string('Text', 'Option')
+        text: figma.string('Text')
       }),
       rightItem: figma.nestedProps('Base components/Toggle groups parts', {
-        text: figma.string('Text', 'Option')
+        text: figma.string('Text')
       }),
 
       children: figma.children('*')
     },
-    example: (props) => (
-      <ToggleGroup aria-label="Toggle group example" size={props.size}>
-        <ToggleGroupItem text={props.leftItem.text} buttonId="toggle-group-item-1left" />
-        <ToggleGroupItem text={props.middleItem1.text} buttonId="toggle-group-item-2middle" />
-        <ToggleGroupItem text={props.middleItem2.text} buttonId="toggle-group-item-3middle" />
-        <ToggleGroupItem text={props.rightItem.text} buttonId="toggle-group-item-4right" />
-        {props.children}
-      </ToggleGroup>
-    )
+    example: (props) => <ToggleGroup aria-label="Toggle group example">{props.children}</ToggleGroup>
   }
 );

@@ -11,13 +11,13 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=8034-7676&t=IzSunfrnw18ti37Y-11',
   {
     props: {
-      // Boolean
+      // boolean
       isExpanded: figma.boolean('Show Footer actions'),
       isInline: figma.boolean('Has tabs'),
       isResizable: figma.boolean('Is resizable'),
       isStatic: figma.boolean('Has action icon'),
 
-      // Enum
+      // enum
       position: figma.enum('Position', {
         'Right - In Main Content Area': 'end',
         'Left - Full Page': 'start',
@@ -33,7 +33,6 @@ figma.connect(
       <Drawer
         isExpanded={props.isExpanded}
         isInline={props.isInline}
-        isResizable={props.isResizable}
         isStatic={props.isStatic}
         position={props.position}
       >

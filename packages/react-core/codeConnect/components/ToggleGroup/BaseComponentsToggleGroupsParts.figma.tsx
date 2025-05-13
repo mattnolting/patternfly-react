@@ -12,7 +12,7 @@ figma.connect(
     props: {
       hasText: figma.boolean('Has text'),
       hasIcon: figma.boolean('Has icon'),
-      text: figma.string('Text', 'Option'),
+      text: figma.string('Text'),
       position: figma.enum('Position', {
         Left: 'left',
         Middle: 'middle',

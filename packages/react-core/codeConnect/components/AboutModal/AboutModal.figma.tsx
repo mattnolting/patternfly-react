@@ -5,13 +5,14 @@ import { AboutModal } from '@patternfly/react-core';
  * PatternFly About Modal component integration for Figma Code Connect
  */
 
-
 figma.connect(
   AboutModal,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2879-13973&m=dev',
+  'https://www.figma.com/file/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6%3A-Components-Test?node-id=5047-695',
   {
     props: {
-      productName: figma.string('Product name', 'Product name'),
+      // string
+      productName: figma.string('Product name'),
+
       trademark: 'Copyright © 2024',
       brandImageSrc: 'Brand Image Source',
       brandImageAlt: 'Brand Image Alt Text',

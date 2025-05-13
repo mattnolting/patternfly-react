@@ -21,6 +21,7 @@ figma.connect(
       isExpanded: figma.enum('State', {
         Expanded: true
       }),
+
       children: figma.children('*')
     },
     example: (props) => (

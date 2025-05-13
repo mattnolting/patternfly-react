@@ -11,25 +11,21 @@ figma.connect(
   {
     props: {
       inset: figma.boolean('Inset'),
-      type: figma.enum('Type', {
+      variant: figma.enum('Type', {
         Default: 'default',
         Boxed: 'boxed',
         'Boxed Light': 'boxed-light',
         'Horizontal overflow': 'horizontal-overflow',
         'With overflow': 'with-overflow'
-      })
+      }),
+      isSecondary: true,
+      component: 'nav',
+
+      children: figma.children('*')
     },
     example: (props) => (
-      <Tabs
-        variant={props.type}
-        inset={props.inset}
-        isSecondary={true}
-        component="nav"
-        aria-label="Horizontal subtabs example"
-      >
-        <Tab eventKey={0} title="Subtab 1" />
-        <Tab eventKey={1} title="Subtab 2" />
-        <Tab eventKey={2} title="Subtab 3" />
+      <Tabs aria-label="Horizontal subtabs example">
+        {props.children}
       </Tabs>
     )
   }

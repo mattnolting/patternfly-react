@@ -11,8 +11,7 @@ figma.connect(
   {
     props: {
       showMenu: figma.boolean('Show menu'),
-      type: figma.enum('Type', {
-        Default: 'default',
+      isCompact: figma.enum('Type', {
         Compact: 'compact'
       }),
       menu: figma.enum('Menu', {
@@ -22,10 +21,10 @@ figma.connect(
     },
     example: (props) => (
       <Pagination
-        itemCount={523}
+        itemCount={99}
         perPage={20}
         page={10}
-        variant={props.type}
+        isCompact={props.isCompact}
         toggleTemplate={props.showMenu}
         isDisabled={false}
         dropDirection={props.menu}

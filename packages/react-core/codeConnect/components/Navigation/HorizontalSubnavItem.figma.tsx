@@ -1,4 +1,3 @@
-import React from "react"
 import { HorizontalSubnavItem } from "./HorizontalSubnavItem"
 import figma from "@figma/code-connect"
 

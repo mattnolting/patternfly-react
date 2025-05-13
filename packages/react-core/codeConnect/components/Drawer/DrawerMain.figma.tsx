@@ -1,5 +1,5 @@
 import figma from '@figma/code-connect';
-import { DrawerMain } from '@patternfly/react-core';
+import { DrawerContent, DrawerContentBody } from '@patternfly/react-core';
 
 /**
  * PatternFly DrawerMain component integration for Figma Code Connect
@@ -7,18 +7,21 @@ import { DrawerMain } from '@patternfly/react-core';
  */
 
 figma.connect(
-  DrawerMain,
+  DrawerContent,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=35586-211216&m=dev',
   {
     props: {
       // String
-      className: figma.enum('Position', {
-        Default: '',
-        Left: 'pf-m-position-left'
+      isPositionEnd: figma.enum('Position', {
+        Left: true
       }),
 
       children: figma.children('*')
     },
-    example: (props) => <DrawerMain className={props.className}>{props.children}</DrawerMain>
+    example: (props) => (
+      <DrawerContent>
+        <DrawerContentBody panelContent={props.children} />
+      </DrawerContent>
+    )
   }
 );

@@ -7,30 +7,30 @@ import { MenuToggle } from '@patternfly/react-core';
 
 figma.connect(
   MenuToggle,
-  "https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=7829-30614&m=dev",
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=7829-30614&m=dev',
   {
     props: {
-      hasToggleText: figma.boolean("Toggle text"),
-      showBadge: figma.boolean("Show Badge"),
-      showCheckbox: figma.boolean("Show Checkbox"),
-      showCustomIcon: figma.boolean("Show Custom Icon"),
-      showAvatar: figma.boolean("Show Avatar"),
-      toggleText: figma.string("✏️ Toggle Text"),
-      variant: figma.enum("Style", {
-        Default: "default",
-        "Plain - Icon": "plain",
-        "Plain text": "plain"
+      hasToggleText: figma.boolean('Toggle text'),
+      showBadge: figma.boolean('Show Badge'),
+      showCheckbox: figma.boolean('Show Checkbox'),
+      showCustomIcon: figma.boolean('Show Custom Icon'),
+      showAvatar: figma.boolean('Show Avatar'),
+      toggleText: figma.string('✏️ Toggle Text'),
+      variant: figma.enum('Style', {
+        Default: 'default',
+        'Plain - Icon': 'plain',
+        'Plain text': 'plain'
       }),
-      state: figma.enum("State", {
-        Default: "default",
-        Disabled: "disabled",
-        Selected: "selected",
-        Hover: "hover",
-        Danger: "danger",
-        Warning: "warning",
-        Success: "success"
+      state: figma.enum('State', {
+        Default: 'default',
+        Disabled: 'disabled',
+        Selected: 'selected',
+        Hover: 'hover',
+        Danger: 'danger',
+        Warning: 'warning',
+        Success: 'success'
       }),
-      isDisabled: figma.enum("State", {
+      isDisabled: figma.enum('State', {
         Disabled: true,
         Default: false,
         Selected: false,

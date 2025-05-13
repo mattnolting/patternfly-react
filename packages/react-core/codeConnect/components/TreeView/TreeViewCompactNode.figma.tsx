@@ -1,41 +1,28 @@
 import figma from '@figma/code-connect';
-import { TreeView } from '@patternfly/react-core';
-import { TreeNodeBaseComponent } from './TreeNodeBaseComponent';
+import { TreeViewListItem } from '@patternfly/react-core';
 
 /**
- * PatternFly TreeView - Compact Node integration for Figma Code Connect
+ * PatternFly TreeNodeBaseComponent integration for Figma Code Connect
  */
 
 figma.connect(
-  TreeView,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=12615-3260&m=dev',
+  TreeViewListItem,
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=12615-2825&m=dev',
   {
     props: {
-      state: figma.enum('State', {
-        Default: 'default',
-        Hover: 'hover',
-        Selected: 'selected',
-        'Expanded - Not Selected': 'expanded-not-selected'
-      }),
-      expandable: figma.boolean('Expandable')
+      // object
+      indent: {
+        lvl1Indent: figma.boolean('Lvl 1 Indent'),
+        lvl3Indent: figma.boolean('Lvl 3 Indent'),
+        lvl4Indent: figma.boolean('Lvl 4 Indent')
+      },
+
+      children: figma.children('*')
     },
     example: (props) => (
-      <TreeView variant="compact">
-        <TreeNodeBaseComponent text="Tree node" showCaret />
-        <TreeNodeBaseComponent text="Tree node" showCaret>
-          <TreeNodeBaseComponent text="Tree node" showCaret />
-          <TreeNodeBaseComponent text="Tree node" />
-          <TreeNodeBaseComponent text="Tree node" showCaret />
-        </TreeNodeBaseComponent>
-        <TreeNodeBaseComponent text="Tree node" showCaret />
-        <TreeNodeBaseComponent text="Tree node" showCaret />
-        <TreeNodeBaseComponent text="Tree node" showCaret />
-        <TreeNodeBaseComponent text="Tree node" showCaret />
-        <TreeNodeBaseComponent text="Tree node" showCaret />
-        <TreeNodeBaseComponent text="Tree node" showCaret />
-        <TreeNodeBaseComponent text="Tree node" showCaret />
-        <TreeNodeBaseComponent text="Tree node" showCaret />
-      </TreeView>
+      <TreeViewListItem isCompact indent={props.indent}>
+        {props.children}
+      </TreeViewListItem>
     )
   }
 );

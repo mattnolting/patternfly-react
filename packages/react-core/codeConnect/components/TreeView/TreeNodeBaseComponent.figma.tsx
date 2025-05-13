@@ -10,21 +10,30 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=12615-3269&m=dev',
   {
     props: {
+      // string
       text: figma.string('Text'),
+
+      // boolean
+      defaultText: figma.boolean('Default Text'),
+      endNodeGuide: figma.boolean('End Node Guide'),
+      noCaretIndent: figma.boolean('No Caret Indent'),
+      nodeGuide: figma.boolean('Node Guide'),
+      sepSelectionText: figma.boolean('Sep. Selection Text'),
+      showBadge: figma.boolean('Show Badge'),
+      showCaret: figma.boolean('Show Caret'),
       withIcon: figma.boolean('With Icon'),
       withActions: figma.boolean('With Actions'),
       withCheckbox: figma.boolean('With Checkbox'),
-      showBadge: figma.boolean('Show Badge'),
-      defaultText: figma.boolean('Default Text'),
-      sepSelectionText: figma.boolean('Sep. Selection Text'),
-      nodeGuide: figma.boolean('Node Guide'),
-      endNodeGuide: figma.boolean('End Node Guide'),
-      showCaret: figma.boolean('Show Caret'),
-      noCaretIndent: figma.boolean('No Caret Indent'),
-      lvl1Indent: figma.boolean('Lvl 1 Indent'),
-      lvl2Indent: figma.boolean('Lvl 2 Indent'),
-      lvl3Indent: figma.boolean('Lvl 3 Indent'),
-      lvl4Indent: figma.boolean('Lvl 4 Indent')
+
+      // object
+      indent: {
+        lvl1Indent: figma.boolean('Lvl 1 Indent'),
+        lvl2Indent: figma.boolean('Lvl 2 Indent'),
+        lvl3Indent: figma.boolean('Lvl 3 Indent'),
+        lvl4Indent: figma.boolean('Lvl 4 Indent')
+      },
+
+      children: figma.children('*')
     },
     example: (props) => (
       <TreeViewListItem
@@ -39,8 +48,10 @@ figma.connect(
         useLastGuideLine={props.endNodeGuide}
         expandable={props.showCaret}
         inset={props.noCaretIndent}
-        indent={props.lvl1Indent || props.lvl2Indent || props.lvl3Indent || props.lvl4Indent}
-      />
+        indent={props.indent}
+      >
+        {props.children}
+      </TreeViewListItem>
     )
   }
 );

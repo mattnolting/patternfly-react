@@ -12,38 +12,25 @@ figma.connect(
   {
     props: {
       // string
-      abbreviatedContent: figma.string('✏️ Abbreviated content', '21 Jan 2019'),
-      defaultTimestampContent: figma.string('✏️ Default timestamp content', 'Thursday, 21 January 2019, 9:38 PM EST'),
-      numericContent: figma.string('✏️ Numeric content', '01/21/2019'),
-      withoutDay: figma.string('✏️ Without day', 'January 2019, 9:38 PM EST'),
-      withoutTime: figma.string('✏️ Without time', '21 January 2019'),
+      abbreviatedContent: figma.string('✏️ Abbreviated content'),
+      defaultTimestampContent: figma.string('✏️ Default timestamp content'),
+      numericContent: figma.string('✏️ Numeric content'),
+      withoutDay: figma.string('✏️ Without day'),
+      withoutTime: figma.string('✏️ Without time'),
 
       // boolean
-      withTooltipUnderline: figma.boolean('With tooltip underline'),
+      tooltipUnderline: figma.boolean('With tooltip underline'),
 
       // enum
-      format: figma.enum('Format', {
-        Default: 'default',
-        'Without time': 'without-time',
-        'Without day': 'without-day',
-        Abbreviated: 'abbreviated',
-        Numeric: 'numeric'
-      })
+      content: figma.enum('Format', {
+        Default: figma.string('✏️ Default timestamp content'),
+        'Without time': figma.string('✏️ Without time'),
+        'Without day': figma.string('✏️ Without day'),
+        Abbreviated: figma.string('✏️ Abbreviated content'),
+        Numeric: figma.string('✏️ Numeric content')
+      }),
+      children: figma.children('*')
     },
-    example: (props) => {
-      let dateString = props.defaultTimestampContent;
-
-      if (props.format === 'without-time') {
-        dateString = props.withoutTime;
-      } else if (props.format === 'without-day') {
-        dateString = props.withoutDay;
-      } else if (props.format === 'abbreviated') {
-        dateString = props.abbreviatedContent;
-      } else if (props.format === 'numeric') {
-        dateString = props.numericContent;
-      }
-
-      return <Timestamp date={dateString} displayFormat={props.format} tooltip={props.withTooltipUnderline} />;
-    }
+    example: (props) => <Timestamp date={props.content} tooltip={props.tooltipUnderline} />
   }
 );

@@ -1,5 +1,5 @@
 import figma from '@figma/code-connect';
-import { Toolbar, ToolbarContent, ToolbarItem } from '@patternfly/react-core';
+import { Toolbar, ToolbarContent } from '@patternfly/react-core';
 
 /**
  * PatternFly Toolbar component integration for Figma Code Connect
@@ -27,7 +27,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
-      <Toolbar id="toolbar-example" inset={{ default: 'insetNone' }}>
+      <Toolbar id="toolbar-example">
         <ToolbarContent>{props.children}</ToolbarContent>
       </Toolbar>
     )
