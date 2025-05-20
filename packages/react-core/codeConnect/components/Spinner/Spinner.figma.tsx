@@ -17,11 +17,8 @@ figma.connect(
         md: 'md',
         lg: 'lg',
         xl: 'xl'
-      }),
-
-      // string
-      ariaLabel: figma.string('Aria Label')
+      })
     },
-    example: (props) => <Spinner size={props.size} aria-label={props.ariaLabel} />
+    example: (props) => <Spinner size={props.size} />
   }
 );

@@ -12,7 +12,7 @@ figma.connect(
   {
     props: {
       // strings
-      text: figma.string('Text', 'Link text'),
+      text: figma.string('Text'),
 
       // variants
       type: figma.enum('Type', {
@@ -26,7 +26,7 @@ figma.connect(
       })
     },
     example: (props) => (
-      <Button isInline isDisabled={props.isDisabled} variant="link">
+      <Button isInline variant="link" isDisabled={props.isDisabled}>
         {props.text}
       </Button>
     )

@@ -25,7 +25,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
-      <Accordion isBordered={props.isBordered} displaySize={props.displaySize}>
+      <Accordion togglePosition={props.togglePosition} isBordered={props.isBordered} displaySize={props.displaySize}>
         {props.children}
       </Accordion>
     )

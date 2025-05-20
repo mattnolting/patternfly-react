@@ -18,7 +18,7 @@ figma.connect(
         Read: true,
       }),
       isDisabled: figma.enum('Type', {
-        disable: true
+        disabled: true
       })
     },
     example: (props) => <Badge title={props.title} isRead={props.isRead} isDisabled={props.isDisabled} />

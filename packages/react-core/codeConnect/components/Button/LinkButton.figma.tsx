@@ -11,38 +11,47 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1259-745&t=TMTA4Fpy1ljK4qQP-11',
   {
     props: {
-      iconEnd: figma.boolean('Icon right'),
-      iconStart: figma.boolean('Icon left'),
-      text: figma.string('Text'),
+      // instance
+      icon: figma.children('IconWrapper'),
 
-      type: figma.enum('Type', {
-        Default: 'default',
+      // string
+      buttonText: figma.string('Text'),
+
+      // boolean
+      iconStart: figma.boolean('Icon left', { true: figma.children('Spinner') }),
+      iconEnd: figma.boolean('Icon right', { true: figma.children('IconWrapper') }),
+
+      // enum
+      isClicked: figma.enum('State', { Clicked: true }),
+      isDisabled: figma.enum('State', { Disabled: true }),
+      size: figma.enum('Size', { Small: 'sm' }),
+
+      // enum
+      variant: figma.enum('Type', {
+        Primary: 'primary',
+        Secondary: 'secondary',
+        Tertiary: 'tertiary',
         Danger: 'danger',
-        'External link': 'external-link',
-        'Button with count': 'button-with-count',
-        Progress: 'progress'
-      }),
-      // state
-      isClicked: figma.enum('State', {
-        Clicked: true
-      }),
-      isDisabled: figma.enum('State', {
-        Disabled: true
+        'Secondary Danger': 'secondary-danger',
+        Warning: 'warning',
+        Progress: 'progress',
+        'Secondary Progress': 'secondary-progress'
       }),
 
-      size: figma.enum('Size', {
-        Default: 'default',
-        Small: 'small'
-      })
+      children: figma.children('*')
     },
     example: (props) => (
       <Button
-        text={props.text}
+        isInline
+        isLink
         isClicked={props.isClicked}
         isDisabled={props.isDisabled}
-        type={props.type}
         size={props.size}
-      />
+        icon={props.icon}
+        variant={props.variant}
+      >
+        {props.buttonText}
+      </Button>
     )
   }
 );

@@ -12,7 +12,7 @@ figma.connect(
   {
     props: {
       // string
-      expandedContentSectionText: figma.string('Expanded Text'),
+      expandedContentSectionText: figma.string('Expanded Truncate Text'),
       toggleTextExpanded: figma.string('Toggle Text Less'),
       toggleTextCollapsed: figma.string('Toggle Text More'),
 
@@ -24,11 +24,7 @@ figma.connect(
         'Expand Detached': true
       }),
       isExpanded: figma.enum('State', {
-        'Expanded Basic': true,
-        'Expand Detached': true,
-        'Expanded Indent': true,
-        'Expanded Custom Content': true,
-        'Expanded Custom with Component swap': true
+        Expanded: true
       })
     },
     example: (props) => (

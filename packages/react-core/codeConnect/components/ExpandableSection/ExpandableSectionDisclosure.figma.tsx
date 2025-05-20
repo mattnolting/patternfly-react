@@ -8,7 +8,7 @@ import { ExpandableSection } from '@patternfly/react-core';
 
 figma.connect(
   ExpandableSection,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2769-146&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2810-80&m=dev',
   {
     props: {
       // string
@@ -24,11 +24,10 @@ figma.connect(
         'Expand Detached': true
       }),
       isExpanded: figma.enum('State', {
-        'Expanded Basic': true,
-        'Expand Detached': true,
+        Expanded: true,
+        'Expanded Uncontrolled': true,
         'Expanded Indent': true,
-        'Expanded Custom Content': true,
-        'Expanded Custom with Component swap': true
+        'Expanded Custom Content': true
       })
     },
     example: (props) => (

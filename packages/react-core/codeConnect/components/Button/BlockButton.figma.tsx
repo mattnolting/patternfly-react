@@ -1,5 +1,5 @@
 import figma from '@figma/code-connect';
-import { Button } from '@patternfly/react-core';
+import { Button, Spinner } from '@patternfly/react-core';
 
 /**
  * PatternFly Block Button component integration for Figma Code Connect
@@ -12,6 +12,7 @@ figma.connect(
   {
     props: {
       // booleans
+      hasSpinner: figma.boolean('Icon Left'),
       iconEnd: figma.boolean('Icon Right'),
 
       // strings
@@ -23,8 +24,15 @@ figma.connect(
       }),
       isDisabled: figma.enum('State', {
         Disabled: true
-      })
+      }),
+
+      children: figma.children('*')
     },
-    example: (props) => <Button isClicked={props.isClicked} isDisabled={props.isDisabled} text={props.text} isBlock />
+    example: (props) => (
+      <Button isClicked={props.isClicked} isDisabled={props.isDisabled} isLoading={props.hasSpinner} isBlock>
+        {props.text}
+        {props.children}
+      </Button>
+    )
   }
 );

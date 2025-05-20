@@ -34,7 +34,9 @@ figma.connect(
       text: figma.string('Text')
     },
     example: (props) => (
-      <Button isClicked={props.isClicked} isDisabled={props.isDisabled} type={props.type} text={props.text} />
+      <Button isClicked={props.isClicked} isDisabled={props.isDisabled} variant={props.type}>
+        {props.text}
+      </Button>
     )
   }
 );

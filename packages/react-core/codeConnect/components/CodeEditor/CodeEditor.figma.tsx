@@ -11,22 +11,19 @@ figma.connect(
   {
     props: {
       // boolean
+      showsLineNumbers: figma.boolean('Show Line Numbers'),
+
+      // enum
       isEditable: figma.enum('Type', { Editable: true }),
       isEmptyState: figma.enum('Type', { 'Empty state': true }),
-      isMinimapVisible: figma.boolean('Mini Map'),
-      hasRuler: figma.boolean('Ruler'),
-      hasRulerErrors: figma.boolean('Rule'),
-      hasShortcuts: figma.boolean('With Shortcuts', { true: 'View Shortcuts' }),
-      showsLineNumbers: figma.boolean('Show Line Numbers'),
+      isMinimapVisible: figma.enum('Type', { 'Mini Map': true }),
     },
     example: (props) => (
       <CodeEditor
         emptyState={props.isEmptyState}
         isEditable={props.isEditable}
-        shortcutsPopoverButtonText={props.hasShortcuts}
         isLineNumbersVisible={props.showsLineNumbers}
         isMinimapVisible={props.isMinimapVisible}
-        language={Language.typescript}
       />
     )
   }

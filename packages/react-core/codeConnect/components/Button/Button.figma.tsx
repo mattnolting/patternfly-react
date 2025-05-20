@@ -15,30 +15,20 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1259-678&m=dev',
   {
     props: {
-      // booleans
-      iconStart: figma.boolean('Icon left', {
-        true: figma.children('IconWrapper')
-      }),
-      iconEnd: figma.boolean('Icon right', {
-        true: figma.children('IconWrapper')
-      }),
-      showCount: figma.boolean('Show Count'),
+      // string
       buttonText: figma.string('Button text'),
 
-      // enums
-      isClicked: figma.enum('State', {
-        Clicked: true
-      }),
+      // boolean
+      hasSpinner: figma.boolean('Icon Left'),
+      iconEnd: figma.boolean('Icon right', { true: figma.children('IconWrapper') }),
+      showCount: figma.boolean('Show Count'),
 
-      isDisabled: figma.enum('State', {
-        Disabled: true
-      }),
+      // enum
+      isClicked: figma.enum('State', { Clicked: true }),
+      isDisabled: figma.enum('State', { Disabled: true }),
+      size: figma.enum('Size', { Small: 'sm' }),
 
-      size: figma.enum('Size', {
-        Small: 'sm',
-        Default: 'md'
-      }),
-      // variants
+      // enum
       variant: figma.enum('Type', {
         Primary: 'primary',
         Secondary: 'secondary',
@@ -49,13 +39,20 @@ figma.connect(
         Progress: 'progress',
         'Secondary Progress': 'secondary-progress'
       }),
+
       children: figma.children('*')
     },
     example: (props) => (
-      <Button isClicked={props.isClicked} isDisabled={props.isDisabled} size={props.size} variant={props.variant}>
-        {props.iconStart}
+      <Button
+        isClicked={props.isClicked}
+        isDisabled={props.isDisabled}
+        size={props.size}
+        isLoading={props.hasSpinner}
+        variant={props.variant}
+      >
         {props.buttonText}
-        {props.iconEnd}
+        {/* TODO: Map badge to countOptions */}
+        {props.children}
       </Button>
     )
   }

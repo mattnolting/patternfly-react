@@ -7,7 +7,7 @@ import { AboutModal } from '@patternfly/react-core';
 
 figma.connect(
   AboutModal,
-  'https://www.figma.com/file/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6%3A-Components-Test?node-id=5047-695',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2879-13973&t=15CEJpGgVui7qP5Q-11',
   {
     props: {
       // string

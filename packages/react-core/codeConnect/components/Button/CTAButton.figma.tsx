@@ -22,6 +22,10 @@ figma.connect(
         Inline: 'inline'
       })
     },
-    example: (props) => <Button text={props.text} type={props.type} size="lg" />
+    example: (props) => (
+      <Button variant={props.type} size="lg">
+        {props.text}
+      </Button>
+    )
   }
 );
