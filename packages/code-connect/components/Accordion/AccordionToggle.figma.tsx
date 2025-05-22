@@ -1,31 +1,36 @@
 import figma from '@figma/code-connect';
 import { AccordionItem, AccordionToggle, AccordionContent } from '@patternfly/react-core';
 
-// Documentation for AccordionToggle can be found at https://www.patternfly.org/components/accordion
-// Note: Adding on onClick event is recommended to initialize AccordionToggle
+/**
+ * PatternFly Accordion component integration for Figma Code Connect
+ */
 
 figma.connect(
   AccordionToggle,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1423-687',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1423-687&m=dev',
   {
     props: {
       // string
       expandText: figma.string('Expand Text'),
 
-      // enum
-      open: figma.enum('State', { Expanded: true }),
+      // enums
       toggleTextExpanded: figma.enum('State', {
         Default: figma.string('Toggle Text'),
         Hover: figma.string('Toggle Text'),
         Expanded: figma.string('Toggle Text Expanded')
-      })
+      }),
+
+      // enum
+      isExpanded: figma.enum('State', {
+        Expanded: true
+      }),
+
+      children: figma.children('*')
     },
     example: (props) => (
-      <AccordionItem isExpanded={props.open}>
-        <AccordionToggle onClick={() => {}} id="<your-id>">
-          {props.toggleTextExpanded}
-        </AccordionToggle>
-        <AccordionContent id="accordion-content-example">
+      <AccordionItem isExpanded={props.isExpanded}>
+        <AccordionToggle>{props.toggleTextExpanded}</AccordionToggle>
+        <AccordionContent>
           <p>{props.expandText}</p>
         </AccordionContent>
       </AccordionItem>

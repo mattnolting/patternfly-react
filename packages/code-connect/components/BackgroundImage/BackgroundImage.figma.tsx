@@ -1,12 +1,15 @@
 import figma from '@figma/code-connect';
 import { BackgroundImage } from '@patternfly/react-core';
 
-// Documentation for BackgroundImage can be found at https://www.patternfly.org/components/background-image
+/**
+ * PatternFly BackgroundImage component integration for Figma Code Connect
+ */
 
 figma.connect(
   BackgroundImage,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2722-13543',
+  'https://www.figma.com/file/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6%3A-Components-Test?node-id=5047-695',
   {
+    props: {},
     example: () => <BackgroundImage src="/assets/images/pf-background.svg" />
   }
 );

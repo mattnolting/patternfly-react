@@ -2,7 +2,7 @@
   "codeConnect": {
     "parser": "react",
     "include": [
-      "components/Alert/*.tsx"
+      "components/LoginPage/*.tsx"
     ],
     "paths": {
       "src/components": "src/components"

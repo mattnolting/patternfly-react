@@ -1,18 +1,19 @@
 import figma from '@figma/code-connect';
 import { Alert } from '@patternfly/react-core';
 
-// Documentation for Alert can be found at https://www.patternfly.org/components/alert
+/**
+ * PatternFly Alert component integration for Figma Code Connect
+ */
 
 figma.connect(
   Alert,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1110-2754',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1110-2754&m=dev',
   {
     props: {
-      // string
-      description: figma.string('✏️ Title'),
+      // strings
       title: figma.string('✏️ Title'),
 
-      // enum
+      // variants
       variant: figma.enum('Type', {
         Info: 'info',
         Success: 'success',
@@ -21,12 +22,11 @@ figma.connect(
         Custom: 'custom'
       }),
 
+      // children
       children: figma.children('*')
     },
     example: (props) => (
-      <Alert isInline isPlain title={props.title} variant={props.variant} variantLabel={props.variant}>
-        {props.description}
-      </Alert>
+      <Alert variant={props.variant} title={props.title} variantLabel={props.variant} isInline isPlain />
     )
   }
 );
