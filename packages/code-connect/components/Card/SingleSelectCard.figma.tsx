@@ -28,7 +28,7 @@ figma.connect(
         isSelectable={props.isSelectable}
         isDisabled={props.isDisabled}
         isCompact={props.isCompact}
-        isExpandable={props.isExpandable}
+        isExpanded={props.isExpandable}
       >
         {props.children}
       </Card>

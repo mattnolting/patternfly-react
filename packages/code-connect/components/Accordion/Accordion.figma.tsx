@@ -2,7 +2,8 @@ import figma from '@figma/code-connect';
 import { Accordion } from '@patternfly/react-core';
 
 /**
- * PatternFly Accordion component integration for Figma Code Connect
+ * PatternFly AccordionToggle integration for Figma Code Connect
+ * @patternfly https://www.patternfly.org/components/accordion
  */
 
 figma.connect(
