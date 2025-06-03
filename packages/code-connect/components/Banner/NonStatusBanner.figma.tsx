@@ -1,5 +1,10 @@
-import { Banner } from '@patternfly/react-core';
 import figma from '@figma/code-connect';
+import { Banner } from '@patternfly/react-core';
+
+/**
+ * PatternFly Banner component integration for Figma Code Connect
+ * @see https://www.patternfly.org/components/banner
+ */
 
 figma.connect(
   Banner,
@@ -7,7 +12,6 @@ figma.connect(
   {
     props: {
       text: figma.string('✏️ Center text'),
-      // enums
       color: figma.enum('Color', {
         Red: 'red',
         Orangered: 'orangered',
@@ -18,14 +22,8 @@ figma.connect(
         Blue: 'blue',
         Purple: 'purple',
         Gray: 'gray'
-      }),
-      icon: figma.boolean('Icon', {
-        true: figma.instance('Icon Swap'),
-        false: undefined
       })
     },
-    example: (props) => (
-      <Banner color={props.color}>{props.icon}{props.text}</Banner>
-    )
+    example: (props) => <Banner color={props.color}>{props.text}</Banner>
   }
 );

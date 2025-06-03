@@ -1,4 +1,4 @@
-// import figma from '@figma/code-connect'
+// import figma from '@figma/code-connect';
 // import { CheckboxGroup } from '@patternfly/react-core';
 
 // figma.connect(

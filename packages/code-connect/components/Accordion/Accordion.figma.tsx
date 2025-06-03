@@ -10,7 +10,7 @@ figma.connect(
   'https://www.figma.com/file/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6%3A-Components-Test?node-id=2621-623',
   {
     props: {
-      // enums
+      // enum
       isBordered: figma.enum('Type', {
         Bordered: true,
         'Large Bordered': true

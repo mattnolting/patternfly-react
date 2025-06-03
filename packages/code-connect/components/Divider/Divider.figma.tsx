@@ -10,16 +10,18 @@ figma.connect(
        * TODO: This is a good example of how properties in Figma and props in React would benefit from naming consistency
        * React is looking for orientation, figma is defining orientation as 'Direction'
        */
-      isHorizontal: figma.enum('Direction', {
-        Horizontal: { default: 'horizontal' }
+      orientation: figma.enum('Direction', {
+        Horizontal: { default: 'horizontal' as const },
+        Vertical: { default: 'vertical' as const }
       }),
       /**
        * TODO: Figma allows optional insets, but default to insetMd
        */
       inset: figma.boolean('With insets', {
-        true: { default: 'insetMd' }
+        true: { default: 'insetMd' as const },
+        false: { default: 'insetNone' as const }
       })
     },
-    example: (props) => <Divider orientation={props.isHorizontal} inset={props.inset} />
+    example: (props) => <Divider orientation={props.orientation} inset={props.inset} />
   }
 );

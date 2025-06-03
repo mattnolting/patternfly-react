@@ -29,6 +29,6 @@ figma.connect(
         Compact: 'compact'
       })
     },
-    example: (props) => <ToggleGroupItem text="Option" buttonId="toggle-group-item-1left" />
+    example: (props) => <ToggleGroupItem text={props.text} buttonId="toggle-group-item-1left" />
   }
 );

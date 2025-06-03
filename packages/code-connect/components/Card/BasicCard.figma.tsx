@@ -12,12 +12,9 @@ figma.connect(
   {
     props: {
       // boolean
-      // isClicked: figma.boolean('Is clicked'),
-      // isClickable: figma.boolean('Is clickable'),
-      // isDisabled: figma.boolean('Is disabled'),
-      // isExpanded: figma.boolean('Is expanded'),
-      // isSelectable: figma.boolean('Is selectable'),
-      // isSelected: figma.boolean('Is selected'),
+      isSelectable: figma.boolean('Is selectable'),
+      isClickable: figma.boolean('Is clickable'),
+      isDisabled: figma.boolean('Is disabled'),
 
       // enum
       isCompact: figma.enum('Size', { Compact: true }),
@@ -30,16 +27,13 @@ figma.connect(
     },
     example: (props) => (
       <Card
-        variant={props.variant}
-        // isClickable={props.isClickable}
-        // isClicked={props.isClicked}
-        // isDisabled={props.isDisabled}
         isCompact={props.isCompact}
-        // isExpanded={props.isExpanded}
+        isSelectable={props.isSelectable}
+        isClickable={props.isClickable}
+        isDisabled={props.isDisabled}
+        variant={props.variant}
         isLarge={props.isLarge}
         isPlain={props.isPlain}
-        // isSelectable={props.isSelectable}
-        // isSelected={props.isSelected}
       >
         {props.children}
       </Card>

@@ -23,11 +23,13 @@ figma.connect(
         Read: 'read',
         Unread: 'unread',
         'Unread - Needs attention': 'unread---needs-attention'
-      })
+      }),
+      icon: figma.children('IconWrapper'),
+      children: figma.children('*')
     },
     example: (props) => (
-      <Button variant="stateful" isExpanded={props.isExpanded} icon={props.showIcon}>
-        {props.text}
+      <Button variant="stateful" isExpanded={props.isExpanded} icon={props.icon}>
+        {props.children}
       </Button>
     )
   }

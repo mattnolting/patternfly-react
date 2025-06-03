@@ -1,21 +1,28 @@
 import figma from '@figma/code-connect';
 import { MultipleFileUpload } from '@patternfly/react-core';
 
+/**
+ * PatternFly Integration for Figma Code Connect
+ * TODO: Add proper documentation
+ */
+
 figma.connect(
-  MultipleFileUploadDragArea,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=8949-96079&m=dev',
+  MultipleFileUpload,
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=8949-96079',
   {
     props: {
-      state: figma.enum('State', {
-        Default: 'default',
-        'Drag Over': 'drag-over'
-      }),
-      isHorizontal: figma.enum('Layout', {
-        Horizontal: true
-      }),
-
-      children: figma.children('*')
+      titleText: figma.string('Title text'),
+      infoText: figma.string('Info text'),
+      browseButtonText: figma.string('Button text'),
+      isUploadButtonHidden: figma.boolean('Hide upload button')
     },
-    example: (props) => <MultipleFileUpload children={props.children} isHorizontal={props.isHorizontal} />
+    example: (props) => (
+      <MultipleFileUpload
+        titleText={props.titleText}
+        infoText={props.infoText}
+        browseButtonText={props.browseButtonText}
+        isUploadButtonHidden={props.isUploadButtonHidden}
+      />
+    )
   }
 );

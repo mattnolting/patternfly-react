@@ -1,5 +1,5 @@
 import figma from '@figma/code-connect';
-import { Tabs, Tab } from '@patternfly/react-core';
+import { Tabs } from '@patternfly/react-core';
 
 /**
  * PatternFly Horizontal Subtabs integration for Figma Code Connect
@@ -23,10 +23,6 @@ figma.connect(
 
       children: figma.children('*')
     },
-    example: (props) => (
-      <Tabs aria-label="Horizontal subtabs example">
-        {props.children}
-      </Tabs>
-    )
+    example: (props) => <Tabs aria-label="Horizontal subtabs example">{props.children}</Tabs>
   }
 );

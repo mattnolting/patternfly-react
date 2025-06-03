@@ -23,7 +23,7 @@ figma.connect(
         variant="control"
         aria-label="Icon button"
         // TODO: Map icon to children
-        icon={icon}
+        icon={props.icon}
         isClicked={props.isClicked}
         isDisabled={props.isDisabled}
         hasNoPadding={props.hasNoPadding}

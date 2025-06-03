@@ -14,9 +14,7 @@ figma.connect(
       title: figma.string('Text'),
 
       // enums
-      isRead: figma.enum('Type', {
-        Read: true,
-      }),
+      isRead: figma.enum('Type', { Read: true }),
       isDisabled: figma.enum('Type', {
         disabled: true
       })

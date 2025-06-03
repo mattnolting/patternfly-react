@@ -1,5 +1,6 @@
 import figma from '@figma/code-connect';
 import { Td } from '@patternfly/react-table';
+import { MenuToggle } from '@patternfly/react-core';
 
 /**
  * PatternFly Right Action Column integration for Figma Code Connect
@@ -18,7 +19,7 @@ figma.connect(
     },
     example: (props) => (
       <Td isActionCell={true} className="pf-v5-u-text-align-right" size={props.size}>
-        <KebabToggle aria-label="Actions" />
+        <MenuToggle aria-label="Actions" />
       </Td>
     )
   }

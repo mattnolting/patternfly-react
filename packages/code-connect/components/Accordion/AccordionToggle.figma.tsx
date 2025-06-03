@@ -13,14 +13,12 @@ figma.connect(
       // string
       expandText: figma.string('Expand Text'),
 
-      // enums
+      // enum
       toggleTextExpanded: figma.enum('State', {
         Default: figma.string('Toggle Text'),
         Hover: figma.string('Toggle Text'),
         Expanded: figma.string('Toggle Text Expanded')
       }),
-
-      // enum
       isExpanded: figma.enum('State', {
         Expanded: true
       }),

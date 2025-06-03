@@ -1,5 +1,5 @@
 import figma from '@figma/code-connect';
-import { ToggleGroup, ToggleGroupItem } from '@patternfly/react-core';
+import { ToggleGroup } from '@patternfly/react-core';
 
 /**
  * PatternFly ToggleGroup component integration for Figma Code Connect

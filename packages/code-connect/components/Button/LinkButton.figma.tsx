@@ -32,10 +32,7 @@ figma.connect(
         Secondary: 'secondary',
         Tertiary: 'tertiary',
         Danger: 'danger',
-        'Secondary Danger': 'secondary-danger',
-        Warning: 'warning',
-        Progress: 'progress',
-        'Secondary Progress': 'secondary-progress'
+        Warning: 'warning'
       }),
 
       children: figma.children('*')
@@ -43,7 +40,6 @@ figma.connect(
     example: (props) => (
       <Button
         isInline
-        isLink
         isClicked={props.isClicked}
         isDisabled={props.isDisabled}
         size={props.size}

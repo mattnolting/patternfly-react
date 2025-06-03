@@ -1,5 +1,9 @@
-import { EmptyState } from '@patternfly/react-core';
 import figma from '@figma/code-connect';
+import { EmptyState } from '@patternfly/react-core';
+
+/**
+ * PatternFly EmptyState integration for Figma Code Connect
+ */
 
 figma.connect(
   EmptyState,

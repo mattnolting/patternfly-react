@@ -18,8 +18,7 @@ figma.connect(
       type: figma.enum('Type', {
         Primary: 'primary',
         Secondary: 'secondary',
-        Tertiary: 'tertiary',
-        Inline: 'inline'
+        Tertiary: 'tertiary'
       })
     },
     example: (props) => (

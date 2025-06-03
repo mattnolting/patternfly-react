@@ -14,14 +14,12 @@ figma.connect(
       showsLineNumbers: figma.boolean('Show Line Numbers'),
 
       // enum
-      isEditable: figma.enum('Type', { Editable: true }),
       isEmptyState: figma.enum('Type', { 'Empty state': true }),
-      isMinimapVisible: figma.enum('Type', { 'Mini Map': true }),
+      isMinimapVisible: figma.enum('Type', { 'Mini Map': true })
     },
     example: (props) => (
       <CodeEditor
         emptyState={props.isEmptyState}
-        isEditable={props.isEditable}
         isLineNumbersVisible={props.showsLineNumbers}
         isMinimapVisible={props.isMinimapVisible}
       />

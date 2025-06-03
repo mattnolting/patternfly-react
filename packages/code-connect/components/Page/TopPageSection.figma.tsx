@@ -10,7 +10,7 @@ import figma from '@figma/code-connect'
  */
 
 figma.connect(
-  TopPageSection,
+  PageSection,
   "https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2104-8584&t=IzSunfrnw18ti37Y-11",
   {
     props: {
@@ -22,6 +22,6 @@ figma.connect(
         "In-Page Horizontal Nav": "in-page-horizontal-nav",
       }),
     },
-    example: (props) => <TopPageSection />,
+    example: (props) => <PageSection />,
   },
 )

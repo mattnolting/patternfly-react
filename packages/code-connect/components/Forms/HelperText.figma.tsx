@@ -10,7 +10,7 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=151-1670&t=lyan2LLnXsDppzjo-11',
   {
     props: {
-      helperText: figma.string('✏️ Helper text', 'This is helper text'),
+      helperText: figma.string('✏️ Helper text'),
       icon: figma.boolean('Icon'),
       type: figma.enum('Type', {
         Default: 'default',
@@ -21,9 +21,9 @@ figma.connect(
       })
     },
     example: (props) => (
-        <HelperText>
-          <HelperTextItem icon={props.icon} variant={props.type} content={props.helperText} />
-        </HelperText>
+      <HelperText>
+        <HelperTextItem icon={props.icon} variant={props.type} content={props.helperText} />
+      </HelperText>
     )
   }
 );
