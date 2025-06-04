@@ -2,7 +2,8 @@ import figma from '@figma/code-connect';
 import { ClipboardCopy } from '@patternfly/react-core';
 
 /**
- * PatternFly ClipboardCopyInlineCompact component integration for Figma Code Connect
+ * PatternFly AccordionToggle integration for Figma Code Connect
+ * @patternfly https://www.patternfly.org/components/clipboard-copy
  */
 
 figma.connect(
@@ -14,7 +15,7 @@ figma.connect(
       isActive: figma.enum('State', { Active: true }),
       isReadOnly: figma.enum('State', { 'Read only': true }),
       isExpanded: figma.enum('State', { Expanded: true }),
-      expansion: figma.enum('State', { 
+      expansion: figma.enum('State', {
         Expanded: 'expansion',
         false: undefined
       }),
@@ -22,7 +23,12 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
-      <ClipboardCopy isReadOnly={props.isReadOnly} variant={props.expansion} isExpanded={props.isExpanded} isActive={props.isActive}>
+      <ClipboardCopy
+        isReadOnly={props.isReadOnly}
+        variant={props.expansion}
+        isExpanded={props.isExpanded}
+        isActive={props.isActive}
+      >
         {props.children}
       </ClipboardCopy>
     )

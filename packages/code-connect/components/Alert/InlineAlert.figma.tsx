@@ -2,8 +2,8 @@ import figma from '@figma/code-connect';
 import { Alert } from '@patternfly/react-core';
 
 /**
- * PatternFly Alert component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/alert
+ * PatternFly Alert integration for Figma Code Connect
+ * @patternfly https://www.patternfly.org/components/alert
  */
 
 figma.connect(

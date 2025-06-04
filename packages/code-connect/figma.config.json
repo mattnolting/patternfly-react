@@ -2,10 +2,11 @@
   "codeConnect": {
     "parser": "react",
     "include": [
-      "components/AboutModal/*.tsx",
-      "components/Accordion/*.tsx",
-      "components/ActionList/*.tsx"
-      "components/Alert/*.tsx"
+      "components/Alert/*.tsx",
+      "components/Avatar/*.tsx",
+      "components/BackToTop/*.tsx",
+      "components/Backdrop/*.tsx",
+      "components/Badge/*.tsx"
     ],
     "paths": {
       "src/components": "src/components"

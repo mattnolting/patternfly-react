@@ -3,6 +3,7 @@ import { BackToTop } from '@patternfly/react-core';
 
 /**
  * PatternFly BackToTop integration for Figma Code Connect
+ * @patternfly https://www.patternfly.org/components/back-to-top
  */
 
 figma.connect(
