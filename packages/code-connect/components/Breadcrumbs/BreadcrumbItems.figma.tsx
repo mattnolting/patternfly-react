@@ -1,10 +1,6 @@
 import figma from '@figma/code-connect';
 import { BreadcrumbItem } from '@patternfly/react-core';
 
-/**
- * PatternFly BreadcrumbsItem integration for Figma Code Connect
- */
-
 figma.connect(
   BreadcrumbItem,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=3362-74&t=TMTA4Fpy1ljK4qQP-11',
@@ -24,6 +20,9 @@ figma.connect(
         'No link': 'no-link'
       })
     },
-    example: (props) => <BreadcrumbItem text={props.text} type={props.type} state={props.state} />
+    example: (props) => (
+      // Documentation for BreadcrumbItem can be found at https://www.patternfly.org/components/breadcrumb
+      <BreadcrumbItem text={props.text} type={props.type} state={props.state} />
+    )
   }
 );

@@ -1,11 +1,6 @@
 import figma from '@figma/code-connect';
 import { Button } from '@patternfly/react-core';
 
-/**
- * PatternFly Button component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/button
- */
-
 figma.connect(
   Button,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1259-678&m=dev',
@@ -29,11 +24,8 @@ figma.connect(
       })
     },
     example: (props) => (
-      <Button
-        isDisabled={props.isDisabled}
-        size={props.size}
-        variant={props.variant}
-      >
+      // Documentation for Button can be found at https://www.patternfly.org/components/button
+      <Button isDisabled={props.isDisabled} size={props.size} variant={props.variant}>
         {props.buttonText}
       </Button>
     )
