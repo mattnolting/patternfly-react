@@ -16,6 +16,9 @@ figma.connect(
         Compact: 'compact'
       })
     },
-    example: (props) => <Td isActionCell={true} width={10} size={props.size} />
+    example: (props) => (
+      // Documentation for Td can be found at https://www.patternfly.org/components/table
+      <Td isActionCell={true} width={10} size={props.size} />
+    )
   }
 );

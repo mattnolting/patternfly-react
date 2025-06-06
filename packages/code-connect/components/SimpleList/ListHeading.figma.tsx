@@ -8,6 +8,9 @@ figma.connect(
     props: {
       text: figma.string('Text')
     },
-    example: (props) => <ListHeading />
+    example: (props) => (
+      // Documentation for ListHeading can be found at https://www.patternfly.org/components/list
+      <ListHeading />
+    )
   }
 );

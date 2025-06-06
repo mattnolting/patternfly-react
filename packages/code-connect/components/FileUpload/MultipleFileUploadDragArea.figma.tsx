@@ -17,6 +17,7 @@ figma.connect(
       isUploadButtonHidden: figma.boolean('Hide upload button')
     },
     example: (props) => (
+      // Documentation for MultipleFileUpload can be found at https://www.patternfly.org/components/file-upload
       <MultipleFileUpload
         titleText={props.titleText}
         infoText={props.infoText}

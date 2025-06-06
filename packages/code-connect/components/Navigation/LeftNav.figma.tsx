@@ -2,7 +2,7 @@ import figma from '@figma/code-connect';
 import { Nav } from '@patternfly/react-core';
 
 /**
- * PatternFly Nav component integration for Figma Code Connect  
+ * PatternFly Nav component integration for Figma Code Connect
  * @see https://www.patternfly.org/components/navigation
  */
 
@@ -13,6 +13,9 @@ figma.connect(
     props: {
       children: figma.children('*')
     },
-    example: (props) => <Nav>{props.children}</Nav>
+    example: (props) => (
+      // Documentation for Nav can be found at https://www.patternfly.org/components/navigation
+      <Nav>{props.children}</Nav>
+    )
   }
 );

@@ -10,6 +10,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
+      // Documentation for LoginPage can be found at https://www.patternfly.org/components/login-page
       <LoginPage>
         {props.children}
         {props.content}

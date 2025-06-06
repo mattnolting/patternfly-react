@@ -33,6 +33,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
+      // Documentation for JumpLinks can be found at https://www.patternfly.org/components/jump-links
       <JumpLinksItem>
         {props.tabText}
         {props.children}

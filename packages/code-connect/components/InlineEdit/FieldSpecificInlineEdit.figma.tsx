@@ -25,6 +25,7 @@ figma.connect(
       valueText: figma.string('Value Text')
     },
     example: (props) => (
+      // Documentation for InlineEdit can be found at https://www.patternfly.org/components/inline-edit
       <InlineEdit
         isEditable={props.state === 'edit-view'}
         label={props.showTermLabel ? props.labelText : undefined}

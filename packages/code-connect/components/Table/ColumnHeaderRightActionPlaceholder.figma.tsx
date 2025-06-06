@@ -15,6 +15,9 @@ figma.connect(
         Compact: 'compact'
       })
     },
-    example: (props) => <Th size={props.size} />
+    example: (props) => (
+      // Documentation for Th can be found at https://www.patternfly.org/components/table
+      <Th size={props.size} />
+    )
   }
 );

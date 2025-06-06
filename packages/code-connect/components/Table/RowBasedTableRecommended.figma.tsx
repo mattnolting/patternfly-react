@@ -28,6 +28,7 @@ figma.connect(
       expandable: figma.boolean('Expandable')
     },
     example: (props) => (
+      // Documentation for Table can be found at https://www.patternfly.org/components/table
       <Table
         variant={props.type === 'basic-table' ? undefined : props.type}
         size={props.size}

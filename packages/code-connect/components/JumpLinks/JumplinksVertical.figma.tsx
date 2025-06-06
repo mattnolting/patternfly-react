@@ -21,6 +21,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
+      // Documentation for JumpLinks can be found at https://www.patternfly.org/components/jump-links
       <JumpLinks isExpanded={props.isExpanded}>
         <JumpLinksLabel>{props.labelText}</JumpLinksLabel>
         {props.children}

@@ -36,6 +36,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
+      // Documentation for TreeViewListItem can be found at https://www.patternfly.org/components/tree-view
       <TreeViewListItem
         text={props.text}
         icon={props.withIcon}

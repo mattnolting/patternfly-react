@@ -10,6 +10,9 @@ figma.connect(
       // showDescription: figma.boolean('Show description', { true: 'Field group header description' }),
       children: figma.children('*')
     },
-    example: (props) => <FormFieldGroupHeader actions={props.showAction}>{props.children}</FormFieldGroupHeader>
+    example: (props) => (
+      // Documentation for FormFieldGroupHeader can be found at https://www.patternfly.org/components/form-field-group
+      <FormFieldGroupHeader actions={props.showAction}>{props.children}</FormFieldGroupHeader>
+    )
   }
 );

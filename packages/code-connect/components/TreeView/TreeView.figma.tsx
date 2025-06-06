@@ -20,6 +20,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
+      // Documentation for TreeView can be found at https://www.patternfly.org/components/tree-view
       <TreeView isCompact indent={props.indent}>
         {props.children}
       </TreeView>

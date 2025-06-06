@@ -19,6 +19,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for Th can be found at https://www.patternfly.org/components/table
       <Th
         isDraggable={props.isDraggable}
         expandableAll={props.expandableAll}

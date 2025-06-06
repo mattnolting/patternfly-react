@@ -33,6 +33,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
+      // Documentation for Tooltip can be found at https://www.patternfly.org/components/tooltip
       <Tooltip content={props.content} position={props.position}>
         {props.children}
       </Tooltip>

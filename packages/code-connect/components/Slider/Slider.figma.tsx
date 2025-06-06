@@ -30,6 +30,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for Slider can be found at https://www.patternfly.org/components/slider
       <Slider
         areCustomStepsContinuous={props.type === 'continuous'}
         isDisabled={props.state === 'disabled'}

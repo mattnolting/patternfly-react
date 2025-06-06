@@ -17,6 +17,9 @@ figma.connect(
         Default: false
       })
     },
-    example: (props) => <NavItem isActive={props.isActive}>{props.navItem}</NavItem>
+    example: (props) => (
+      // Documentation for NavItem can be found at https://www.patternfly.org/components/navigation
+      <NavItem isActive={props.isActive}>{props.navItem}</NavItem>
+    )
   }
 );

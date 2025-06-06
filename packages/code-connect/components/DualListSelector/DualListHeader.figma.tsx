@@ -20,6 +20,9 @@ figma.connect(
 
       children: figma.children('*')
     },
-    example: (props) => <DualListHeader>{props.children}</DualListHeader>
+    example: (props) => (
+      // Documentation for DualListHeader can be found at https://www.patternfly.org/components/dual-list-selector
+      <DualListHeader>{props.children}</DualListHeader>
+    )
   }
 );

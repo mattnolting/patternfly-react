@@ -33,6 +33,9 @@ figma.connect(
 
       children: figma.children('*')
     },
-    example: (props) => <ToggleGroup aria-label="Toggle group example">{props.children}</ToggleGroup>
+    example: (props) => (
+      // Documentation for ToggleGroup can be found at https://www.patternfly.org/components/toggle-group
+      <ToggleGroup aria-label="Toggle group example">{props.children}</ToggleGroup>
+    )
   }
 );

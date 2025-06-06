@@ -19,6 +19,9 @@ figma.connect(
         xl: 'xl'
       })
     },
-    example: (props) => <Spinner size={props.size} />
+    example: (props) => (
+      // Documentation for Spinner can be found at https://www.patternfly.org/components/spinner
+      <Spinner size={props.size} />
+    )
   }
 );

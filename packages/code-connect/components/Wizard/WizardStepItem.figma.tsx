@@ -26,7 +26,13 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
-      <WizardNavItem content={props.navItem} isDisabled={props.isDisabled} isExpandable={props.isExpandable}>
+      // Documentation for WizardNavItem can be found at https://www.patternfly.org/components/wizard
+      <WizardNavItem
+        content={props.navItem}
+        isDisabled={props.isDisabled}
+        isExpandable={props.isExpandable}
+        stepIndex={props.stepIndex}
+      >
         {props.children}
       </WizardNavItem>
     )

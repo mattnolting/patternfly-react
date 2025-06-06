@@ -25,6 +25,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
+      // Documentation for DescriptionList can be found at https://www.patternfly.org/components/description-list
       <DescriptionList isFluid={props.isFluid} isCompact={props.isCompact} isHorizontal={props.isHorizontal}>
         {props.children}
       </DescriptionList>

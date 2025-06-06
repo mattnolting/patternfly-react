@@ -15,14 +15,13 @@ figma.connect(
       size: figma.enum('Size', {
         Small: 'small',
         Medium: 'medium',
-        Large: 'large',
+        Large: 'large'
       }),
       children: figma.children('*')
     },
     example: (props) => (
-      <Modal size={props.size}>
-        {props.children}
-      </Modal>
+      // Documentation for Modal can be found at https://www.patternfly.org/components/modal
+      <Modal size={props.size}>{props.children}</Modal>
     )
   }
 );

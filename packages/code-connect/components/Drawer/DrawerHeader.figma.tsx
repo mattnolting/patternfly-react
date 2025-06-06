@@ -13,6 +13,9 @@ figma.connect(
     props: {
       children: figma.children('*')
     },
-    example: (props) => <DrawerHeader>{props.children}</DrawerHeader>
+    example: (props) => (
+      // Documentation for DrawerHeader can be found at https://www.patternfly.org/components/drawer
+      <DrawerHeader>{props.children}</DrawerHeader>
+    )
   }
 );

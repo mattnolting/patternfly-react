@@ -36,6 +36,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for MenuItem can be found at https://www.patternfly.org/components/menu
       <MenuItem
         showLeadingIcon={props.showLeadingIcon}
         showActionIcon={props.showActionIcon}

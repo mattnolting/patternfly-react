@@ -34,6 +34,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for Progress can be found at https://www.patternfly.org/components/progress
       <Progress
         value={50}
         title={props.title}

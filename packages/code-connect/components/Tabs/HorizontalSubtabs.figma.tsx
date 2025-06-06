@@ -23,6 +23,9 @@ figma.connect(
 
       children: figma.children('*')
     },
-    example: (props) => <Tabs aria-label="Horizontal subtabs example">{props.children}</Tabs>
+    example: (props) => (
+      // Documentation for Tabs can be found at https://www.patternfly.org/components/tabs
+      <Tabs aria-label="Horizontal subtabs example">{props.children}</Tabs>
+    )
   }
 );

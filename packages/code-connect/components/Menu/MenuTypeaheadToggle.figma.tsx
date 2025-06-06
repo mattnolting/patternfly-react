@@ -29,6 +29,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for MenuTypeaheadToggle can be found at https://www.patternfly.org/components/menu
       <MenuTypeaheadToggle
         hasToggleText={props.hasToggleText}
         showAvatar={props.showAvatar}

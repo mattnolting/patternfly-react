@@ -30,6 +30,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for ErrorState can be found at https://www.patternfly.org/components/error-state
       <ErrorState variant={props.type}>
         <EmptyState
           variant={props.emptyStateProps.type}

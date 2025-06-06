@@ -14,6 +14,9 @@ figma.connect(
       headerTitle: figma.string('✏️ Header title'),
       children: figma.children('*')
     },
-    example: (props) => <NavGroup title={props.headerTitle}>{props.children}</NavGroup>
+    example: (props) => (
+      // Documentation for NavGroup can be found at https://www.patternfly.org/components/navigation
+      <NavGroup title={props.headerTitle}>{props.children}</NavGroup>
+    )
   }
 );

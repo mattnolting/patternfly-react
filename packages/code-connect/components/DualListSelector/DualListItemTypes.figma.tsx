@@ -13,6 +13,9 @@ figma.connect(
     props: {
       children: figma.children('*')
     },
-    example: (props) => <DualListSelectorListItem>{props.children}</DualListSelectorListItem>
+    example: (props) => (
+      // Documentation for DualListSelectorListItem can be found at https://www.patternfly.org/components/dual-list-selector
+      <DualListSelectorListItem>{props.children}</DualListSelectorListItem>
+    )
   }
 );

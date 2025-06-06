@@ -21,6 +21,9 @@ figma.connect(
         Icons: 'icons'
       })
     },
-    example: (props) => <InlineEditAction aria-label="Inline edit actions" />
+    example: (props) => (
+      // Documentation for InlineEditAction can be found at https://www.patternfly.org/components/inline-edit
+      <InlineEditAction aria-label="Inline edit actions" />
+    )
   }
 );

@@ -13,6 +13,9 @@
 //         Horizontal: "horizontal",
 //       }),
 //     },
-//     example: (props) => <RadioButtonGroup />,
-//   },
-// )
+//     example: (props) => (
+//       // Documentation for RadioButtonGroup can be found at https://www.patternfly.org/components/radio-button-group
+//       <RadioButtonGroup />
+//     )
+//   }
+// );

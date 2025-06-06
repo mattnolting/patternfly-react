@@ -31,6 +31,9 @@
 //         Reversed: "reversed",
 //       }),
 //     },
-//     example: (props) => <Switch />,
-//   },
-// )
+//     example: (props) => (
+//       // Documentation for Switch can be found at https://www.patternfly.org/components/switch
+//       <Switch />
+//     )
+//   }
+// );

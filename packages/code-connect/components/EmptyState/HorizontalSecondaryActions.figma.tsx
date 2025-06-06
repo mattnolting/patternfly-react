@@ -3,35 +3,36 @@ import figma from '@figma/code-connect';
 
 figma.connect(
   EmptyStateActions,
-  "https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2181-3490&m=dev",
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2181-3490&m=dev',
   {
     props: {
-      showInlineLink: figma.boolean("Show Inline link", {
+      showInlineLink: figma.boolean('Show Inline link', {
         true: true,
         false: false
       }),
-      showInlineLink2: figma.boolean("Show Inline link 2", {
+      showInlineLink2: figma.boolean('Show Inline link 2', {
         true: true,
         false: false
       }),
-      showInlineLink3: figma.boolean("Show Inline link 3", {
+      showInlineLink3: figma.boolean('Show Inline link 3', {
         true: true,
         false: false
       }),
-      showInlineLink4: figma.boolean("Show Inline link 4", {
+      showInlineLink4: figma.boolean('Show Inline link 4', {
         true: true,
         false: false
       }),
-      showInlineLink5: figma.boolean("Show Inline link 5", {
+      showInlineLink5: figma.boolean('Show Inline link 5', {
         true: true,
         false: false
       }),
-      showInlineLink6: figma.boolean("Show Inline link 6", {
+      showInlineLink6: figma.boolean('Show Inline link 6', {
         true: true,
         false: false
       })
     },
     example: (props) => (
+      // Documentation for EmptyStateActions can be found at https://www.patternfly.org/components/empty-state
       <EmptyStateActions>
         {props.showInlineLink && <Button variant="primary">Primary Action</Button>}
         {props.showInlineLink2 && <Button variant="secondary">Secondary Action</Button>}
@@ -40,6 +41,6 @@ figma.connect(
         {props.showInlineLink5 && <Button variant="link">Link Action 3</Button>}
         {props.showInlineLink6 && <Button variant="link">Link Action 4</Button>}
       </EmptyStateActions>
-    ),
-  },
+    )
+  }
 );

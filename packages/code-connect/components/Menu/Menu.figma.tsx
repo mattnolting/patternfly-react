@@ -30,6 +30,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
+      // Documentation for Menu can be found at https://www.patternfly.org/components/menu
       <Menu>
         <MenuContent>{props.children}</MenuContent>
       </Menu>

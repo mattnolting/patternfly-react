@@ -31,6 +31,9 @@ figma.connect(
       }),
       children: figma.children('*')
     },
-    example: (props) => <Timestamp date={props.content} tooltip={props.tooltipUnderline} />
+    example: (props) => (
+      // Documentation for Timestamp can be found at https://www.patternfly.org/components/timestamp
+      <Timestamp date={props.content} tooltip={props.tooltipUnderline} />
+    )
   }
 );

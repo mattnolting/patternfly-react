@@ -13,6 +13,9 @@ figma.connect(
       isDisabled: figma.boolean('Is disabled'),
       isSelected: figma.boolean('Is selected')
     },
-    example: (props) => <MastheadMenuItemToggles isDisabled={props.isDisabled} isSelected={props.isSelected} />
+    example: (props) => (
+      // Documentation for MastheadMenuItemToggles can be found at https://www.patternfly.org/components/masthead
+      <MastheadMenuItemToggles isDisabled={props.isDisabled} isSelected={props.isSelected} />
+    )
   }
 );

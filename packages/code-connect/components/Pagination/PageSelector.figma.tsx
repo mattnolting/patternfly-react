@@ -21,6 +21,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for Pagination can be found at https://www.patternfly.org/components/pagination
       <Pagination page={10} perPage={10} itemCount={27} variant={props.type} isDisabled={props.state === 'Disabled'} />
     )
   }

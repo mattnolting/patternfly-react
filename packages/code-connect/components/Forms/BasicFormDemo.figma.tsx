@@ -8,6 +8,9 @@ figma.connect(
     props: {
       children: figma.children('*')
     },
-    example: (props) => <Form>{props.children}</Form>
+    example: (props) => (
+      // Documentation for Form can be found at https://www.patternfly.org/components/form
+      <Form>{props.children}</Form>
+    )
   }
 );

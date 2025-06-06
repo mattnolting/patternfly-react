@@ -17,10 +17,8 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
-      <SearchInput 
-        value={props.value}
-        placeholder={props.placeholder}
-      >
+      // Documentation for SearchInput can be found at https://www.patternfly.org/components/search-input
+      <SearchInput value={props.value} placeholder={props.placeholder}>
         {props.children}
       </SearchInput>
     )

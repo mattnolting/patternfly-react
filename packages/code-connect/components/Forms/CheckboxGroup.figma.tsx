@@ -13,6 +13,9 @@
 //         Horizontal: "horizontal",
 //       }),
 //     },
-//     example: (props) => <CheckboxGroup />,
+//     example: (props) => (
+//       // Documentation for CheckboxGroup can be found at https://www.patternfly.org/components/checkbox-group
+//       <CheckboxGroup />
+//     ),
 //   },
 // )

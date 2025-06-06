@@ -8,6 +8,9 @@ figma.connect(
     props: {
       children: figma.children('*')
     },
-    example: (props) => <FormFieldGroup>{props.children}</FormFieldGroup>
+    example: (props) => (
+      // Documentation for FormFieldGroup can be found at https://www.patternfly.org/components/form-field-group
+      <FormFieldGroup>{props.children}</FormFieldGroup>
+    )
   }
 );

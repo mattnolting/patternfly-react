@@ -13,6 +13,9 @@ figma.connect(
       description: figma.string('Description'),
       titleText: figma.string('Title text')
     },
-    example: (props) => <EmptyState description={props.description} titleText={props.titleText} />
+    example: (props) => (
+      // Documentation for EmptyState can be found at https://www.patternfly.org/components/empty-state
+      <EmptyState description={props.description} titleText={props.titleText} />
+    )
   }
 );

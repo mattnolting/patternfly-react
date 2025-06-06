@@ -24,7 +24,7 @@ figma.connect(
       // Documentation for Button can be found at https://www.patternfly.org/components/button
       <Button isInline variant="link" isDisabled={props.isDisabled}>
         {props.text}
-      </Button>
+      </Button>cccccbngnicidtkfkrhurfd
     )
   }
 );

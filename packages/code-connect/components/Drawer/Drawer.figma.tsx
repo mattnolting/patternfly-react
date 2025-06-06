@@ -31,6 +31,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
+      // Documentation for Drawer can be found at https://www.patternfly.org/components/drawer
       <Drawer isExpanded={props.isExpanded} isInline={props.isInline} isStatic={props.isStatic} position={props.isLeft}>
         {props.children}
         {props.mainContent}

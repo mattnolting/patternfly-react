@@ -26,6 +26,7 @@ figma.connect(
       bordered: figma.boolean('Bordered')
     },
     example: (props) => (
+      // Documentation for Tr can be found at https://www.patternfly.org/components/table
       <Tr
         showLeftControls={props.showLeftControls}
         showActions={props.showActions}

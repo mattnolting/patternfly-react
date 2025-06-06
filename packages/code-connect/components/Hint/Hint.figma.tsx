@@ -28,6 +28,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for Hint can be found at https://www.patternfly.org/components/hint
       <Hint>
         <HintTitle>{props.titleText}</HintTitle>
         <HintBody>{props.bodyText}</HintBody>

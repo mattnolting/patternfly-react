@@ -24,6 +24,9 @@ figma.connect(
       showPageDescription: figma.boolean('Show page description'),
       showPageTitle: figma.boolean('Show page title')
     },
-    example: (props) => <PageTextSectionDefault />
+    example: (props) => (
+      // Documentation for PageTextSectionDefault can be found at https://www.patternfly.org/components/page
+      <PageTextSectionDefault />
+    )
   }
 );

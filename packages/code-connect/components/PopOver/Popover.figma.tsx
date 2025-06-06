@@ -34,6 +34,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for Popover can be found at https://www.patternfly.org/components/popover
       <Popover
         headerIcon={props.showHeaderIcon}
         headerContent={props.popoverHeading}

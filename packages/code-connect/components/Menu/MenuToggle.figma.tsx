@@ -41,6 +41,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for MenuToggle can be found at https://www.patternfly.org/components/menu
       <MenuToggle
         hasToggleText={props.hasToggleText}
         showBadge={props.showBadge}

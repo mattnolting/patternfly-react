@@ -45,6 +45,7 @@
 
 //       // Create the component with exactly the props we need
 //       return (
+//         // Documentation for TextInput can be found at https://www.patternfly.org/components/text-input
 //         <TextInput
 //           value={props['Input text']}
 //           type="text"

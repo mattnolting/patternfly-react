@@ -21,6 +21,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for Tr can be found at https://www.patternfly.org/components/table
       <Tr showActions={props.showActions} state={props.state} expanded={props.expanded} selected={props.selected} />
     )
   }

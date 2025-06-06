@@ -9,6 +9,9 @@ figma.connect(
       icon: figma.boolean('Icon ⎆'),
       children: figma.string('✏️ Label')
     },
-    example: (props) => <DescriptionListTerm icon={props.icon}>{props.children}</DescriptionListTerm>
+    example: (props) => (
+      // Documentation for DescriptionListTerm can be found at https://www.patternfly.org/components/description-list
+      <DescriptionListTerm icon={props.icon}>{props.children}</DescriptionListTerm>
+    )
   }
 );

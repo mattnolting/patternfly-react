@@ -35,6 +35,9 @@
 //         Selected: "selected",
 //       }),
 //     },
-//     example: (props) => <InputGroupItems />,
-//   },
-// )
+//     example: (props) => (
+//       // Documentation for InputGroupItems can be found at https://www.patternfly.org/components/input-group
+//       <InputGroupItems />
+//     )
+//   }
+// );

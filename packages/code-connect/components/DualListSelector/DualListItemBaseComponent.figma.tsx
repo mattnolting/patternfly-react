@@ -24,6 +24,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
+      // Documentation for DualListSelectorListItem can be found at https://www.patternfly.org/components/dual-list-selector
       <DualListSelectorListItem isDraggable={props.isDraggable} isSelected={props.isSelected}>
         {props.content}
         {props.children}

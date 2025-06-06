@@ -12,6 +12,9 @@ figma.connect(
     props: {
       children: '*'
     },
-    example: (props) => <TreeView variant="compact">{props.children}</TreeView>
+    example: (props) => (
+      // Documentation for TreeView can be found at https://www.patternfly.org/components/tree-view
+      <TreeView variant="compact">{props.children}</TreeView>
+    )
   }
 );

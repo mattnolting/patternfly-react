@@ -17,6 +17,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for Td can be found at https://www.patternfly.org/components/table
       <Td dataLabel="Code branch" size={props.size}>
         Code branch
       </Td>

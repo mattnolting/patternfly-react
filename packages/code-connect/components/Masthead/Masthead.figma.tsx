@@ -17,6 +17,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for Masthead can be found at https://www.patternfly.org/components/masthead
       <Masthead variant={props.variant} display={props.display}>
         <MastheadMain>
           <MastheadBrand href="#">Brand Logo</MastheadBrand>

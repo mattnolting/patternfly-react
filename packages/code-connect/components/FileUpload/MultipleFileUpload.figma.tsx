@@ -3,7 +3,7 @@ import { MultipleFileUpload } from '@patternfly/react-core';
 
 figma.connect(
   MultipleFileUpload,
-  "https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=8949-96128&t=IzSunfrnw18ti37Y-11",
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=8949-96128&t=IzSunfrnw18ti37Y-11',
   {
     props: {
       isHorizontal: figma.enum('Layout', {
@@ -12,6 +12,9 @@ figma.connect(
 
       children: figma.children('*')
     },
-    example: (props) => <MultipleFileUpload isHorizontal={props.isHorizontal} children={props.children} />
+    example: (props) => (
+      // Documentation for MultipleFileUpload can be found at https://www.patternfly.org/components/file-upload
+      <MultipleFileUpload isHorizontal={props.isHorizontal} children={props.children} />
+    )
   }
 );

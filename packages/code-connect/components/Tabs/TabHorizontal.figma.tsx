@@ -36,6 +36,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for TabHorizontal can be found at https://www.patternfly.org/components/tabs
       <TabHorizontal
         hasCloseButton={props.closeButton}
         hasHelpButton={props.helpButton}

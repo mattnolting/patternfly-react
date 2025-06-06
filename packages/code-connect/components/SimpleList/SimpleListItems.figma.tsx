@@ -22,6 +22,9 @@ figma.connect(
 
       children: figma.children('*')
     },
-    example: (props) => <SimpleListItems>{props.children}</SimpleListItems>
+    example: (props) => (
+      // Documentation for SimpleListItems can be found at https://www.patternfly.org/components/list
+      <SimpleListItems>{props.children}</SimpleListItems>
+    )
   }
 );

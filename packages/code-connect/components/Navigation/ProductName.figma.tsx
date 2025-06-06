@@ -13,6 +13,9 @@ figma.connect(
     props: {
       productName: figma.string('Product name')
     },
-    example: (props) => <Title headingLevel="h1">{props.productName}</Title>
+    example: (props) => (
+      // Documentation for Title can be found at https://www.patternfly.org/components/title
+      <Title headingLevel="h1">{props.productName}</Title>
+    )
   }
 );

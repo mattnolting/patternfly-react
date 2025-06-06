@@ -28,6 +28,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for ExpandableSection can be found at https://www.patternfly.org/components/expandable-section
       <ExpandableSection
         isExpanded={props.isExpanded}
         isIndented={props.isIndented}

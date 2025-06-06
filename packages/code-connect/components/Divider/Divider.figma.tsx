@@ -22,6 +22,9 @@ figma.connect(
         false: { default: 'insetNone' as const }
       })
     },
-    example: (props) => <Divider orientation={props.orientation} inset={props.inset} />
+    example: (props) => (
+      // Documentation for Divider can be found at https://www.patternfly.org/components/divider
+      <Divider orientation={props.orientation} inset={props.inset} />
+    )
   }
 );

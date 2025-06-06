@@ -21,6 +21,9 @@ figma.connect(
       // string
       label: figma.string('Label')
     },
-    example: (props) => <InlineEditToggle aria-label="Toggle edit mode" />
+    example: (props) => (
+      // Documentation for InlineEditToggle can be found at https://www.patternfly.org/components/inline-edit
+      <InlineEditToggle aria-label="Toggle edit mode" />
+    )
   }
 );

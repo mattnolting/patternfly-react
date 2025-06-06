@@ -25,6 +25,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for Th can be found at https://www.patternfly.org/components/table
       <Th showHelpIcon={props.showHelpIcon} sortable={props.sortable} state={props.state} size={props.size}>
         Header
       </Th>

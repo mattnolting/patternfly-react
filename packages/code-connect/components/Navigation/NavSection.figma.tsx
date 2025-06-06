@@ -13,6 +13,9 @@ figma.connect(
     props: {
       children: figma.children('*')
     },
-    example: (props) => <NavList>{props.children}</NavList>
+    example: (props) => (
+      // Documentation for NavList can be found at https://www.patternfly.org/components/navigation
+      <NavList>{props.children}</NavList>
+    )
   }
 );

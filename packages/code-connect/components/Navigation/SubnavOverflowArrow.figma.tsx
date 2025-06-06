@@ -16,6 +16,9 @@ figma.connect(
         Default: false
       })
     },
-    example: (props) => <Button variant="plain" isDisabled={props.isDisabled} />
+    example: (props) => (
+      // Documentation for Button can be found at https://www.patternfly.org/components/button
+      <Button variant="plain" isDisabled={props.isDisabled} />
+    )
   }
 );

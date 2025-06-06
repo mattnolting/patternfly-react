@@ -17,6 +17,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for Td can be found at https://www.patternfly.org/components/table
       <Td isActionCell={true} className="pf-v5-u-text-align-right" size={props.size}>
         <KebabToggle aria-label="Actions" />
       </Td>

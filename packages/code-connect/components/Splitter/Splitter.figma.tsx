@@ -19,6 +19,9 @@ figma.connect(
 
       children: figma.children('*')
     },
-    example: (props) => <Splitter variant={props.variant}>{props.children}</Splitter>
+    example: (props) => (
+      // Documentation for Splitter can be found at https://www.patternfly.org/components/splitter
+      <Splitter variant={props.variant}>{props.children}</Splitter>
+    )
   }
 );

@@ -19,6 +19,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for TableCellLeftControls can be found at https://www.patternfly.org/components/table
       <TableCellLeftControls
         rowExpansion={props.rowExpansion}
         isDraggable={props.isDraggable}

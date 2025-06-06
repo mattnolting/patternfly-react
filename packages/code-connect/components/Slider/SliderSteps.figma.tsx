@@ -18,6 +18,9 @@ figma.connect(
       // boolean
       isLabelHidden: figma.boolean('Is Label Hidden')
     },
-    example: (props) => <SliderStep isLabelHidden={props.isLabelHidden} label={props.label} value={props.value} />
+    example: (props) => (
+      // Documentation for SliderStep can be found at https://www.patternfly.org/components/slider
+      <SliderStep isLabelHidden={props.isLabelHidden} label={props.label} value={props.value} />
+    )
   }
 );

@@ -27,6 +27,7 @@ figma.connect(
       cells: ['My application']
     },
     example: (props) => (
+      // Documentation for BasicRow can be found at https://www.patternfly.org/components/table
       <BasicRow
         showLeftControls={props.showLeftControls}
         showRightActions={props.showRightActions}

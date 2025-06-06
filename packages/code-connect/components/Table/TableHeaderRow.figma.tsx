@@ -13,6 +13,9 @@ figma.connect(
       rightActionColumn: figma.boolean('Right action column'),
       showLeftControls: figma.boolean('Show left controls')
     },
-    example: (props) => <Tr rightActionColumn={props.rightActionColumn} showLeftControls={props.showLeftControls} />
+    example: (props) => (
+      // Documentation for Tr can be found at https://www.patternfly.org/components/table
+      <Tr rightActionColumn={props.rightActionColumn} showLeftControls={props.showLeftControls} />
+    )
   }
 );

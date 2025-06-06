@@ -15,9 +15,8 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
-      <Page>
-        {props.children}
-      </Page>
+      // Documentation for Page can be found at https://www.patternfly.org/components/page
+      <Page>{props.children}</Page>
     )
   }
 );

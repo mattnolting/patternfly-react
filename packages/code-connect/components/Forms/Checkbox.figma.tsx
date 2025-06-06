@@ -26,6 +26,7 @@ figma.connect(
       isDisabled: figma.enum('State', { Disabled: true })
     },
     example: (props) => (
+      // Documentation for Checkbox can be found at https://www.patternfly.org/components/checkbox
       <Checkbox
         label={props.label}
         description={props.description}

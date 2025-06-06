@@ -7,7 +7,7 @@ figma.connect(
   {
     props: {
       showHelperText: figma.boolean('Show helper text'),
-      showTextPreviewBox: figma.boolean('Show text preview box'),
+      showTextPreviewBox: figma.boolean('Show text preview box')
       // state: figma.enum('State', {
       //   Default: 'default',
       //   'Invalid upload': 'invalid-upload',
@@ -17,6 +17,9 @@ figma.connect(
       //   'Uploaded + Editable': 'uploaded---editable'
       // })
     },
-    example: (props) => <FileUpload children={props.children} />
+    example: (props) => (
+      // Documentation for FileUpload can be found at https://www.patternfly.org/components/file-upload
+      <FileUpload children={props.children} />
+    )
   }
 );

@@ -23,6 +23,9 @@
 //         "non - expandable": "non---expandable",
 //       }),
 //     },
-//     example: (props) => <FieldGroupHeaderNested />,
+//     example: (props) => (
+//       // Documentation for FieldGroupHeaderNested can be found at https://www.patternfly.org/components/form-field-group
+//       <FieldGroupHeaderNested />
+//     ),
 //   },
 // )

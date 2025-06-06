@@ -13,7 +13,7 @@ figma.connect(
       size: figma.enum('Size', {
         Default: 'default',
         Compact: 'compact'
-      }),
+      })
       // Instead of trying to directly reference layers that may not exist with
       // those exact names, let's use simpler properties that match what's in the UI
       // iconButtonState: figma.enum('State', {
@@ -35,11 +35,8 @@ figma.connect(
       // actionButton: figma.children('ActionButton')
     },
     example: (props) => (
-      <Td
-        size={props.size}
-        isActionCell={true}
-        className="pf-v5-u-text-align-right"
-      />
+      // Documentation for Td can be found at https://www.patternfly.org/components/table
+      <Td size={props.size} isActionCell={true} className="pf-v5-u-text-align-right" />
       // <IconWrapper iconSize={props.iconSize} icon={props.icon} />
       // <div>
       //   {props.iconWrapper}

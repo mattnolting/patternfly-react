@@ -12,6 +12,9 @@ figma.connect(
     props: {
       children: figma.children('*')
     },
-    example: (props) => <CodeBlock>{props.children}</CodeBlock>
+    example: (props) => (
+      // Documentation for CodeBlock can be found at https://www.patternfly.org/components/code-block
+      <CodeBlock>{props.children}</CodeBlock>
+    )
   }
 );

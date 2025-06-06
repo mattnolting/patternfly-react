@@ -18,6 +18,7 @@ figma.connect(
     },
 
     example: (props) => (
+      // Documentation for DescriptionList can be found at https://www.patternfly.org/components/description-list
       <DescriptionListGroup>
         {props.children}
         <DescriptionListDescription>{props.content}</DescriptionListDescription>

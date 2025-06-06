@@ -13,6 +13,9 @@ figma.connect(
     props: {
       children: figma.children('*')
     },
-    example: (props) => <Nav>{props.children}</Nav>
+    example: (props) => (
+      // Documentation for Nav can be found at https://www.patternfly.org/components/navigation
+      <Nav>{props.children}</Nav>
+    )
   }
 );

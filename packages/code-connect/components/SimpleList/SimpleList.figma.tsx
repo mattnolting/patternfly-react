@@ -11,6 +11,9 @@ figma.connect(
         Grouped: 'grouped'
       })
     },
-    example: (props) => <SimpleList />
+    example: (props) => (
+      // Documentation for SimpleList can be found at https://www.patternfly.org/components/list
+      <SimpleList />
+    )
   }
 );

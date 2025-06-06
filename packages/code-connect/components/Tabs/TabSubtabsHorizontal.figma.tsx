@@ -31,6 +31,7 @@ figma.connect(
       moreTabText: figma.string('More Tab Text', 'More')
     },
     example: (props) => (
+      // Documentation for TabSubtabsHorizontal can be found at https://www.patternfly.org/components/tabs
       <TabSubtabsHorizontal
         title={props.tabText}
         hasHelpIcon={props.helpIcon}

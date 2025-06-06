@@ -31,7 +31,13 @@ figma.connect(
       children: figma.children('TabHorizontal')
     },
     example: (props) => (
-      <HorizontalTabs isBox={props.isBox} hasOverflowTab={props.hasOverflowTab} usePageInsets={props.inset} variant={props.variant}>
+      // Documentation for HorizontalTabs can be found at https://www.patternfly.org/components/tabs
+      <HorizontalTabs
+        isBox={props.isBox}
+        hasOverflowTab={props.hasOverflowTab}
+        usePageInsets={props.inset}
+        variant={props.variant}
+      >
         {props.children}
       </HorizontalTabs>
     )

@@ -24,14 +24,15 @@ figma.connect(
       selected: figma.boolean('Selected'),
       bordered: figma.boolean('Bordered')
     },
-    example: (props) => <Tr
-      showLeftControls={props.showLeftControls}
-      showActions={props.showActions}
-      size={props.size}
-      state={props.state}
-      selected={props.selected}
-      bordered={props.bordered}
-      isDraggable={true}
-    />
+    example: (props) => (
+      // Documentation for Tr can be found at https://www.patternfly.org/components/table
+      <Tr
+        size={props.size}
+        state={props.state}
+        selected={props.selected}
+        bordered={props.bordered}
+        isDraggable={true}
+      />
+    )
   }
 );

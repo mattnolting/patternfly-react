@@ -26,6 +26,9 @@
 //         "Uploaded + Editable": "uploaded---editable",
 //       }),
 //     },
-//     example: (props) => <SimpleFileUpload />,
-//   },
-// )
+//     example: (props) => (
+//       // Documentation for SimpleFileUpload can be found at https://www.patternfly.org/components/simple-file-upload
+//       <SimpleFileUpload />
+//     )
+//   }
+// );

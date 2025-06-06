@@ -16,9 +16,12 @@ figma.connect(
     props: {
       type: figma.enum('Type', {
         Basic: 'basic',
-        Grouped: 'grouped',
-      }),
+        Grouped: 'grouped'
+      })
     },
-    example: (props) => <NotificationDrawer />,
-  },
-)
+    example: (props) => (
+      // Documentation for NotificationDrawer can be found at https://www.patternfly.org/components/notification-drawer
+      <NotificationDrawer />
+    )
+  }
+);

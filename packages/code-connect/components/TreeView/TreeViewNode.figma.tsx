@@ -12,6 +12,9 @@ figma.connect(
     props: {
       children: figma.children('*')
     },
-    example: (props) => <TreeViewListItem>{props.children}</TreeViewListItem>
+    example: (props) => (
+      // Documentation for TreeViewListItem can be found at https://www.patternfly.org/components/tree-view
+      <TreeViewListItem>{props.children}</TreeViewListItem>
+    )
   }
 );

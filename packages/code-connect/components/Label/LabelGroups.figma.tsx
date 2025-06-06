@@ -7,17 +7,18 @@ import { LabelGroup } from '@patternfly/react-core';
 
 figma.connect(
   LabelGroup,
-  "https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2800-1075&t=IzSunfrnw18ti37Y-11",
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2800-1075&t=IzSunfrnw18ti37Y-11',
   {
     props: {
-      categoryName: figma.string("Label group name", "Group"),
-      hasCollapsedLabels: figma.boolean("Has collapsed labels"),
-      type: figma.enum("Type", {
-        "Default": "default",
-        "Label management": "label-management",
-      }),
+      categoryName: figma.string('Label group name', 'Group'),
+      hasCollapsedLabels: figma.boolean('Has collapsed labels'),
+      type: figma.enum('Type', {
+        Default: 'default',
+        'Label management': 'label-management'
+      })
     },
     example: (props) => (
+      // Documentation for LabelGroup can be found at https://www.patternfly.org/components/label-group
       <LabelGroup
         categoryName={props.categoryName}
         type={props.type}

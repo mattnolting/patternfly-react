@@ -18,6 +18,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for Tabs can be found at https://www.patternfly.org/components/tabs
       <Tabs variant={props.type} isVertical={true} component="nav" aria-label="Vertical tabs example">
         <Tab eventKey={0} title="Containers" />
         <Tab eventKey={1} title="Database" />

@@ -33,6 +33,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for Label can be found at https://www.patternfly.org/components/label
       <Label
         text={props.text}
         status={props.status}

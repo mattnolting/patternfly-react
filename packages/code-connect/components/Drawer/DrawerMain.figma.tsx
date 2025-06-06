@@ -13,6 +13,9 @@ figma.connect(
     props: {
       children: figma.children('*')
     },
-    example: (props) => <DrawerContent>{props.children}</DrawerContent>
+    example: (props) => (
+      // Documentation for DrawerMain can be found at https://www.patternfly.org/components/drawer
+      <DrawerContent>{props.children}</DrawerContent>
+    )
   }
 );

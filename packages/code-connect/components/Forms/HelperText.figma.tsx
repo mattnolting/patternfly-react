@@ -21,6 +21,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for HelperText can be found at https://www.patternfly.org/components/helper-text
       <HelperText>
         <HelperTextItem icon={props.icon} variant={props.type} content={props.helperText} />
       </HelperText>

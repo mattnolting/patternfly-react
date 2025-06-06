@@ -23,6 +23,9 @@
 //         "Disabled Off": "disabled-off",
 //       }),
 //     },
-//     example: (props) => <Switches />,
-//   },
-// )
+//     example: (props) => (
+//       // Documentation for Switches can be found at https://www.patternfly.org/components/switches
+//       <Switches />
+//     )
+//   }
+// );

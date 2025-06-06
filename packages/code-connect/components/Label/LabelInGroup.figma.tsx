@@ -25,6 +25,7 @@ figma.connect(
 
       children: figma.children('*')
     },
+    // Documentation for LabelGroup can be found at https://www.patternfly.org/components/label-group
     example: (props) => (
       <LabelGroup categoryName={props.categoryName} isExpanded={!props.hasCollapsedLabels} numLabels={3}>
         <Label color="blue">Label 1</Label>

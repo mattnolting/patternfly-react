@@ -24,6 +24,9 @@ figma.connect(
         Disabled: 'disabled'
       })
     },
-    example: (props) => <SliderTick label={props.number} showLabels={props.showNumber} value={props.number} />
+    example: (props) => (
+      // Documentation for SliderTick can be found at https://www.patternfly.org/components/slider
+      <SliderTick label={props.number} showLabels={props.showNumber} value={props.number} />
+    )
   }
 );

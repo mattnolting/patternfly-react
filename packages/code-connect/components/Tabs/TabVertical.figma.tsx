@@ -30,6 +30,7 @@ figma.connect(
       })
     },
     example: (props) => (
+      // Documentation for TabVertical can be found at https://www.patternfly.org/components/tabs
       <TabVertical
         title={props.text}
         hasHelpIcon={props.helpIcon}

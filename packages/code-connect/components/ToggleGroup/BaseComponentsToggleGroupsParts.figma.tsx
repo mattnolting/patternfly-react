@@ -29,6 +29,9 @@ figma.connect(
         Compact: 'compact'
       })
     },
-    example: (props) => <ToggleGroupItem text={props.text} buttonId="toggle-group-item-1left" />
+    example: (props) => (
+      // Documentation for ToggleGroupItem can be found at https://www.patternfly.org/components/toggle-group
+      <ToggleGroupItem text={props.text} buttonId="toggle-group-item-1left" />
+    )
   }
 );

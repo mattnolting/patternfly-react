@@ -70,6 +70,9 @@
 //       children: figma.string('Helper Text', 'This is helper text'),
 //       isError: figma.boolean('Is Error', false)
 //     },
-//     example: ({ children, isError }) => <FormHelperText isError={isError}>{children}</FormHelperText>
+//     example: ({ children, isError }) => (
+//       // Documentation for FormHelperText can be found at https://www.patternfly.org/components/form-helper-text
+//       <FormHelperText isError={isError}>{children}</FormHelperText>
+//     )
 //   }
 // );
