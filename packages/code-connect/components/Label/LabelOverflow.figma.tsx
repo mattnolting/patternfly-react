@@ -11,26 +11,11 @@ figma.connect(
   {
     props: {
       text: figma.string('Text'),
-      isEditable: figma.boolean('Is Editable'),
-      isDismissable: figma.boolean('Dismissable'),
-      hasIcon: figma.boolean('Has icon'),
-      color: figma.enum('Color', {
-        Red: 'red',
-        Orange: 'orange',
-        'Orange Red': 'orange-red',
-        Gold: 'gold',
-        Green: 'green',
-        Cyan: 'cyan',
-        Blue: 'blue',
-        Purple: 'purple',
-        Grey: 'grey'
-      }),
       variant: figma.enum('Type', {
         Filled: 'filled',
         Outlined: 'outlined'
       }),
-      isCompact: figma.enum('Size', {
-        Default: false,
+      isCompact: figma.enum('Type', {
         Compact: true
       })
     },

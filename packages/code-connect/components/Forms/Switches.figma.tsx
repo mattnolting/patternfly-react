@@ -16,12 +16,6 @@
 //   {
 //     props: {
 //       showCheck: figma.boolean("Show check"),
-//       state: figma.enum("State", {
-//         On: "on",
-//         Off: "off",
-//         "Disabled On": "disabled-on",
-//         "Disabled Off": "disabled-off",
-//       }),
 //     },
 //     example: (props) => (
 //       // Documentation for Switches can be found at https://www.patternfly.org/components/switches

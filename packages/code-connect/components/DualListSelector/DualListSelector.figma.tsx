@@ -1,18 +1,16 @@
-import { DualListSelector } from './DualListSelector';
+import { DualListSelector } from '@patternfly/react-core';
 import figma from '@figma/code-connect';
 
-/**
- * PatternFly DualListSelectorListItem integration for Figma Code Connect
- * @patternfly https://www.patternfly.org/components/dual-list-selector
- */
 figma.connect(
   DualListSelector,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=29667-231683&t=IzSunfrnw18ti37Y-11',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=29667-231683&m=dev',
   {
-    props: {},
+    props: {
+      children: figma.children('*')
+    },
     example: (props) => (
       // Documentation for DualListSelector can be found at https://www.patternfly.org/components/dual-list-selector
-      <DualListSelector />
+      <DualListSelector>{props.children}</DualListSelector>
     )
   }
 );

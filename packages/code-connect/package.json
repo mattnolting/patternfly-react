@@ -1,7 +1,40 @@
 {
   "name": "codeConnect",
+  "version": "1.0.0",
   "packageManager": "yarn@4.7.0",
+  "scripts": {
+    "clean": "node cleanup-project.js",
+    "targeted-clean": "node targeted-cleanup.js",
+    "restore": "node restore-valid-components.js",
+    "comprehensive-fix": "node comprehensive-fix.js",
+    "validate": "node optimize-workflow.js",
+    "validate:full": "node optimize-workflow.js --test-figma",
+    "forms:update": "node update-forms-components.js",
+    "dev": "npm run validate && npm run figma:parse",
+    "test": "npm run validate:full",
+    "build": "npm run restore && npm run comprehensive-fix && npm run validate",
+    "fix": "npm run comprehensive-fix && npm run figma:parse",
+    "fix-all": "npm run restore && npm run comprehensive-fix && npm run figma:parse",
+    "generate": "node scripts/generate-component-templates.js",
+    "lookup": "node scripts/lookup-node-ids.js",
+    "complete": "node scripts/create-remaining-components.js",
+    "figma:publish": "figma code-connect publish",
+    "figma:parse": "figma code-connect parse .",
+    "status": "cat PROJECT_STATUS.md",
+    "health": "node optimize-workflow.js && echo '\\n📊 For detailed metrics, see efficiency-report.json'"
+  },
   "dependencies": {
     "@figma/code-connect": "^1.3.2"
-  }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "figma",
+    "code-connect",
+    "patternfly",
+    "design-system",
+    "react"
+  ],
+  "description": "PatternFly Figma Code Connect integration for seamless design-to-code workflow"
 }

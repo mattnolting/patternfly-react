@@ -10,14 +10,7 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=4917-4769&m=dev',
   {
     props: {
-      totalQuantity: figma.string('Total quantity', '523'),
-      pageQuantity: figma.string('Page quantity', '1 - 20'),
-      state: figma.enum('State', {
-        Default: 'default',
-        Disabled: 'disabled',
-        Hover: 'hover',
-        Expanded: 'expanded'
-      })
+      totalQuantity: figma.string('Total quantity')
     },
     example: (props) => (
       // Documentation for Pagination can be found at https://www.patternfly.org/components/pagination

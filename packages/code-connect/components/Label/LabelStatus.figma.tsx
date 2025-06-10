@@ -12,21 +12,6 @@ figma.connect(
   {
     props: {
       text: figma.string('Text'),
-      status: figma.enum('Status', {
-        Danger: 'danger',
-        Warning: 'warning',
-        Success: 'success',
-        Info: 'info',
-        Custom: 'custom'
-      }),
-      variant: figma.enum('Type', {
-        Filled: 'filled',
-        Outlined: 'outlined'
-      }),
-      isCompact: figma.enum('Size', {
-        Default: false,
-        Compact: true
-      }),
       state: figma.enum('State', {
         Default: 'default',
         Hover: 'hover'

@@ -6,10 +6,10 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1259-1132&m=dev',
   {
     props: {
-      // strings
+      // string
       text: figma.string('Text'),
 
-      // enums
+      // enum
       isRead: figma.enum('Type', { Read: true }),
       isDisabled: figma.enum('Type', {
         disabled: true

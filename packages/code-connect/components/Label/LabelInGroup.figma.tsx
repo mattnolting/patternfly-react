@@ -12,18 +12,7 @@ figma.connect(
   {
     props: {
       // string
-      categoryName: figma.string('Label group name'),
-
-      // boolean
-      hasCollapsedLabels: figma.boolean('Has collapsed labels'),
-
-      // enum
-      type: figma.enum('Type', {
-        Default: 'default',
-        'Label management': 'label-management'
-      }),
-
-      children: figma.children('*')
+      categoryName: figma.string('Label group name')
     },
     // Documentation for LabelGroup can be found at https://www.patternfly.org/components/label-group
     example: (props) => (

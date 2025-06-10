@@ -2,17 +2,24 @@
   "codeConnect": {
     "parser": "react",
     "include": [
-      "components/Alert/*.tsx",
-      "components/Avatar/*.tsx",
-      "components/BackToTop/*.tsx",
-      "components/Backdrop/*.tsx",
-      "components/Badge/*.tsx"
+      "components/ActionList/*.figma.tsx",
+      "components/Alert/*.figma.tsx",
+      "components/Avatar/*.figma.tsx",
+      "components/Backdrop/*.figma.tsx",
+      "components/BackgroundImage/*.figma.tsx",
+      "components/BackToTop/*.figma.tsx",
+      "components/Badge/*.figma.tsx",
+      "components/Banner/*.figma.tsx",
+      "components/Brand/*.figma.tsx",
+      "components/Breadcrumbs/*.figma.tsx"
     ],
     "paths": {
-      "src/components": "src/components"
+      "@patternfly/react-core": "/Users/mnolting/Web/patternfly-react/packages/react-core/src",
+      "@patternfly/react-table": "/Users/mnolting/Web/patternfly-react/packages/react-table/src"
     },
     "aliases": {
-      "@patternfly/react-core": "."
+      "@patternfly/react-core": "/Users/mnolting/Web/patternfly-react/packages/react-core/src",
+      "@patternfly/react-table": "/Users/mnolting/Web/patternfly-react/packages/react-table/src"
     },
     "importPaths": {
       "src/components": "src/components"
@@ -28,6 +35,10 @@
       "production": {
         "enabled": false
       }
-    }
+    },
+    "exclude": [
+      "node_modules/**",
+      "scripts/**"
+    ]
   }
 }

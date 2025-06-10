@@ -11,10 +11,7 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2800-609&m=dev',
   {
     props: {
-      text: figma.string('Text', 'Label'),
-      isEditable: figma.boolean('Is Editable'),
-      isDismissable: figma.boolean('Dismissable'),
-      hasIcon: figma.boolean('Has icon'),
+      text: figma.string('Text'),
       color: figma.enum('Color', {
         Red: 'red',
         Orange: 'orange',
@@ -30,8 +27,7 @@ figma.connect(
         Filled: 'filled',
         Outlined: 'outlined'
       }),
-      isCompact: figma.enum('Size', {
-        Default: false,
+      isCompact: figma.enum('Type', {
         Compact: true
       })
     },

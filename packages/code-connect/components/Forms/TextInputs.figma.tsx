@@ -25,10 +25,8 @@
 //         'Read Only': 'read-only',
 //         'ReadOnly - Plain': 'readonly---plain'
 //       }),
-//       'Input text': figma.string('Input text', 'Input field'),
-//       'Custom Icon': figma.boolean('Custom Icon')
-//     },
-//     example: (props) => {
+//       'Input text': figma.string('Input text')
+//     }) => {
 //       // Map Figma state to PatternFly props
 //       const isDisabled = props.State === 'Disabled';
 //       const readOnly = props.State === 'Read Only' || props.State === 'ReadOnly - Plain';

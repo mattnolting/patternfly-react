@@ -11,7 +11,9 @@ figma.connect(
       isDisabled: figma.enum('State', { Disabled: true }),
 
       // variants
-      hasNoPadding: figma.enum('Type', { 'No padding': true })
+      hasNoPadding: figma.enum('Type', { 'No padding': true }),
+
+      icon: figma.children('IconWrapper')
     },
     example: (props) => (
       // Documentation for Button can be found at https://www.patternfly.org/components/button

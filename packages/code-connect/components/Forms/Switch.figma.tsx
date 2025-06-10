@@ -16,20 +16,6 @@
 //   {
 //     props: {
 //       toggleLabel: figma.string("✏️ Toggle label"),
-//       type: figma.enum("Type", {
-//         "With Label": "with-label",
-//         Standalone: "standalone",
-//       }),
-//       state: figma.enum("State", {
-//         Disabled: "disabled",
-//         Off: "off",
-//         On: "on",
-//         Default: "default",
-//       }),
-//       labelPlacement: figma.enum("Label placement", {
-//         Default: "default",
-//         Reversed: "reversed",
-//       }),
 //     },
 //     example: (props) => (
 //       // Documentation for Switch can be found at https://www.patternfly.org/components/switch

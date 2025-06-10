@@ -1,11 +1,6 @@
 import figma from '@figma/code-connect';
 import { Slider } from '@patternfly/react-core';
 
-/**
- * PatternFly Slider component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/slider
- */
-
 figma.connect(
   Slider,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=3155-97956&t=IzSunfrnw18ti37Y-11',

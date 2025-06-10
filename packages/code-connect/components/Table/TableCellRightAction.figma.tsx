@@ -1,9 +1,6 @@
 import figma from '@figma/code-connect';
 import { Td } from '@patternfly/react-table';
 import { IconWrapper } from 'src/components/Icon/IconWrapper.tsx';
-/**
- * PatternFly Table Cell Right Action integration for Figma Code Connect
- */
 
 figma.connect(
   Td,

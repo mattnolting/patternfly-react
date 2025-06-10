@@ -11,22 +11,6 @@ figma.connect(
   {
     props: {
       searchInput: figma.boolean('Show search input'),
-      menuType: figma.enum('Menu', {
-        Basic: 'basic',
-        'Plain Menu': 'plain-menu',
-        'With Actions': 'with-actions',
-        'With Separator': 'with-separator',
-        'With Links': 'with-links',
-        'With Icons': 'with-icons',
-        'Titled Groups': 'titled-groups',
-        'Drill Down Start': 'drill-down-start',
-        'Drill Down Return': 'drill-down-return',
-        'Option Select': 'option-select',
-        'Item Checkbox': 'item-checkbox',
-        'With favorites': 'with-favorites',
-        Danger: 'danger',
-        'Drill Down Breadcrumbs': 'drill-down-breadcrumbs'
-      }),
       children: figma.children('*')
     },
     example: (props) => (

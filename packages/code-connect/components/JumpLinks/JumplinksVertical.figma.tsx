@@ -13,14 +13,10 @@ figma.connect(
     props: {
       // boolean
       isExpanded: figma.boolean('Is Expanded'),
-      showLabel: figma.boolean('Show Label'),
 
       // string
-      labelText: figma.string('Label Text'),
-
-      children: figma.children('*')
-    },
-    example: (props) => (
+      labelText: figma.string('Label Text')
+    }) => (
       // Documentation for JumpLinks can be found at https://www.patternfly.org/components/jump-links
       <JumpLinks isExpanded={props.isExpanded}>
         <JumpLinksLabel>{props.labelText}</JumpLinksLabel>

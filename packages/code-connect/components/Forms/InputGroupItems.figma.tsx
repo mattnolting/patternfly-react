@@ -15,27 +15,7 @@
 //   "https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=176-2806&t=IzSunfrnw18ti37Y-11",
 //   {
 //     props: {
-//       inputText: figma.string("✏️  Input text"),
-//       type: figma.enum("Type", {
-//         Icon: "icon",
-//         Text: "text",
-//         Dropdown: "dropdown",
-//         Button: "button",
-//       }),
-//       state: figma.enum("State", {
-//         Default: "default",
-//         Hover: "hover",
-//         Active: "active",
-//         Complete: "complete",
-//         Disabled: "disabled",
-//         "Read Only": "read-only",
-//         Success: "success",
-//         Warning: "warning",
-//         Error: "error",
-//         Selected: "selected",
-//       }),
-//     },
-//     example: (props) => (
+//       inputText: figma.string("✏️  Input text") => (
 //       // Documentation for InputGroupItems can be found at https://www.patternfly.org/components/input-group
 //       <InputGroupItems />
 //     )

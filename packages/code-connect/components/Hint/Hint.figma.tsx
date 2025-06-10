@@ -12,22 +12,8 @@ figma.connect(
   {
     props: {
       // string
-      bodyText: figma.string('✏️ Body'),
-      footerLinkText: figma.string('✏️ Footer Link'),
-      titleText: figma.string('✏️ Title'),
-
-      // enum
-      components: figma.enum('Components', {
-        'Title, Body, Footer': 'all',
-        'Title and Body': 'title-body',
-        'Title and Footer': 'title-footer',
-        'Body and Footer': 'body-footer',
-        'Title Only': 'title-only',
-        'Body Only': 'body-only',
-        'Footer Only': 'footer-only'
-      })
-    },
-    example: (props) => (
+      bodyText: figma.string('✏️ Body')
+    }) => (
       // Documentation for Hint can be found at https://www.patternfly.org/components/hint
       <Hint>
         <HintTitle>{props.titleText}</HintTitle>

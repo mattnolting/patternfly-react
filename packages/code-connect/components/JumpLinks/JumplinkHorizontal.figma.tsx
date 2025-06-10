@@ -14,18 +14,6 @@ figma.connect(
       // string
       tabText: figma.string('Tab Text'),
 
-      // boolean
-      closeIcon: figma.boolean('Close Icon'),
-      hasIcon: figma.boolean('Has icon'),
-      helpIcon: figma.boolean('Help icon'),
-
-      // enum
-      state: figma.enum('State', {
-        Default: 'default',
-        Hover: 'hover',
-        Selected: 'selected'
-      }),
-
       children: figma.children('*')
     },
     example: (props) => (

@@ -16,7 +16,6 @@
 //   {
 //     props: {
 //       helperText: figma.boolean("Helper text"),
-//       label: figma.boolean("Label"),
 //     },
 //     example: (props) => (
 //       // Documentation for LabeledInputGroup can be found at https://www.patternfly.org/components/labeled-input-group

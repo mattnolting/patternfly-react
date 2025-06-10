@@ -1,11 +1,6 @@
 import figma from '@figma/code-connect';
 import { Spinner } from '@patternfly/react-core';
 
-/**
- * PatternFly Spinner component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/spinner
- */
-
 figma.connect(
   Spinner,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=790-332&t=IzSunfrnw18ti37Y-11',
@@ -21,7 +16,7 @@ figma.connect(
     },
     example: (props) => (
       // Documentation for Spinner can be found at https://www.patternfly.org/components/spinner
-      <Spinner size={props.size} />
+      <Spinner aria-label="Loading..." size={props.size} />
     )
   }
 );

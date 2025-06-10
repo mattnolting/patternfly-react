@@ -1,10 +1,6 @@
 import figma from '@figma/code-connect';
 import { Progress } from '@patternfly/react-core';
 
-/**
- * PatternFly ProgressBar integration for Figma Code Connect
- */
-
 figma.connect(
   Progress,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=7644-38395&m=dev',

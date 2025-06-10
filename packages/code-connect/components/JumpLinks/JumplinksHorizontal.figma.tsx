@@ -12,17 +12,7 @@ figma.connect(
   {
     props: {
       // boolean
-      showLabel: figma.boolean('Show label'),
-
-      // string
-      labelText: figma.string('Label Text'),
-
-      // enum
-      type: figma.enum('Type', {
-        'With Label': 'with-label'
-      }),
-
-      children: figma.children('*')
+      showLabel: figma.boolean('Show label')
     },
     example: (props) => (
       // Documentation for JumpLinks can be found at https://www.patternfly.org/components/jump-links

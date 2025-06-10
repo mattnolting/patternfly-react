@@ -1,11 +1,6 @@
 import figma from '@figma/code-connect';
 import { ExpandableSection } from '@patternfly/react-core';
 
-/**
- * PatternFly ExpandableSection component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/expandable-section#truncated-content
- */
-
 figma.connect(
   ExpandableSection,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2810-80&m=dev',

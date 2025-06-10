@@ -1,9 +1,5 @@
-import { DataList } from '@patternfly/react-core';
 import figma from '@figma/code-connect';
-
-/**
- * PatternFly DataList component integration for Figma Code Connect
- */
+import { DataList } from '@patternfly/react-core';
 
 figma.connect(
   DataList,

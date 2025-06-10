@@ -1,38 +1,29 @@
 import figma from '@figma/code-connect';
 import { Tr } from '@patternfly/react-table';
 
-/**
- * PatternFly Draggable Row integration for Figma Code Connect
- */
-
 figma.connect(
   Tr,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=21288-130668&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=6441-39265&t=dQvgcyu0ZKNA0TiF-11',
   {
     props: {
-      showLeftControls: figma.boolean('Show Left Controls'),
-      showActions: figma.boolean('Show actions'),
-      size: figma.enum('Size', {
-        Default: 'default',
-        Compact: 'compact'
+      // boolean
+      isBordered: figma.boolean('Bordered'),
+
+      // enum
+      isRowSelected: figma.enum('State', {
+        Default: undefined,
+        Selected: true,
+        'Selected (not clicked)': true
       }),
-      state: figma.enum('State', {
-        Default: 'default',
-        'On Drag': 'on-drag',
-        'Drag Outside': 'drag-outside'
-      }),
-      selected: figma.boolean('Selected'),
-      bordered: figma.boolean('Bordered')
+      isSelectable: figma.enum('Type', {
+        Basic: undefined,
+        'Clickable + Selectable': true,
+        Selectable: true
+      })
     },
     example: (props) => (
       // Documentation for Tr can be found at https://www.patternfly.org/components/table
-      <Tr
-        size={props.size}
-        state={props.state}
-        selected={props.selected}
-        bordered={props.bordered}
-        isDraggable={true}
-      />
+      <Tr isRowSelected={props.isRowSelected} isSelectable={props.isSelectable} isBorderRow={props.isBordered} />
     )
   }
 );

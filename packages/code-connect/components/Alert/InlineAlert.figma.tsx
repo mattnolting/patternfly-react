@@ -6,11 +6,16 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1110-2698&m=dev',
   {
     props: {
+      // string
       title: figma.string('✏️ Title'),
+
+      // boolean
       isExpandable: figma.boolean('Expandable', {
         true: true,
         false: false
       }),
+
+      // enum
       variant: figma.enum('Type', {
         Info: 'info',
         Success: 'success',

@@ -1,9 +1,5 @@
 import figma from '@figma/code-connect';
-import { Popover, Button } from '@patternfly/react-core';
-
-/**
- * PatternFly Popover integration for Figma Code Connect
- */
+import { Button, Popover } from '@patternfly/react-core';
 
 figma.connect(
   Popover,
@@ -11,36 +7,38 @@ figma.connect(
   {
     props: {
       hasFooter: figma.boolean('Has footer'),
-      popoverDescription: figma.string('Popover description', 'I think what happened is you broke something.'),
-      popoverHeading: figma.string('Popover Heading', 'Popover titles be like what the dickens!'),
+      popoverDescription: figma.string('Popover description'),
+      popoverHeading: figma.string('Popover Heading'),
       hasSecondaryButton: figma.boolean('Has Secondary button'),
       hasInlineButton: figma.boolean('Has inline button'),
-      popoverFooter: figma.string('Popover footer', 'Some time ago'),
+      popoverFooter: figma.string('Popover footer'),
       showHeaderIcon: figma.boolean('Show header icon'),
       status: figma.enum('Status', {
-        Default: 'default',
+        Default: undefined,
         Success: 'success',
         Info: 'info',
         Warning: 'warning',
         Danger: 'danger'
       }),
       position: figma.enum('Position', {
-        'Top-left': 'top-left',
+        'Top-left': 'top-start',
         'Top-middle': 'top',
-        'Top-right': 'top-right',
-        'Bottom-left': 'bottom-left',
+        'Top-right': 'top-end',
+        'Bottom-left': 'bottom-start',
         'Bottom-middle': 'bottom',
-        'Bottom-right': 'bottom-right'
+        'Bottom-right': 'bottom-end'
       })
     },
     example: (props) => (
       // Documentation for Popover can be found at https://www.patternfly.org/components/popover
       <Popover
+        aria-label="Clickable popover"
         headerIcon={props.showHeaderIcon}
         headerContent={props.popoverHeading}
         bodyContent={props.popoverDescription}
         footerContent={props.popoverFooter}
         position={props.position}
+        triggerAction="click"
         alertSeverityVariant={props.status}
       >
         <Button>Click me</Button>

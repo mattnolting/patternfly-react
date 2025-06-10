@@ -1,15 +1,6 @@
 import figma from '@figma/code-connect';
 import { Table, Thead, Tbody, Tr, Th, Td } from '@patternfly/react-table';
 
-/**
- * PatternFly Row-Based Table (Recommended) integration for Figma Code Connect
- *
- * This file maps Figma properties to the PatternFly Table components,
- * allowing designers to generate React code directly from Figma's Dev Mode.
- */
-
-// Since RowBasedTableRecommended appears to be a custom component,
-// we'll use Table from PatternFly as the base component
 figma.connect(
   Table,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=3331-12049&m=dev',

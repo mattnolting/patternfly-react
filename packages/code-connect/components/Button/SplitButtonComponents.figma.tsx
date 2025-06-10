@@ -32,8 +32,7 @@
 
 //       // strings
 //       text: figma.string('Text')
-//     },
-//     example: (props) => (
+//     }) => (
 //       <Button isClicked={props.isClicked} isDisabled={props.isDisabled} variant={props.type}>
 //         {props.text}
 //       </Button>

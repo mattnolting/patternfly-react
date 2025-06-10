@@ -3,12 +3,14 @@ import { SimpleListGroup } from '@patternfly/react-core';
 
 figma.connect(
   SimpleListGroup,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=4410-20708&t=IzSunfrnw18ti37Y-11',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=4410-20708&m=dev',
   {
-    props: {},
+    props: {
+      children: figma.children('*')
+    },
     example: (props) => (
-      // Documentation for SimpleListGroup can be found at https://www.patternfly.org/components/list
-      <SimpleListGroup />
+      // Documentation for SimpleListGroup can be found at https://www.patternfly.org/components/simple-list
+      <SimpleListGroup>{props.children}</SimpleListGroup>
     )
   }
 );

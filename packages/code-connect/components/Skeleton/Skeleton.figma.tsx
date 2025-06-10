@@ -7,24 +7,22 @@ figma.connect(
   {
     props: {
       size: figma.enum('Size', {
-        S: 's',
-        M: 'm',
-        L: 'l',
+        S: 'sm',
+        M: 'md',
+        L: 'lg',
         XL: 'xl',
         '2XL': '2xl',
         '3XL': '3xl',
         '4XL': '4xl'
       }),
       type: figma.enum('Type', {
-        Default: 'default',
-        Rectangle: 'rectangle',
-        Square: 'square',
+        Rectangle: 'square',
         Circle: 'circle'
       })
     },
     example: (props) => (
       // Documentation for Skeleton can be found at https://www.patternfly.org/components/skeleton
-      <Skeleton size={props.size} type={props.type} />
+      <Skeleton fontSize={props.size} shape={props.type} />
     )
   }
 );

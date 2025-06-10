@@ -3,14 +3,16 @@ import { Button } from '@patternfly/react-core';
 
 figma.connect(
   Button,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1259-678&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1259-678',
   {
     props: {
+      // string
       buttonText: figma.string('Button text'),
-      isDisabled: figma.boolean('State', {
-        Disabled: true,
-        Default: false
-      }),
+
+      // boolean
+      isDisabled: figma.boolean('State', { Disabled: true }),
+
+      // enum
       size: figma.enum('Size', {
         Small: 'sm',
         Default: 'md'

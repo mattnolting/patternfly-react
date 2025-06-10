@@ -1,11 +1,6 @@
 import figma from '@figma/code-connect';
 import { Card } from '@patternfly/react-core';
 
-/**
- * PatternFly Basic Card component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/Card
- */
-
 figma.connect(
   Card,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=3144-18658&m=dev',
@@ -26,6 +21,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
+      // Documentation for Card can be found at https://www.patternfly.org/components/card
       <Card
         isCompact={props.isCompact}
         isSelectable={props.isSelectable}

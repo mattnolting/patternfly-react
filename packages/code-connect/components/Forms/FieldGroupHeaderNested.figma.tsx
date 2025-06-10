@@ -16,7 +16,6 @@
 //   {
 //     props: {
 //       showDescription: figma.boolean("Show description"),
-//       withTrashIcon: figma.boolean("with trash icon"),
 //       type: figma.enum("Type", {
 //         "expandable - closed": "expandable---closed",
 //         "expandable - open": "expandable---open",

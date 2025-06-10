@@ -1,11 +1,6 @@
 import figma from '@figma/code-connect';
 import { Toolbar, ToolbarContent } from '@patternfly/react-core';
 
-/**
- * PatternFly Toolbar component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/toolbar
- */
-
 figma.connect(
   Toolbar,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=8062-17157&m=dev',

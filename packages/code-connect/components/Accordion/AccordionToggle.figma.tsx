@@ -10,22 +10,27 @@ figma.connect(
       expandText: figma.string('Expand Text'),
 
       // enum
+      isExpanded: figma.enum('State', { Expanded: true }),
       toggleTextExpanded: figma.enum('State', {
         Default: figma.string('Toggle Text'),
         Hover: figma.string('Toggle Text'),
         Expanded: figma.string('Toggle Text Expanded')
       }),
-      isExpanded: figma.enum('State', { Expanded: true }),
 
       children: figma.children('*')
     },
     example: (props) => (
       // Documentation for Accordion can be found at https://www.patternfly.org/components/accordion
       <AccordionItem isExpanded={props.isExpanded}>
-        <AccordionToggle onClick={() => {}} id="<your-id>">
+        <AccordionToggle
+          onClick={() => {
+            "onToggle('<accordion-toggle-id>');";
+          }}
+          id="<accordion-toggle-id>"
+        >
           {props.toggleTextExpanded}
         </AccordionToggle>
-        <AccordionContent id="accordion-content-example">
+        <AccordionContent id="<accordion-content-id>">
           <p>{props.expandText}</p>
         </AccordionContent>
       </AccordionItem>
