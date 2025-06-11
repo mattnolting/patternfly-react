@@ -3,7 +3,7 @@ import { Button, Popover } from '@patternfly/react-core';
 
 figma.connect(
   Popover,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=5857-2066&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=5857-2066',
   {
     props: {
       hasFooter: figma.boolean('Has footer'),

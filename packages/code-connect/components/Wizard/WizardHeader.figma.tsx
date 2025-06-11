@@ -3,7 +3,7 @@ import { WizardHeader } from '@patternfly/react-core';
 
 figma.connect(
   WizardHeader,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=14628-17329&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=14628-17329',
   {
     props: {
       title: figma.string('✏️Wizard Title'),

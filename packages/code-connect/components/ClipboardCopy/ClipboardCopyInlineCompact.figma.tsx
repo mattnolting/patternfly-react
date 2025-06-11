@@ -3,7 +3,7 @@ import { ClipboardCopy } from '@patternfly/react-core';
 
 figma.connect(
   ClipboardCopy,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=9914-75768&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=9914-75768',
   {
     props: {
       children: figma.children('*')

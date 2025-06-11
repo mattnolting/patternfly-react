@@ -3,7 +3,7 @@ import { Wizard } from '@patternfly/react-core';
 
 figma.connect(
   Wizard,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=14628-23799&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=14628-23799',
   {
     props: {
       children: figma.children('*')

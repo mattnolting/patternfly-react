@@ -3,7 +3,7 @@ import { TreeView } from '@patternfly/react-core';
 
 figma.connect(
   TreeView,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=12615-2825&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=12615-2825',
   {
     props: {
       // object

@@ -3,7 +3,7 @@ import { DatePicker } from '@patternfly/react-core';
 
 figma.connect(
   DatePicker,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=7958:136841',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=7958-136846',
   {
     props: {
       children: figma.children('*')

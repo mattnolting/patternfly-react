@@ -3,7 +3,7 @@ import { Breadcrumb } from '@patternfly/react-core';
 
 figma.connect(
   Breadcrumb,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6%3A-Components-Test?node-id=3362-283&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6%3A-Components-Test?node-id=3362-283',
   {
     props: {
       children: figma.children('*')

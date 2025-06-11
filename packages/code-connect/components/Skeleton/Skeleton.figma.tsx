@@ -3,7 +3,7 @@ import { Skeleton } from '@patternfly/react-core';
 
 figma.connect(
   Skeleton,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=790-288&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=790-288',
   {
     props: {
       size: figma.enum('Size', {

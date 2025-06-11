@@ -4,7 +4,7 @@ import { IconWrapper } from 'src/components/Icon/IconWrapper.tsx';
 
 figma.connect(
   Td,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2912-36519&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2912-36519',
   {
     props: {
       size: figma.enum('Size', {

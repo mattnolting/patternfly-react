@@ -3,7 +3,7 @@ import { Masthead, MastheadBrand, MastheadContent, MastheadMain } from '@pattern
 
 figma.connect(
   Masthead,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2104-6642&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2104-6642',
   {
     props: {
       // Map only properties available in Figma

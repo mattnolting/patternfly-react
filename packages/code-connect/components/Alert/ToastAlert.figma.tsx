@@ -3,14 +3,17 @@ import { Alert } from '@patternfly/react-core';
 
 figma.connect(
   Alert,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1110-2587&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1110-2587',
   {
     props: {
+      // string
       title: figma.string('✏️ Title'),
-      isExpandable: figma.boolean('Expandable', {
-        true: true,
-        false: false
-      }),
+      description: figma.string('✏️ Title'),
+
+      // boolean
+      isExpandable: figma.boolean('Expandable'),
+
+      // enum
       variant: figma.enum('Type', {
         Custom: 'custom',
         Danger: 'danger',
@@ -21,7 +24,9 @@ figma.connect(
     },
     example: (props) => (
       // Documentation for Alert can be found at https://www.patternfly.org/components/alert
-      <Alert title={props.title} variant={props.variant} isExpandable={props.isExpandable} />
+      <Alert isToast isLiveRegion title={props.title} variant={props.variant} isExpandable={props.isExpandable}>
+        {props.description}
+      </Alert>
     )
   }
 );

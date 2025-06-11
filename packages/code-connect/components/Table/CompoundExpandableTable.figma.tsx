@@ -3,7 +3,7 @@ import { Table } from '@patternfly/react-table';
 
 figma.connect(
   Table,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=6482-55919&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=6482-55919',
   {
     props: {},
     example: (props) => (

@@ -3,7 +3,7 @@
 
 // figma.connect(
 //   CalendarMonth,
-//   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=FIND-CALENDAR-NODE-ID&m=dev',
+//   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=FIND-CALENDAR-NODE-ID',
 //   {
 //     props: {
 //       isDisabled: figma.boolean('Is Disabled')

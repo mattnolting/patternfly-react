@@ -3,7 +3,7 @@ import { Timestamp } from '@patternfly/react-core';
 
 figma.connect(
   Timestamp,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=7472-6718&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=7472-6718',
   {
     props: {
       // string

@@ -8,7 +8,7 @@ import { Nav } from '@patternfly/react-core';
 
 figma.connect(
   Nav,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=7514-12157&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=7514-12157',
   {
     props: {
       children: figma.children('*')

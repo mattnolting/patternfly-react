@@ -3,7 +3,7 @@ import { EmptyState, EmptyStateBody } from '@patternfly/react-core';
 
 figma.connect(
   EmptyState,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=25224-6210&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=25224-6210',
   {
     props: {
       title: figma.string('Title text'),

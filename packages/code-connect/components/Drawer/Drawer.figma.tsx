@@ -9,23 +9,38 @@ figma.connect(
       // boolean
       isExpanded: figma.boolean('Show Footer actions'),
       isResizable: figma.boolean('Is resizable'),
-      description: figma.string('Description'),
-      headerText: figma.string('Header text'),
 
       // enum
-      isInline: figma.enum('Type', { Inline: 'inline' }),
-      isLeft: figma.enum('Position', { Left: 'start' }),
+      isInline: figma.enum('Type', {
+        Overlay: undefined,
+        Inline: true
+      }),
+      position: figma.enum('Position', {
+        'Left In Main Content Area': 'start',
+        'Right - Full Page': undefined,
+        'Left - Full Page': 'start',
+        'Right Full Page': undefined,
+        'Bottom Full Page': 'end',
+        'Bottom In Main Content Area': 'end',
+        'Right In Main Content Area': undefined
+      }),
 
-      // children
-      children: figma.children('*'),
-      drawerMain: figma.instance('DrawerMain'),
-      mainContent: figma.children('DrawerMain')
+      panelContent: figma.children('*')
     },
     example: (props) => (
       // Documentation for Drawer can be found at https://www.patternfly.org/components/drawer
-      <Drawer isExpanded={props.isExpanded} isInline={props.isInline} position={props.isLeft}>
-        {props.children}
-        {props.mainContent}
+      <Drawer
+        id="<drawer-id>"
+        isExpanded={props.isExpanded}
+        isInline={props.isInline}
+        isResizable={props.isResizable}
+        position={props.position}
+        onResize={() => {}}
+        onExpand={() => {}}
+      >
+        <DrawerContent panelContent={props.panelContent}>
+          <DrawerContentBody>Drawer content</DrawerContentBody>
+        </DrawerContent>
       </Drawer>
     )
   }

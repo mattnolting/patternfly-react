@@ -3,7 +3,7 @@ import { WizardStep } from '@patternfly/react-core';
 
 figma.connect(
   WizardStep,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=14628-17356&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=14628-17356',
   {
     props: {
       // string

@@ -1,9 +1,11 @@
 import figma from '@figma/code-connect';
 import { ActionList, ActionListGroup } from '@patternfly/react-core';
 
+// TODO: add ActionListGroup and ActionListItem to Figma
+
 figma.connect(
   ActionList,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=6780-15839&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=6780-15839',
   {
     props: {
       // enum

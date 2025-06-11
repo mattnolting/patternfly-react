@@ -3,7 +3,7 @@ import { LoginPage } from '@patternfly/react-core';
 
 figma.connect(
   LoginPage,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2104-4180&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2104-4180',
   {
     props: {
       content: figma.textContent('About content'),
