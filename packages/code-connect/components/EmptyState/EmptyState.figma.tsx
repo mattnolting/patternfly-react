@@ -28,7 +28,7 @@ figma.connect(
         'Extra large': 'xl'
       }),
       // "custom" | "warning" | "success" | "danger" | "info"
-      status: figma.enum('Status', {
+      status: figma.enum('Type', {
         Basic: {
           icon: CubesIcon,
           type: undefined
@@ -58,7 +58,7 @@ figma.connect(
           type: undefined
         }
       }),
-      isLoading: figma.enum('Status', { Loading: 'Spinner' })
+      isLoading: figma.enum('Type', { Loading: 'Spinner' })
     },
     example: (props) => (
       // Documentation for EmptyState can be found at https://www.patternfly.org/components/empty-state

@@ -2,15 +2,10 @@
   "codeConnect": {
     "parser": "react",
     "include": [
-      "components/ClipboardCopy/*.figma.tsx",
-      "components/CodeBlock/*.figma.tsx",
-      "components/CodeEditor/*.figma.tsx",
-      "components/DataList/*.figma.tsx",
-      "components/DatePicker/*.figma.tsx",
-      "components/DescriptionList/*.figma.tsx",
-      "components/Divider/*.figma.tsx",
-      "components/Drawer/*.figma.tsx",
-      "components/DualListSelector/*.figma.tsx"
+      "components/EmptyState/*.figma.tsx",
+      "components/ExpandableSection/*.figma.tsx",
+      "components/FileUpload/*.figma.tsx",
+      "components/Hint/*.figma.tsx"
     ],
     "paths": {
       "@patternfly/react-core": "/Users/mnolting/Web/patternfly-react/packages/react-core/src",
