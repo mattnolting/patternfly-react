@@ -5,7 +5,8 @@
       "components/EmptyState/*.figma.tsx",
       "components/ExpandableSection/*.figma.tsx",
       "components/FileUpload/*.figma.tsx",
-      "components/Hint/*.figma.tsx"
+      "components/Hint/*.figma.tsx",
+      "components/InlineEdit/*.figma.tsx"
     ],
     "paths": {
       "@patternfly/react-core": "/Users/mnolting/Web/patternfly-react/packages/react-core/src",
