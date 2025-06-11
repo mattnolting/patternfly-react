@@ -24,19 +24,19 @@ figma.connect(
           />
         ))}`
     },
-    example: (props) => {
-      const alertGroupProps = {
-        maxDisplayed: 4,
-        alerts: [
-          { key: '1', variant: 'info', title: 'Info alert' },
-          { key: '2', variant: 'success', title: 'Success alert' },
-          { key: '3', variant: 'warning', title: 'Warning alert' },
-          { key: '4', variant: 'danger', title: 'Danger alert' }
-        ]
-      };
+    example: (props) => (
+      // const alertGroupOverflowContent = {
+      //   maxDisplayed: 4,
+      //   alerts: [
+      //     { key: '1', variant: 'info', title: 'Info alert' },
+      //     { key: '2', variant: 'success', title: 'Success alert' },
+      //     { key: '3', variant: 'warning', title: 'Warning alert' },
+      //     { key: '4', variant: 'danger', title: 'Danger alert' }
+      //   ]
+      // };
 
       // Documentation for Alert can be found at https://www.patternfly.org/components/alert
-      return <AlertGroup>{props.alertGroupOverflowContent}</AlertGroup>;
-    }
+      <AlertGroup>{props.alertGroupOverflowContent}</AlertGroup>
+    )
   }
 );

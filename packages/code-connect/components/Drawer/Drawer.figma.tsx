@@ -1,5 +1,5 @@
 import figma from '@figma/code-connect';
-import { Drawer } from '@patternfly/react-core';
+import { Drawer, DrawerContent, DrawerContentBody } from '@patternfly/react-core';
 
 figma.connect(
   Drawer,
@@ -33,7 +33,6 @@ figma.connect(
         id="<drawer-id>"
         isExpanded={props.isExpanded}
         isInline={props.isInline}
-        isResizable={props.isResizable}
         position={props.position}
         onResize={() => {}}
         onExpand={() => {}}

@@ -1,6 +1,6 @@
 import figma from '@figma/code-connect';
 import { Button, ButtonVariant, DualListSelectorPane } from '@patternfly/react-core';
-import { PficonSortCommonAscIcon } from '@patternfly/react-icons/dist/esm/icons/pficon-sort-common-asc-icon';
+import PficonSortCommonAscIcon from '@patternfly/react-icons/icons/pficon-sort-common-asc-icon/dist/esm/icons/pficon-sort-common-asc-icon';
 
 figma.connect(
   DualListSelectorPane,
@@ -21,7 +21,9 @@ figma.connect(
         false: undefined
       }),
 
-      hasSort: figma.boolean('Has search bar', {
+      // TODO: FIGMA: Add sort button
+
+      actions: figma.boolean('Has search bar', {
         true: [
           <Button
             variant={ButtonVariant.plain}
@@ -47,13 +49,14 @@ figma.connect(
     example: (props) => (
       // Documentation for DualListHeader can be found at https://www.patternfly.org/components/dual-list-selector
       <DualListSelectorPane
-        searchInput={props.isSearchable}
-        onSearch={props.onSearch}
-        actions={props.hasSort}
-        title={props.title}
-      ></DualListSelectorPane>
-        searchInput={buildSearchInput(true)}
+        actions={props.actions}
         listMinHeight="300px"
+        onSearch={props.onSearch}
+        searchInput={props.isSearchable}
+        title={props.title}
+      >
+        {props.children}
+      </DualListSelectorPane>
     )
   }
 );

@@ -1,5 +1,7 @@
 import figma from '@figma/code-connect';
-import { EmptyState, EmptyStateBody } from '@patternfly/react-core';
+import { EmptyState, EmptyStateBody, EmptyStateFooter } from '@patternfly/react-core';
+
+// TODO: FIGMA: Add Empty state footer
 
 figma.connect(
   EmptyState,
@@ -7,14 +9,13 @@ figma.connect(
   {
     props: {
       title: figma.string('Header text'),
-      body: figma.string('Body text'),
-      children: figma.children('*')
+      body: figma.string('Body text')
     },
     example: (props) => (
       // Documentation for EmptyState can be found at https://www.patternfly.org/components/empty-state
-      <EmptyState>
-        <EmptyStateHeader titleText={props.title} headingLevel="h4" />
+      <EmptyState titleText={props.title} headingLevel="h4">
         <EmptyStateBody>{props.body}</EmptyStateBody>
+        {/* <EmptyStateFooter>{props.children}</EmptyStateFooter> */}
       </EmptyState>
     )
   }
