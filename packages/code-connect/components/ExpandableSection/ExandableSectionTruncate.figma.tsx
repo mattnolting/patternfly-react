@@ -12,22 +12,25 @@ figma.connect(
 
       // boolean
       isExpanded: figma.enum('State', { Expanded: true }),
-
       propsExpandedContentSectionText: figma.enum('State', {
-        Default: undefined,
+        Default: figma.string('Default Truncate Text'),
         Expanded: figma.string('Expanded Truncate Text')
       }),
 
       // enum
-      expandedContentSectionText: figma.enum('State', { 'Expanded Truncate': true })
+      expandedContentSectionText: figma.enum('State', { 'Expanded Truncate': true }),
+
+      children: figma.children('*')
     },
     example: (props) => (
       // Documentation for ExpandableSection can be found at https://www.patternfly.org/components/expandable-section
       <ExpandableSection
-        isExpanded={props.isExpanded}
         toggleTextCollapsed={props.toggleTextCollapsed}
         toggleTextExpanded={props.toggleTextExpanded}
+        onToggle={() => {}}
         variant="truncate"
+        isExpanded={props.isExpanded}
+        toggleContent={props.children}
       >
         {props.expandedContentSectionText}
       </ExpandableSection>

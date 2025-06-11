@@ -1,6 +1,17 @@
 import figma from '@figma/code-connect';
 import { ExpandableSection } from '@patternfly/react-core';
 
+// TODO: FIGMA: Create toggle component
+const toggleContent = `
+    <div>
+    <span>You can also use icons </span>
+    <CheckCircleIcon />
+    <span> or badges </span>
+    <Badge isRead={true}>4</Badge>
+    <span> !</span>
+  </div>
+`;
+
 figma.connect(
   ExpandableSection,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2404-21',
@@ -15,6 +26,11 @@ figma.connect(
         'Expanded Indent': true,
         'Expanded Custom Content': true,
         'Expanded Custom with Component swap': true
+      }),
+      toggleContent: figma.enum('State', {
+        'Default Custom Content': toggleContent,
+        'Expanded Custom Content': toggleContent,
+        'Expanded Custom with Component swap': toggleContent
       }),
       toggleTextExpanded: figma.enum('State', {
         'Expanded Basic': figma.string('Toggle Text Less'),
@@ -41,6 +57,7 @@ figma.connect(
       <ExpandableSection
         isExpanded={props.isExpanded}
         isIndented={props.isIndented}
+        toggleContent={props.toggleContent}
         toggleTextCollapsed={props.toggleTextCollapsed}
         toggleTextExpanded={props.toggleTextExpanded}
         variant="truncate"

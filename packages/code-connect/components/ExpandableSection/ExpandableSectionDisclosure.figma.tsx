@@ -11,19 +11,18 @@ figma.connect(
       toggleTextExpanded: figma.string('Toggle Text Less'),
       toggleTextCollapsed: figma.string('Toggle Text More'),
 
-      // Boolean
+      // boolean
       isIndented: figma.enum('State', {
         'Expanded Indent': true
       }),
-      isDetached: figma.enum('State', {
-        'Expand Detached': true
-      }),
       isExpanded: figma.enum('State', {
         Expanded: true,
-        'Expanded Uncontrolled': true,
+        'Expand Uncontrolled': true,
         'Expanded Indent': true,
         'Expanded Custom Content': true
-      })
+      }),
+
+      children: figma.children('*')
     },
     example: (props) => (
       // Documentation for ExpandableSection can be found at https://www.patternfly.org/components/expandable-section
@@ -33,6 +32,7 @@ figma.connect(
         toggleTextCollapsed={props.toggleTextCollapsed}
         toggleTextExpanded={props.toggleTextExpanded}
         variant="truncate"
+        toggleContent={props.children}
       >
         {props.expandedContentSectionText}
       </ExpandableSection>
