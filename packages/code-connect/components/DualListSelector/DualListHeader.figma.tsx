@@ -1,5 +1,6 @@
 import figma from '@figma/code-connect';
 import { Button, ButtonVariant, DualListSelectorPane } from '@patternfly/react-core';
+import { PficonSortCommonAscIcon } from '@patternfly/react-icons/dist/esm/icons/pficon-sort-common-asc-icon';
 
 figma.connect(
   DualListSelectorPane,
@@ -11,7 +12,10 @@ figma.connect(
       itemInformation: figma.string('Item information'),
 
       // boolean
-      isSearchable: figma.boolean('Has search bar'),
+      isSearchable: figma.boolean('Has search bar', {
+        true: `buildSearchInput(true)`,
+        false: undefined
+      }),
       onSearch: figma.boolean('Has search bar', {
         true: () => {},
         false: undefined
@@ -48,6 +52,8 @@ figma.connect(
         actions={props.hasSort}
         title={props.title}
       ></DualListSelectorPane>
+        searchInput={buildSearchInput(true)}
+        listMinHeight="300px"
     )
   }
 );
