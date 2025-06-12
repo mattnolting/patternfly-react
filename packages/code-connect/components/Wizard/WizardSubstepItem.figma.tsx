@@ -4,8 +4,5 @@ figma.connect('https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6-
   props: {
     stepItem: figma.children('*')
   },
-  example: (props) => (
-    // Documentation for WizardStep can be found at https://www.patternfly.org/components/wizard
-    <>{props.stepItem}</>
-  )
+  example: (props) => <>{props.stepItem}</>
 });

@@ -22,7 +22,6 @@ figma.connect(
     // id, name, isDisabled
     // body, isHidden, navItem, footer, status
     example: (props) => (
-      // Documentation for WizardStep can be found at https://www.patternfly.org/components/wizard
       <WizardStep isDisabled={props.isDisabled} name={props.name} id="<your-id>" steps={[props.steps]}>
         {props.children}
       </WizardStep>

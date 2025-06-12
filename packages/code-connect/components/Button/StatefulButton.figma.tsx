@@ -1,5 +1,6 @@
 import figma from '@figma/code-connect';
 import { Button } from '@patternfly/react-core';
+import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 
 figma.connect(
   Button,
@@ -19,11 +20,10 @@ figma.connect(
         'Unread - Needs attention': 'unread---needs-attention'
       }),
 
-      icon: figma.children('IconWrapper'),
       children: figma.children('*')
     },
     example: (props) => (
-      <Button variant="stateful" icon={props.icon}>
+      <Button variant="stateful" icon={<CogIcon />}>
         {props.children}
       </Button>
     )

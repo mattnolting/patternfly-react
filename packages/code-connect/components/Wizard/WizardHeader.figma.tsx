@@ -10,7 +10,6 @@ figma.connect(
       description: figma.string('✏️ Description')
     },
     example: (props) => (
-      // Documentation for WizardHeader can be found at https://www.patternfly.org/components/wizard
       <WizardHeader
         description={props.description}
         descriptionId="<wizard-description-id>"

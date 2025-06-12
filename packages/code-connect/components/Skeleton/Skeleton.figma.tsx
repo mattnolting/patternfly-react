@@ -22,7 +22,7 @@ figma.connect(
     },
     example: (props) => (
       // Documentation for Skeleton can be found at https://www.patternfly.org/components/skeleton
-      <Skeleton fontSize={props.size} shape={props.type} />
+      <Skeleton fontSize={props.size} shape={props.type} screenreaderText="Loading default content" />
     )
   }
 );

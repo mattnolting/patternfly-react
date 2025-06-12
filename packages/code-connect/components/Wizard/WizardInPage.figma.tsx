@@ -8,6 +8,9 @@ figma.connect(
     props: {
       children: figma.children('*')
     },
-    example: (props) => <Wizard>{props.children}</Wizard>
+    example: (props) => (
+      // Documentation for Wizard can be found at https://www.patternfly.org/components/wizard
+      <Wizard>{props.children}</Wizard>
+    )
   }
 );

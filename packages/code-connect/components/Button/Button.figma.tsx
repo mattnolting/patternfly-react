@@ -1,5 +1,6 @@
 import figma from '@figma/code-connect';
 import { Button } from '@patternfly/react-core';
+import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 
 figma.connect(
   Button,
@@ -10,13 +11,7 @@ figma.connect(
       buttonText: figma.string('Button text'),
 
       // boolean
-      isDisabled: figma.boolean('State', { Disabled: true }),
-
-      // enum
-      size: figma.enum('Size', {
-        Small: 'sm',
-        Default: 'md'
-      }),
+      isDisabled: figma.enum('State', { Disabled: true }),
       variant: figma.enum('Type', {
         Primary: 'primary',
         Secondary: 'secondary',
@@ -27,7 +22,7 @@ figma.connect(
     },
     example: (props) => (
       // Documentation for Button can be found at https://www.patternfly.org/components/button
-      <Button isDisabled={props.isDisabled} size={props.size} variant={props.variant}>
+      <Button isDisabled={props.isDisabled} variant={props.variant} icon={<CogIcon />}>
         {props.buttonText}
       </Button>
     )

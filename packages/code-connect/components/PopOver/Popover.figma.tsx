@@ -1,24 +1,42 @@
 import figma from '@figma/code-connect';
-import { Button, Popover } from '@patternfly/react-core';
+import { Popover } from '@patternfly/react-core';
+
+// TODO: FIGMA: Add buttons boolean to footerContent
+// TODO: REACT: Add iconWrapper support
 
 figma.connect(
   Popover,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=5857-2066',
   {
     props: {
-      hasFooter: figma.boolean('Has footer'),
-      popoverDescription: figma.string('Popover description'),
-      popoverHeading: figma.string('Popover Heading'),
-      hasSecondaryButton: figma.boolean('Has Secondary button'),
-      hasInlineButton: figma.boolean('Has inline button'),
-      popoverFooter: figma.string('Popover footer'),
-      showHeaderIcon: figma.boolean('Show header icon'),
+      // hasFooter: figma.boolean('Has footer', {}),
+      bodyContent: figma.string('Popover description'),
+      headerContent: figma.string('Popover Heading'),
+      footerContent: figma.boolean('Has footer', {
+        true: figma.string('Popover footer'),
+        false: undefined
+      }),
       status: figma.enum('Status', {
-        Default: undefined,
-        Success: 'success',
-        Info: 'info',
-        Warning: 'warning',
-        Danger: 'danger'
+        Default: {
+          state: undefined,
+          icon: undefined
+        },
+        Success: {
+          state: 'success',
+          icon: <CheckCircleIcon />
+        },
+        Info: {
+          state: 'info',
+          icon: <InfoCircleIcon />
+        },
+        Warning: {
+          state: 'warning',
+          icon: <ExclamationTriangleIcon />
+        },
+        Danger: {
+          state: 'danger',
+          icon: <ExclamationCircleIcon />
+        }
       }),
       position: figma.enum('Position', {
         'Top-left': 'top-start',
@@ -27,22 +45,21 @@ figma.connect(
         'Bottom-left': 'bottom-start',
         'Bottom-middle': 'bottom',
         'Bottom-right': 'bottom-end'
-      })
+      }),
+
+      children: figma.children('*')
     },
     example: (props) => (
       // Documentation for Popover can be found at https://www.patternfly.org/components/popover
       <Popover
         aria-label="Clickable popover"
-        headerIcon={props.showHeaderIcon}
-        headerContent={props.popoverHeading}
-        bodyContent={props.popoverDescription}
-        footerContent={props.popoverFooter}
+        headerContent={props.headerContent}
+        bodyContent={props.bodyContent}
+        footerContent={props.footerContent}
         position={props.position}
-        triggerAction="click"
-        alertSeverityVariant={props.status}
-      >
-        <Button>Click me</Button>
-      </Popover>
+        headerIcon={props.status.icon}
+        alertSeverityVariant={props.status.state}
+      />
     )
   }
 );

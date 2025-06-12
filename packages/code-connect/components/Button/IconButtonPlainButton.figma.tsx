@@ -1,5 +1,6 @@
 import figma from '@figma/code-connect';
 import { Button } from '@patternfly/react-core';
+import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 
 figma.connect(
   Button,
@@ -11,17 +12,14 @@ figma.connect(
       isDisabled: figma.enum('State', { Disabled: true }),
 
       // variants
-      hasNoPadding: figma.enum('Type', { 'No padding': true }),
-
-      icon: figma.children('IconWrapper')
+      hasNoPadding: figma.enum('Type', { 'No padding': true })
     },
     example: (props) => (
       // Documentation for Button can be found at https://www.patternfly.org/components/button
       <Button
         variant="control"
         aria-label="Icon button"
-        // TODO: Map icon to children
-        icon={props.icon}
+        icon={<CogIcon />}
         isClicked={props.isClicked}
         isDisabled={props.isDisabled}
         hasNoPadding={props.hasNoPadding}

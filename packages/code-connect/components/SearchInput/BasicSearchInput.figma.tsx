@@ -7,12 +7,24 @@ figma.connect(
   {
     props: {
       // string
-      placeholder: figma.string('✏️ Placeholder text')
+      placeholder: figma.string('✏️ Placeholder text'),
+      inputGroupItems: figma.boolean('Show submit button', {
+        true: figma.children('Input group items'),
+        false: undefined
       })
     },
     example: (props) => (
       // Documentation for SearchInput can be found at https://www.patternfly.org/components/search-input
-      <SearchInput placeholder={props.placeholder} value={props.isFilledValue} onChange={() => {}} onClear={() => {}} />
+      <>
+        <SearchInput
+          placeholder={props.placeholder}
+          value=""
+          onChange={() => {}}
+          onClear={() => {}}
+          onSearch={() => {}}
+        />
+        {props.inputGroupItems}
+      </>
     )
   }
 );

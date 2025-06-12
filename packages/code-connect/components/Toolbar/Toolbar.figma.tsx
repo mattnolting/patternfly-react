@@ -1,5 +1,5 @@
 import figma from '@figma/code-connect';
-import { Toolbar, ToolbarContent } from '@patternfly/react-core';
+import { Toolbar } from '@patternfly/react-core';
 
 figma.connect(
   Toolbar,
@@ -16,14 +16,17 @@ figma.connect(
       overflowMenu: figma.boolean('Overflow menu'),
       pagination: figma.boolean('Pagination'),
       searchFilter: figma.boolean('Search filter'),
-      transparentBackground: figma.boolean('Transparent Background'),
-      verticalDivider: figma.boolean('Vertical divider'),
+      hasNoBackground: figma.boolean('Transparent Background', {
+        true: 'no-background',
+        false: undefined
+      }),
 
       children: figma.children('*')
     },
     example: (props) => (
-      <Toolbar id="toolbar-example">
-        <ToolbarContent>{props.children}</ToolbarContent>
+      <Toolbar id="toolbar-example" colorVariant={props.hasNoBackground}>
+        <ToolbarGroup></ToolbarGroup>
+        {props.children}
       </Toolbar>
     )
   }

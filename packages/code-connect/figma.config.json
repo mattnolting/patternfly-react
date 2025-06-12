@@ -2,11 +2,8 @@
   "codeConnect": {
     "parser": "react",
     "include": [
-      "components/NotificationDrawer/*.figma.tsx",
-      "components/Page/*.figma.tsx",
-      "components/Pagination/*.figma.tsx",
-      "components/Popover/*.figma.tsx",
-      "components/SearchInput/*.figma.tsx"
+      "components/Icon/*.figma.tsx",
+      "components/Button/*.figma.tsx"
     ],
     "paths": {
       "@patternfly/react-core": "/Users/mnolting/Web/patternfly-react/packages/react-core/src",
