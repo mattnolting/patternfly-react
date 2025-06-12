@@ -2,11 +2,11 @@
   "codeConnect": {
     "parser": "react",
     "include": [
-      "components/EmptyState/*.figma.tsx",
-      "components/ExpandableSection/*.figma.tsx",
-      "components/FileUpload/*.figma.tsx",
-      "components/Hint/*.figma.tsx",
-      "components/InlineEdit/*.figma.tsx"
+      "components/NotificationDrawer/*.figma.tsx",
+      "components/Page/*.figma.tsx",
+      "components/Pagination/*.figma.tsx",
+      "components/Popover/*.figma.tsx",
+      "components/SearchInput/*.figma.tsx"
     ],
     "paths": {
       "@patternfly/react-core": "/Users/mnolting/Web/patternfly-react/packages/react-core/src",
