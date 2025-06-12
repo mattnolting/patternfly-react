@@ -1,25 +1,19 @@
 import figma from '@figma/code-connect';
-import { Label, LabelGroup } from '@patternfly/react-core';
-
-/**
- * PatternFly LabelGroup component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/label-group
- */
+import { LabelGroup } from '@patternfly/react-core';
 
 figma.connect(
   LabelGroup,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2800-1075&t=IzSunfrnw18ti37Y-11',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2800-1075',
   {
     props: {
       // string
-      categoryName: figma.string('Label group name')
+      categoryName: figma.string('Label group name'),
+      isCollapsed: figma.boolean('Has collapsed labels'),
+      children: figma.children('Label')
     },
     // Documentation for LabelGroup can be found at https://www.patternfly.org/components/label-group
     example: (props) => (
-      <LabelGroup categoryName={props.categoryName} isExpanded={!props.hasCollapsedLabels} numLabels={3}>
-        <Label color="blue">Label 1</Label>
-        <Label color="green">Label 2</Label>
-        <Label color="purple">Label 3</Label>
+      <LabelGroup categoryName={props.categoryName} numLabels={5}>
         {props.children}
       </LabelGroup>
     )

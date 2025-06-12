@@ -6,7 +6,6 @@ import {
   MultipleFileUploadStatus,
   MultipleFileUploadStatusItem
 } from '@patternfly/react-core';
-import UploadIcon from '@patternfly/react-icons/dist/esm/icons/upload-icon';
 
 // TODO: FIGMA: Add status toggle text
 // TODO: FIGMA: Add status toggle icon

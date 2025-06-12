@@ -47,7 +47,6 @@ figma.connect(
         isLoading={props.isLoading}
         isDragActive={props.isDragActive}
         hideDefaultPreview={props.hideDefaultPreview}
-        isLoading={props.isLoading}
         allowEditingUploadedText={props.allowEditingUploadedText}
         onFileInputChange={() => {}}
         onDataChange={() => {}}

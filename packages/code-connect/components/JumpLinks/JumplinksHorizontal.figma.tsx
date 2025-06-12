@@ -1,10 +1,5 @@
 import figma from '@figma/code-connect';
-import { JumpLinks, JumpLinksLabel } from '@patternfly/react-core';
-
-/**
- * PatternFly JumpLinks horizontal component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/jump-links#horizontal-with-label
- */
+import { JumpLinks } from '@patternfly/react-core';
 
 figma.connect(
   JumpLinks,
@@ -12,14 +7,13 @@ figma.connect(
   {
     props: {
       // boolean
-      showLabel: figma.boolean('Show label')
+      label: figma.boolean('Show label', { true: figma.children('Label') }),
+
+      children: figma.children('*')
     },
     example: (props) => (
       // Documentation for JumpLinks can be found at https://www.patternfly.org/components/jump-links
-      <JumpLinks isHorizontal>
-        <JumpLinksLabel>{props.labelText}</JumpLinksLabel>
-        {props.children}
-      </JumpLinks>
+      <JumpLinks label={props.label}>{props.children}</JumpLinks>
     )
   }
 );

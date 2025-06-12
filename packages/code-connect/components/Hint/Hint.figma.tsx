@@ -1,5 +1,16 @@
 import figma from '@figma/code-connect';
-import { Hint, HintBody, HintFooter, HintTitle, Button, DropdownList, Dropdown } from '@patternfly/react-core';
+import {
+  Hint,
+  HintBody,
+  HintFooter,
+  HintTitle,
+  DropdownList,
+  Dropdown,
+  DropdownItem,
+  Divider,
+  MenuToggle
+} from '@patternfly/react-core';
+import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/ellipsis-v-icon';
 
 // TODO: FIGMA: Use dropdown from figma for actions
 // TODO: FIGMA: Create hint title
