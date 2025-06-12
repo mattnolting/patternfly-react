@@ -23,5 +23,6 @@ figma.connect(
     example: (props) => (
       // Documentation for SimpleListItem can be found at https://www.patternfly.org/components/simple-list
       <SimpleListItem>{props.text}</SimpleListItem>
+    )
   }
 );

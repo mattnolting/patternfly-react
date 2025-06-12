@@ -1,5 +1,9 @@
 import figma from '@figma/code-connect';
 import { Popover } from '@patternfly/react-core';
+import CheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/check-circle-icon';
+import InfoCircleIcon from '@patternfly/react-icons/dist/esm/icons/info-circle-icon';
+import ExclamationTriangleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-triangle-icon';
+import ExclamationCircleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-circle-icon';
 
 // TODO: FIGMA: Add buttons boolean to footerContent
 // TODO: REACT: Add iconWrapper support
