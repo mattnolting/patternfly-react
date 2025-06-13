@@ -18,12 +18,12 @@ figma.connect(
         false: ''
       }),
       size: figma.enum('Size', {
-        Default: 'default',
+        Default: undefined,
         Small: 'sm',
         Large: 'lg'
       }),
       state: figma.enum('State', {
-        Default: 'default',
+        Default: undefined,
         Success: 'success',
         Warning: 'warning',
         Error: 'danger'

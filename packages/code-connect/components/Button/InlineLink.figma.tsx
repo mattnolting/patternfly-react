@@ -11,7 +11,7 @@ figma.connect(
 
       // variants
       type: figma.enum('Type', {
-        Default: 'default',
+        Default: undefined,
         'Inline link external': 'inline-link-external'
       }),
 

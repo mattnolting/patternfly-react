@@ -7,7 +7,7 @@ figma.connect(
   {
     props: {
       size: figma.enum('Size', {
-        Default: 'default',
+        Default: undefined,
         Compact: 'compact'
       })
     },

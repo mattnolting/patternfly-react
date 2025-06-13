@@ -17,7 +17,7 @@
 //     props: {
 //       showTabs: figma.boolean('Show tabs'),
 //       type: figma.enum('Type', {
-//         Default: 'default',
+//         Default: undefined,
 //         Sticky: 'sticky'
 //       }),
 //       hasPageTitleSection: figma.boolean('Has Page Title Section')

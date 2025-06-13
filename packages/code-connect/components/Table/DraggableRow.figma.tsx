@@ -9,11 +9,11 @@ figma.connect(
       showActions: figma.boolean('Show actions'),
       showLeftControls: figma.boolean('Show Left Controls'),
       size: figma.enum('Size', {
-        Default: 'default',
+        Default: undefined,
         Compact: 'compact'
       }),
       state: figma.enum('State', {
-        Default: 'default',
+        Default: undefined,
         'On Drag': 'on-drag',
         'Drag Outside': 'drag-outside'
       }),

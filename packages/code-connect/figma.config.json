@@ -2,7 +2,8 @@
   "codeConnect": {
     "parser": "react",
     "include": [
-      "components/Icon/*.figma.tsx",
+      "components/CodeBlock/*.figma.tsx",
+      "components/CodeEditor/*.figma.tsx",
       "components/Button/*.figma.tsx"
     ],
     "paths": {

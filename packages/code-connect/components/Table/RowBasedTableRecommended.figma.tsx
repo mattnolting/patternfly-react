@@ -12,7 +12,7 @@ figma.connect(
         'Clickable & Selectable table': 'clickable---selectable-table'
       }),
       size: figma.enum('Size', {
-        Default: 'default',
+        Default: undefined,
         Compact: 'compact'
       }),
       bordered: figma.boolean('Bordered'),

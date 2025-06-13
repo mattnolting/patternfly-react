@@ -14,7 +14,7 @@ figma.connect(
 
       // enum
       variant: figma.enum('State', {
-        'In progress status': 'default',
+        'In progress status': undefined,
         'Pending status': 'pending',
         'Failure status': 'danger',
         'Completed status': 'success',

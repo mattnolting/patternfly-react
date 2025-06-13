@@ -22,7 +22,7 @@ figma.connect(
       isHorizontal: figma.enum('Layout', { Horizontal: true }),
 
       state: figma.enum('State', {
-        Default: 'default',
+        Default: undefined,
         'Drag over': 'drag-over',
         'Uploading + Collapsed': 'uploading---collapsed',
         'Uploaded + Collapsed': 'uploaded---collapsed',

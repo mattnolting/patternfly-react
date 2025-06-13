@@ -5,14 +5,14 @@ figma.connect(Th, 'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFl
   props: {
     showHelpIcon: figma.boolean('Show help icon'),
     state: figma.enum('State', {
-      Default: 'default',
+      Default: undefined,
       Hover: 'hover',
       Empty: 'empty',
       'Sorted - Ascending': 'sorted-ascending',
       'Sorted - Descending': 'sorted-descending'
     }),
     size: figma.enum('Size', {
-      Default: 'default',
+      Default: undefined,
       Compact: 'compact'
     })
   },

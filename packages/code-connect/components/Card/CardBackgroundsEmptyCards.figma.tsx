@@ -11,7 +11,7 @@ figma.connect(
       isDisabled: figma.boolean('Disabled'),
 
       state: figma.enum('State', {
-        Default: 'default',
+        Default: undefined,
         Hover: 'hover',
         Clicked: 'clicked'
       }),

@@ -16,7 +16,7 @@ figma.connect(
         Skeleton: 'skeleton'
       }),
       state: figma.enum('State', {
-        Default: 'default',
+        Default: undefined,
         Hover: 'hover',
         Selected: 'selected'
       }),

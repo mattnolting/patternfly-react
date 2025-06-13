@@ -14,7 +14,7 @@ figma.connect(
       isDisabled: figma.enum('State', { Disabled: true }),
       state: figma.enum('State', {
         Disabled: 'disabled',
-        Default: 'default',
+        Default: undefined,
         'Current day': 'current-day',
         Hover: 'hover',
         Selected: 'selected',

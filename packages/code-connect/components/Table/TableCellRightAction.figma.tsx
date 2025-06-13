@@ -8,13 +8,13 @@ figma.connect(
   {
     props: {
       size: figma.enum('Size', {
-        Default: 'default',
+        Default: undefined,
         Compact: 'compact'
       })
       // Instead of trying to directly reference layers that may not exist with
       // those exact names, let's use simpler properties that match what's in the UI
       // iconButtonState: figma.enum('State', {
-      //   Default: 'default',
+      //   Default: undefined,
       //   Hover: 'hover',
       //   Clicked: 'clicked',
       //   Disabled: 'disabled'

@@ -14,7 +14,7 @@
 //         'Text box': 'text-box'
 //       }),
 //       State: figma.enum('State', {
-//         Default: 'default',
+//         Default: undefined,
 //         Hover: 'hover',
 //         Active: 'active',
 //         Complete: 'complete',

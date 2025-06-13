@@ -10,11 +10,11 @@ figma.connect(
       leftUnit: figma.boolean('Left unit'),
       unit: figma.string('Unit'),
       type: figma.enum('Type', {
-        Default: 'default',
+        Default: undefined,
         'With Unit': 'with-unit'
       }),
       status: figma.enum('Status', {
-        Default: 'default',
+        Default: undefined,
         Warning: 'warning',
         Error: 'error',
         Success: 'success',
