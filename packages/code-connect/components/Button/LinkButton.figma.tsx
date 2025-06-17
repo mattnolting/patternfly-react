@@ -1,5 +1,11 @@
 import figma from '@figma/code-connect';
 import { Button } from '@patternfly/react-core';
+import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
+
+// TODO: FIGMA: Define Icon left/right intent
+// Ex: Are the icons different or just on different sides?
+// The current configuration renders two icons separately
+// Documentation for Button can be found at https://www.patternfly.org/components/button
 
 figma.connect(
   Button,
@@ -7,14 +13,10 @@ figma.connect(
   {
     props: {
       // instance
-      icon: figma.children('IconWrapper'),
+      icon: <TimesIcon />, // placeholder icon
 
       // string
       buttonText: figma.string('Text'),
-
-      // boolean
-      iconStart: figma.boolean('Icon left', { true: figma.children('Spinner') }),
-      iconEnd: figma.boolean('Icon right', { true: figma.children('IconWrapper') }),
 
       // enum
       isClicked: figma.enum('State', { Clicked: true }),
@@ -34,13 +36,13 @@ figma.connect(
     },
     example: (props) => (
       <Button
-        isInline
+        variant="link"
         isClicked={props.isClicked}
         isDisabled={props.isDisabled}
         size={props.size}
         icon={props.icon}
-        variant={props.variant}
       >
+        {props.icon}
         {props.buttonText}
       </Button>
     )

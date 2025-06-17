@@ -10,14 +10,15 @@ figma.connect(
       itemText: figma.string('Item text'),
 
       // boolean
-      isDraggable: figma.boolean('Is Draggable'),
       draggableButtonAriaLabel: figma.boolean('Is Draggable', {
         true: 'Draggable list item',
         false: undefined
       }),
+      isDraggable: figma.boolean('Is Draggable'),
 
       // enum
       isSelected: figma.enum('State', { Selected: true }),
+
       children: figma.children('*')
     },
     example: (props) => (

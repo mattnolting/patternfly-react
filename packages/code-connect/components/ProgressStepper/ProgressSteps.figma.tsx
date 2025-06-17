@@ -8,20 +8,30 @@ figma.connect(
   {
     props: {
       // boolean
-      popoverRender: figma.boolean('Popover Underline '),
+      popoverRender: figma.boolean('Popover Underline ', {
+        true: (stepRef) => (
+          <Popover
+            aria-label="Step help"
+            headerContent={<div>Step popover</div>}
+            bodyContent={<div>Additional info or help text content.</div>}
+            triggerAction="click"
+            position="right"
+          />
+        ),
         false: undefined
       }),
 
       // enum
+      icon: figma.enum('State', { 'Loading/Misc. state': <InProgressIcon /> }),
       variant: figma.enum('State', {
-        'In progress status': undefined,
+        'In progress status': 'default',
         'Pending status': 'pending',
         'Failure status': 'danger',
         'Completed status': 'success',
         'Warning status': 'warning'
       }),
-      inProgress: figma.enum('State', { 'Loading/Misc. state': <InProgressIcon /> }),
 
+      // content
       description: figma.textContent('Description'),
       title: figma.textContent('Title')
     },
@@ -29,7 +39,7 @@ figma.connect(
       // Documentation for ProgressStep can be found at https://www.patternfly.org/components/progress-stepper
       <ProgressStep
         popoverRender={props.popoverRender}
-        icon={props.inProgress}
+        icon={props.icon}
         description={props.description}
         variant={props.variant}
       >

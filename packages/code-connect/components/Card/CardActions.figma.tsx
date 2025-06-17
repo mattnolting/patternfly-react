@@ -1,23 +1,16 @@
 import figma from '@figma/code-connect';
-import { Card } from '@patternfly/react-core';
+import { CardHeader } from '@patternfly/react-core';
+
+// TODO: FIGMA: Add separate CardHeader actions
+// TODO: FIGMA: Use MenuToggle for dropdown
 
 figma.connect(
-  Card,
-  'https://www.figma.com/file/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6%3A-Components-Test?node-id=3144-17097',
+  CardHeader,
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=3144-17097&m=dev',
   {
     props: {
-      isSelectable: figma.boolean('Selectable'),
-      isClickable: figma.boolean('Clickable'),
-      isDisabled: figma.boolean('Disabled'),
-
-      // children
-      children: figma.children('*')
+      actions: figma.children('*')
     },
-    example: (props) => (
-      // Documentation for Card can be found at https://www.patternfly.org/components/card
-      <Card isSelectable={props.isSelectable} isClickable={props.isClickable} isDisabled={props.isDisabled}>
-        {props.children}
-      </Card>
-    )
+    example: (props) => <CardHeader actions={props.actions} />
   }
 );

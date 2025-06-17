@@ -1,56 +1,29 @@
 import figma from '@figma/code-connect';
-import { Table, Thead, Tbody, Tr, Th, Td } from '@patternfly/react-table';
+import { Table } from '@patternfly/react-table';
 
 figma.connect(
   Table,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=3331-12049',
   {
     props: {
-      type: figma.enum('Type', {
-        'Basic Table': 'basic-table',
-        'Selectable Table': 'selectable-table',
-        'Clickable & Selectable table': 'clickable---selectable-table'
-      }),
-      size: figma.enum('Size', {
-        Default: undefined,
-        Compact: 'compact'
-      }),
+      // boolean
       bordered: figma.boolean('Bordered'),
-      expandable: figma.boolean('Expandable')
+      expandable: figma.boolean('Expandable'),
+
+      // enum
+      isClickable: figma.enum('Type', { 'Clickable & Selectable table': true }),
+      isSelectable: figma.enum('Type', {
+        'Selectable Table': true,
+        'Clickable & Selectable table': true
+      }),
+      variant: figma.enum('Size', { Compact: 'compact' }),
+
+      children: figma.children('*')
     },
     example: (props) => (
       // Documentation for Table can be found at https://www.patternfly.org/components/table
-      <Table
-        variant={props.type === 'basic-table' ? undefined : props.type}
-        size={props.size}
-        borders={props.bordered}
-        aria-label="Row-based table example"
-      >
-        <Thead>
-          <Tr>
-            <Th>Header</Th>
-            <Th>Header</Th>
-            <Th>Header</Th>
-            <Th>Header</Th>
-            <Th>Header</Th>
-            <Th>Header</Th>
-            <Th>Header</Th>
-            <Th>Header</Th>
-          </Tr>
-        </Thead>
-        <Tbody>
-          <Tr>
-            <Td>My application</Td>
-            <Td>Code branch</Td>
-            <Td>Code branch</Td>
-            <Td>Label</Td>
-            <Td>My application</Td>
-            <Td>My application</Td>
-            <Td>My application</Td>
-            <Td>My application</Td>
-          </Tr>
-          {/* Additional rows would be added here */}
-        </Tbody>
+      <Table variant={props.variant} borders={props.bordered} aria-label="Table example">
+        {props.children}
       </Table>
     )
   }

@@ -7,11 +7,9 @@ figma.connect(
   {
     props: {
       showActions: figma.boolean('Show actions'),
-      expanded: figma.boolean('Expanded')
+      expanded: figma.boolean('Expanded'),
+      children: figma.children('*')
     },
-    example: (props) => (
-      // Documentation for Tr can be found at https://www.patternfly.org/components/table
-      <Tr showActions={props.showActions} state={props.state} expanded={props.expanded} selected={props.selected} />
-    )
+    example: (props) => <Tr isExpanded={props.expanded}>{props.children}</Tr>
   }
 );

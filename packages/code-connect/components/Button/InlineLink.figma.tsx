@@ -16,9 +16,7 @@ figma.connect(
       }),
 
       // state
-      isDisabled: figma.enum('State', {
-        Disabled: true
-      })
+      isDisabled: figma.enum('State', { Disabled: true })
     },
     example: (props) => (
       // Documentation for Button can be found at https://www.patternfly.org/components/button

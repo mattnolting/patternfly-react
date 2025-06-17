@@ -6,11 +6,19 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=6441-38440',
   {
     props: {
-      columnHeader: figma.boolean('Column header')
+      children: figma.children('*')
     },
     example: (props) => (
-      // Documentation for Td can be found at https://www.patternfly.org/components/table
-      <Td isActionCell={true} width={10} size={props.size} />
+      <Td
+        select={{
+          rowIndex: 0,
+          onSelect: () => {},
+          isSelected: false,
+          isDisabled: false
+        }}
+      >
+        {props.children}
+      </Td>
     )
   }
 );

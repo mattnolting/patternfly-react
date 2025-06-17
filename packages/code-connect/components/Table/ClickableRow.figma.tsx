@@ -6,31 +6,22 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2930-40632',
   {
     props: {
-      showLeftControls: figma.boolean('Show left controls'),
-      size: figma.enum('Size', {
-        Default: undefined,
-        Compact: 'compact'
-      }),
-      state: figma.enum('State', {
-        Default: undefined,
-        Hover: 'hover',
-        Clicked: 'clicked'
-      }),
-      selected: figma.boolean('Selected'),
-      bordered: figma.boolean('Bordered')
+      isRowSelected: figma.boolean('Selected'),
+      bordered: figma.boolean('Bordered'),
+      isExpanded: figma.boolean('Expanded'),
+
+      children: figma.children('*')
     },
     example: (props) => (
-      // Documentation for Tr can be found at https://www.patternfly.org/components/table
       <Tr
-        showLeftControls={props.showLeftControls}
-        showActions={props.showActions}
-        size={props.size}
-        state={props.state}
-        selected={props.selected}
-        expanded={props.expanded}
-        bordered={props.bordered}
+        isBorderRow={props.bordered}
         isClickable={true}
-      />
+        isExpanded={props.isExpanded}
+        isRowSelected={props.isRowSelected}
+        onRowClick={() => {}}
+      >
+        {props.children}
+      </Tr>
     )
   }
 );

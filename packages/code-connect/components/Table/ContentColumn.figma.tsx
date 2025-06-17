@@ -6,13 +6,8 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=6441-38677',
   {
     props: {
-      columnHeader: figma.boolean('Column header')
+      children: figma.children('*')
     },
-    example: (props) => (
-      // Documentation for Td can be found at https://www.patternfly.org/components/table
-      <Td dataLabel="Code branch" size={props.size}>
-        Code branch
-      </Td>
-    )
+    example: (props) => <Td dataLabel="Content column">{props.children}</Td>
   }
 );

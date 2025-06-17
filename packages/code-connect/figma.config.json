@@ -2,9 +2,8 @@
   "codeConnect": {
     "parser": "react",
     "include": [
-      "components/CodeBlock/*.figma.tsx",
-      "components/CodeEditor/*.figma.tsx",
-      "components/Button/*.figma.tsx"
+      "components/DescriptionList/*.figma.tsx",
+      "components/Forms/*.figma.tsx"
     ],
     "paths": {
       "@patternfly/react-core": "/Users/mnolting/Web/patternfly-react/packages/react-core/src",
@@ -29,9 +28,6 @@
         "enabled": false
       }
     },
-    "exclude": [
-      "node_modules/**",
-      "scripts/**"
-    ]
+    "exclude": ["node_modules/**", "scripts/**"]
   }
 }

@@ -1,25 +1,29 @@
 import figma from '@figma/code-connect';
 import { Th } from '@patternfly/react-table';
 
-figma.connect(Th, 'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=14-623', {
-  props: {
-    showHelpIcon: figma.boolean('Show help icon'),
-    state: figma.enum('State', {
-      Default: undefined,
-      Hover: 'hover',
-      Empty: 'empty',
-      'Sorted - Ascending': 'sorted-ascending',
-      'Sorted - Descending': 'sorted-descending'
-    }),
-    size: figma.enum('Size', {
-      Default: undefined,
-      Compact: 'compact'
-    })
-  },
-  example: (props) => (
-    // Documentation for Th can be found at https://www.patternfly.org/components/table
-    <Th showHelpIcon={props.showHelpIcon} sortable={props.sortable} state={props.state} size={props.size}>
-      Header
-    </Th>
-  )
-});
+// TODO: FIGMA: Use the button component instead of a layer
+
+figma.connect(
+  Th,
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=14-623&m=dev',
+  {
+    props: {
+      isEmpty: figma.boolean('State', { true: true }),
+      sort: figma.boolean('Sortable', {
+        true: { onSort: () => {} },
+        false: undefined
+      }),
+      info: figma.boolean('Show help icon', {
+        true: { tooltip: 'More information' },
+        false: undefined
+      }),
+
+      children: figma.children('*')
+    },
+    example: (props) => (
+      <Th isEmpty={props.isEmpty} sort={props.sort} info={props.info}>
+        {props.children}
+      </Th>
+    )
+  }
+);

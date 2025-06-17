@@ -10,8 +10,8 @@ figma.connect(
       isBordered: figma.boolean('Bordered'),
 
       // enum
+      isClickable: figma.enum('Type', { 'Clickable + Selectable': true }),
       isRowSelected: figma.enum('State', {
-        Default: undefined,
         Selected: true,
         'Selected (not clicked)': true
       }),
@@ -19,11 +19,21 @@ figma.connect(
         Basic: undefined,
         'Clickable + Selectable': true,
         Selectable: true
-      })
+      }),
+
+      children: figma.children('*')
     },
     example: (props) => (
-      // Documentation for Tr can be found at https://www.patternfly.org/components/table
-      <Tr isRowSelected={props.isRowSelected} isSelectable={props.isSelectable} isBorderRow={props.isBordered} />
+      <Tr
+        key="<key>"
+        isBorderRow={props.isBordered}
+        isClickable={props.isClickable}
+        isRowSelected={props.isRowSelected}
+        isSelectable={props.isSelectable}
+        onRowClick={() => {}}
+      >
+        {props.children}
+      </Tr>
     )
   }
 );

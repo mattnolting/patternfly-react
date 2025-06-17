@@ -8,8 +8,11 @@ figma.connect(
     props: {
       isDisabled: figma.enum('State', { Disabled: true }),
 
-      children: figma.children('*')
+      inputValue: figma.children('Input field')
     },
-    example: (props) => <TimePicker isDisabled={props.isDisabled}>{props.children}</TimePicker>
+    example: (props: any) => (
+      // Documentation for TimePicker can be found at https://www.patternfly.org/components/time-picker
+      <TimePicker time={props.inputValue} onChange={() => {}} />
+    )
   }
 );

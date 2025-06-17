@@ -31,12 +31,13 @@ figma.connect(
           isExpanded: true,
           onToggle: () => {}
         }
-      })
+      }),
+
+      children: figma.children('*')
     },
     example: (props) => (
-      // Documentation for Td can be found at https://www.patternfly.org/components/table
       <Td dataLabel="Compound expandable cell" compoundExpand={props.compoundExpand} type={props.type}>
-        Content
+        {props.children}
       </Td>
     )
   }

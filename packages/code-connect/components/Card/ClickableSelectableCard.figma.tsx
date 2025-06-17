@@ -3,16 +3,20 @@ import { Card } from '@patternfly/react-core';
 
 figma.connect(
   Card,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=3144-18658',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=3144-18715',
   {
     props: {
-      // boolean
-      isSelectable: figma.boolean('Is selectable'),
-      isClickable: figma.boolean('Is clickable'),
-      isDisabled: figma.boolean('Is disabled'),
-
       // enum
+      isClicked: figma.enum('State', {
+        Clicked: true,
+        'Clicked AND Selected': true
+      }),
       isCompact: figma.enum('Size', { Compact: true }),
+      isDisabled: figma.enum('State', { Disabled: true }),
+      isSelected: figma.enum('State', {
+        Selected: true,
+        'Clicked AND Selected': true
+      }),
       isLarge: figma.enum('Size', { Large: true }),
       isPlain: figma.enum('Style', { Plain: true }),
       isSecondary: figma.enum('Style', { Secondary: true }),
@@ -23,10 +27,10 @@ figma.connect(
     example: (props) => (
       // Documentation for Card can be found at https://www.patternfly.org/components/card
       <Card
+        isClicked={props.isClicked}
         isCompact={props.isCompact}
-        isSelectable={props.isSelectable}
-        isClickable={props.isClickable}
         isDisabled={props.isDisabled}
+        isSelected={props.isSelected}
         variant={props.variant}
         isLarge={props.isLarge}
         isPlain={props.isPlain}

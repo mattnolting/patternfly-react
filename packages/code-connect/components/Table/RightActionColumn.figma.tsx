@@ -8,9 +8,6 @@ figma.connect(
     props: {
       children: figma.children('*')
     },
-    example: (props) => (
-      // Documentation for Td can be found at https://www.patternfly.org/components/table
-      <Td isActionCell={true}>{props.children}</Td>
-    )
+    example: (props) => <Td isActionCell={true}>{props.children}</Td>
   }
 );
