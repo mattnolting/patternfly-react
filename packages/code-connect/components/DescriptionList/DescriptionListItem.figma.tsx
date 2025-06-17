@@ -10,20 +10,16 @@ figma.connect(
       content: figma.string('✏️ Content'),
 
       // enum
-      type: figma.enum('Type', {
-        Vertical: 'vertical',
-        'Horizontal fluid': 'horizontal-fluid',
-        'Horizontal fixed': 'horizontal-fixed'
+      isHorizontal: figma.enum('Type', {
+        'Horizontal fluid': true,
+        'Horizontal fixed': true
       }),
-
-      // instance
-      swapLabel: figma.instance('Swap label'),
 
       children: figma.children('*')
     },
 
     example: (props) => (
-      <DescriptionListGroup>
+      <DescriptionListGroup isHorizontal={props.isHorizontal}>
         {props.children}
         <DescriptionListDescription>{props.content}</DescriptionListDescription>
       </DescriptionListGroup>
