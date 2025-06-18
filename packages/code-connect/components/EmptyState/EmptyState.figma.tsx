@@ -13,6 +13,7 @@ import { EmptyState, EmptyStateBody, EmptyStateFooter, EmptyStateActions } from 
 // TODO: FIGMA: Add empty state isLoading
 // Based on Code Connect's limitations, this component needs to be overhauled. Using the base component approach present in
 // other components would significantly reduce complexity.
+// Documentation for EmptyState can be found at https://www.patternfly.org/components/empty-state
 
 figma.connect(
   EmptyState,
@@ -43,11 +44,9 @@ figma.connect(
         'Extra large': 'xl'
       }),
 
-      // children
       actions: figma.children(['Button', 'Link Button'])
     },
     example: (props) => (
-      // Documentation for EmptyState can be found at https://www.patternfly.org/components/empty-state
       <EmptyState
         headingLevel="h4"
         icon={props.icon as any}

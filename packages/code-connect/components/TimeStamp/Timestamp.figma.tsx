@@ -1,6 +1,8 @@
 import figma from '@figma/code-connect';
 import { Timestamp } from '@patternfly/react-core';
 
+// Documentation for Timestamp can be found at https://www.patternfly.org/components/timestamp
+
 figma.connect(
   Timestamp,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=7472-6718',

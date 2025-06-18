@@ -11,7 +11,7 @@ figma.connect(
       text: figma.string('Text'),
 
       // enum
-      type: figma.enum('Type', {
+      variant: figma.enum('Type', {
         Primary: 'primary',
         Secondary: 'secondary',
         Tertiary: 'tertiary'
@@ -19,7 +19,7 @@ figma.connect(
       isInline: figma.enum('Type', { Inline: true })
     },
     example: (props) => (
-      <Button variant={props.type} size="lg">
+      <Button size="lg" variant={props.variant}>
         {props.text}
       </Button>
     )

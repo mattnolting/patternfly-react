@@ -1,5 +1,7 @@
 import figma from '@figma/code-connect';
-import { Toolbar } from '@patternfly/react-core';
+import { Toolbar, ToolbarGroup } from '@patternfly/react-core';
+
+// Documentation for Toolbar can be found at https://www.patternfly.org/components/toolbar
 
 figma.connect(
   Toolbar,
@@ -25,8 +27,7 @@ figma.connect(
     },
     example: (props) => (
       <Toolbar id="toolbar-example" colorVariant={props.hasNoBackground}>
-        <ToolbarGroup></ToolbarGroup>
-        {props.children}
+        <ToolbarGroup>{props.children}</ToolbarGroup>
       </Toolbar>
     )
   }

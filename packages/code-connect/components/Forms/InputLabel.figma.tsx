@@ -1,5 +1,7 @@
 import figma from '@figma/code-connect';
-import { FormGroup, FormGroupLabelHelp, Popover } from '@patternfly/react-core';
+import { FormGroupLabelHelp, Popover } from '@patternfly/react-core';
+
+// Documentation for FormGroup can be found at https://www.patternfly.org/components/forms/form-group
 
 figma.connect('https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=151-1566', {
   props: {
@@ -35,7 +37,7 @@ figma.connect('https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6-
             </div>
           }
         >
-          <FormGroupLabelHelp ref="{labelHelpRef}" aria-label="More info for name field" />
+          <FormGroupLabelHelp aria-label="More info for name field" />
         </Popover>
       ),
       false: undefined

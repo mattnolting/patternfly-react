@@ -1,9 +1,7 @@
 import figma from '@figma/code-connect';
 import { Menu, MenuContent } from '@patternfly/react-core';
 
-/**
- * PatternFly Menu integration for Figma Code Connect
- */
+// Documentation for Menu can be found at https://www.patternfly.org/components/menu
 
 figma.connect(
   Menu,
@@ -14,7 +12,6 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
-      // Documentation for Menu can be found at https://www.patternfly.org/components/menu
       <Menu>
         <MenuContent>{props.children}</MenuContent>
       </Menu>

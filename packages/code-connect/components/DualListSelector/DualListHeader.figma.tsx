@@ -22,6 +22,7 @@ import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
   variant="DualListSelectorList"
 > */
 }
+// Documentation for DualListHeader can be found at https://www.patternfly.org/components/dual-list-selector
 
 figma.connect(
   DualListSelectorPane,
@@ -31,16 +32,16 @@ figma.connect(
       icon: <TimesIcon />, // placeholder icon
 
       // string
-      title: figma.string('Header text'),
       itemInformation: figma.string('Item information'),
+      title: figma.string('Header text'),
 
       // boolean
-      isSearchable: figma.boolean('Has search bar', {
-        true: `buildSearchInput(true)`,
-        false: undefined
-      }),
       onSearch: figma.boolean('Has search bar', {
         true: () => {},
+        false: undefined
+      }),
+      isSearchable: figma.boolean('Has search bar', {
+        true: `buildSearchInput(true)`,
         false: undefined
       }),
       actions: figma.boolean('Has search bar', {

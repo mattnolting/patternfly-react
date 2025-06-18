@@ -17,6 +17,7 @@ import {
 
 // Note: Figma will not render conditional props within React components.
 // This means that the <HintTitle>, <HintBody>, and <HintFooter> tags will not be properly render figma.string()
+// Documentation for Hint can be found at https://www.patternfly.org/components/hint
 
 const actions = (
   <Dropdown
@@ -77,7 +78,6 @@ figma.connect(
       actions: figma.instance('Swap button')
     },
     example: (props) => (
-      // Documentation for Hint can be found at https://www.patternfly.org/components/hint
       <Hint actions={actions}>
         {props.hintTitle}
         {props.hintBody}

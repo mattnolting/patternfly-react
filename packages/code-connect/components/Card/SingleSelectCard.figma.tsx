@@ -1,6 +1,8 @@
 import figma from '@figma/code-connect';
 import { Card } from '@patternfly/react-core';
 
+// Documentation for Card can be found at https://www.patternfly.org/components/card
+
 figma.connect(
   Card,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=27155-32360',
@@ -17,8 +19,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
-      // Documentation for Card can be found at https://www.patternfly.org/components/card
-      <Card isSelectable={true} isSelected={props.isSelected} isDisabled={props.isDisabled} isCompact={props.isCompact}>
+      <Card isCompact={props.isCompact} isDisabled={props.isDisabled} isSelectable={true} isSelected={props.isSelected}>
         {props.children}
       </Card>
     )

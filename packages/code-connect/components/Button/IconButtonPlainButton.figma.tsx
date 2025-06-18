@@ -19,12 +19,12 @@ figma.connect(
     },
     example: (props) => (
       <Button
-        variant="control"
         aria-label="Icon button"
+        hasNoPadding={props.hasNoPadding}
         icon={props.icon}
         isClicked={props.isClicked}
         isDisabled={props.isDisabled}
-        hasNoPadding={props.hasNoPadding}
+        variant="control"
       />
     )
   }

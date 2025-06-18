@@ -1,6 +1,8 @@
 import figma from '@figma/code-connect';
 import { Drawer, DrawerContent, DrawerContentBody } from '@patternfly/react-core';
 
+// Documentation for Drawer can be found at https://www.patternfly.org/components/drawer
+
 figma.connect(
   Drawer,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=8034-7676&t=IzSunfrnw18ti37Y-11',
@@ -24,7 +26,6 @@ figma.connect(
       panelContent: figma.textContent('Panel header')
     },
     example: (props) => (
-      // Documentation for Drawer can be found at https://www.patternfly.org/components/drawer
       <Drawer
         id="<drawer-id>"
         isExpanded={props.isExpanded}

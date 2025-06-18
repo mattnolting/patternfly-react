@@ -1,40 +1,31 @@
 import figma from '@figma/code-connect';
 import { Button } from '@patternfly/react-core';
 
-/**
- * PatternFly Split Button component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/Button
- */
+// Documentation for Button can be found at https://www.patternfly.org/components/button
 
 figma.connect(
   Button,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=3102-7154&t=TMTA4Fpy1ljK4qQP-11',
   {
     props: {
-      // enums
+      // enum
+      isClicked: figma.enum('State', { Clicked: true }),
+      isDisabled: figma.enum('State', { Disabled: true }),
       leftOrRight: figma.enum('Left or Right', {
         Left: 'left',
         Right: 'right'
       }),
-      type: figma.enum('Type', {
+      variant: figma.enum('Type', {
         Primary: 'primary',
         Secondary: 'secondary',
         Tertiary: 'tertiary'
       }),
 
-      // state
-      isClicked: figma.enum('State', {
-        Clicked: true
-      }),
-      isDisabled: figma.enum('State', {
-        Disabled: true
-      }),
-
-      // strings
+      // string
       text: figma.string('Text')
     },
     example: (props) => (
-      <Button isClicked={props.isClicked} isDisabled={props.isDisabled} variant={props.type}>
+      <Button isClicked={props.isClicked} isDisabled={props.isDisabled} variant={props.variant}>
         {props.text}
       </Button>
     )

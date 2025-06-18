@@ -7,14 +7,12 @@ import { DataListItem } from '@patternfly/react-core';
 
 figma.connect(
   DataListItem,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=6649-69488&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=6649-69488',
   {
     props: {
       // boolean
-      showLeftControls: figma.boolean('Show Left controls'),
-      showRightActions: figma.boolean('Show right actions'),
-      isSelected: figma.boolean('Selected'),
       isExpanded: figma.boolean('Expanded'),
+      isSelected: figma.boolean('Selected'),
 
       // enum
       isCompact: figma.enum('Size', { Compact: true }),
@@ -22,7 +20,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
-      <DataListItem selected={props.isSelected} isExpanded={props.isExpanded} aria-labelledby="<data-list-row-id>">
+      <DataListItem aria-labelledby="<data-list-row-id>" isExpanded={props.isExpanded} selected={props.isSelected}>
         {props.children}
       </DataListItem>
     )

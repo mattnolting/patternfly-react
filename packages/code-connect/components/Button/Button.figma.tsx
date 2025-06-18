@@ -38,11 +38,11 @@ figma.connect(
     },
     example: (props) => (
       <Button
-        isDisabled={props.isDisabled}
-        variant={props.variant}
-        size={props.size}
         icon={props.icon}
         iconPosition={props.iconPosition}
+        isDisabled={props.isDisabled}
+        size={props.size}
+        variant={props.variant}
       >
         {props.buttonText}
         {props.badge}

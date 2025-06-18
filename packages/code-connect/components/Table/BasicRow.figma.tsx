@@ -5,10 +5,11 @@ import { Tr } from '@patternfly/react-table';
 // TODO: FIGMA: Configure isSelectable, currently does not exist
 // Show left actions should be 'Expandable'
 // Show right actions should be an action cell
+// Documentation for Table can be found at https://www.patternfly.org/components/table
 
 figma.connect(
   Tr,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2930-36939&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2930-36939',
   {
     props: {
       isBordered: figma.boolean('Bordered'),

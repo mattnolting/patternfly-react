@@ -1,5 +1,7 @@
-import { Radio } from '@patternfly/react-core';
 import figma from '@figma/code-connect';
+import { Radio } from '@patternfly/react-core';
+
+// Documentation for Radio can be found at https://www.patternfly.org/components/radio
 
 figma.connect(
   Radio,
@@ -18,7 +20,6 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
-      // Documentation for Radio can be found at https://www.patternfly.org/components/radio
       <Radio
         id="radio1"
         label="Radio input"

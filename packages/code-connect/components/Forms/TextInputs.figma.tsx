@@ -1,6 +1,8 @@
 import figma from '@figma/code-connect';
 import { TextInput } from '@patternfly/react-core';
 
+// Documentation for TextInput can be found at https://www.patternfly.org/components/text-input
+
 figma.connect(
   TextInput,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=154-71',
@@ -18,7 +20,6 @@ figma.connect(
     },
 
     example: (props) => (
-      // Documentation for TextInput can be found at https://www.patternfly.org/components/text-input
       <TextInput
         value={props.value}
         type="text"

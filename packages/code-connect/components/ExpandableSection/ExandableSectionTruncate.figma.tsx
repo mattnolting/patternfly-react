@@ -1,6 +1,8 @@
 import figma from '@figma/code-connect';
 import { ExpandableSection } from '@patternfly/react-core';
 
+// Documentation for ExpandableSection can be found at https://www.patternfly.org/components/expandable-section
+
 // TODO: FIGMA: Create toggle component
 const toggleContent = `
     <div>
@@ -33,7 +35,6 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
-      // Documentation for ExpandableSection can be found at https://www.patternfly.org/components/expandable-section
       <ExpandableSection
         // onToggle={() => {}} // only required if the user wants to be able to have other side effects when opening/closing
         // isExpanded={() => {}} // only required if the user wants to be able to have other side effects when opening/closing

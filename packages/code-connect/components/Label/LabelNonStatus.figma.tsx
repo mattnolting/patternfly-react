@@ -1,10 +1,7 @@
 import figma from '@figma/code-connect';
 import { Label } from '@patternfly/react-core';
 
-/**
- * PatternFly Label component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/label
- */
+// Documentation for Label can be found at https://www.patternfly.org/components/label
 
 figma.connect(
   Label,
@@ -18,6 +15,7 @@ figma.connect(
       isEditable: figma.boolean('Is Editable'),
 
       // enum
+      isCompact: figma.enum('Type', { Compact: true }),
       color: figma.enum('Color', {
         Red: 'red',
         Orange: 'orange',
@@ -30,12 +28,10 @@ figma.connect(
       variant: figma.enum('Type', {
         Filled: 'filled',
         Outlined: 'outline'
-      }),
-      isCompact: figma.enum('Type', { Compact: true })
+      })
     },
     example: (props) => (
-      // Documentation for Label can be found at https://www.patternfly.org/components/label
-      <Label color={props.color} variant={props.variant} isCompact={props.isCompact} isEditable={props.isEditable}>
+      <Label isCompact={props.isCompact} isEditable={props.isEditable} color={props.color} variant={props.variant}>
         {props.text}
       </Label>
     )

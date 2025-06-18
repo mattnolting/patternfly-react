@@ -5,9 +5,11 @@ import {
   NotificationDrawerListItemHeader
 } from '@patternfly/react-core';
 
+// Documentation for NotificationDrawerListItem can be found at https://www.patternfly.org/components/notification-drawer
+
 figma.connect(
   NotificationDrawerListItem,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=3164-16861&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=3164-16861',
   {
     props: {
       isRead: figma.enum('Type', {

@@ -1,6 +1,8 @@
 import figma from '@figma/code-connect';
 import { Wizard } from '@patternfly/react-core';
 
+// Documentation for Wizard can be found at https://www.patternfly.org/components/wizard
+
 figma.connect(
   Wizard,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=14628-23799',

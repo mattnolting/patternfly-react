@@ -11,6 +11,7 @@ import {
 import BarsIcon from '@patternfly/react-icons/dist/js/icons/bars-icon';
 
 // TODO: Map Figma component to these properties.
+// Documentation for Masthead can be found at https://www.patternfly.org/components/masthead
 
 figma.connect(
   Masthead,

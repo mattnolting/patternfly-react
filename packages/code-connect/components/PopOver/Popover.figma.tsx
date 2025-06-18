@@ -7,6 +7,7 @@ import ExclamationCircleIcon from '@patternfly/react-icons/dist/esm/icons/exclam
 
 // TODO: FIGMA: Add buttons boolean to footerContent
 // TODO: REACT: Add icon support
+// Documentation for Popover can be found at https://www.patternfly.org/components/popover
 
 figma.connect(
   Popover,
@@ -54,7 +55,6 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
-      // Documentation for Popover can be found at https://www.patternfly.org/components/popover
       <Popover
         aria-label="Clickable popover"
         headerContent={props.headerContent}

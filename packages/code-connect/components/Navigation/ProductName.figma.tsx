@@ -1,10 +1,7 @@
 import figma from '@figma/code-connect';
 import { Title } from '@patternfly/react-core';
 
-/**
- * PatternFly Title component integration for Figma Code Connect
- * @see https://www.patternfly.org/components/title
- */
+// Documentation for Title can be found at https://www.patternfly.org/components/title
 
 figma.connect(
   Title,
@@ -12,9 +9,7 @@ figma.connect(
   {
     props: {
       productName: figma.string('Product name')
-    }) => (
-      // Documentation for Title can be found at https://www.patternfly.org/components/title
-      <Title headingLevel="h1">{props.productName}</Title>
-    )
+    },
+    example: (props) => <Title headingLevel="h1">{props.productName}</Title>
   }
 );

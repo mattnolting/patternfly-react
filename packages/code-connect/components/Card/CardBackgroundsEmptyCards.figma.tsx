@@ -2,6 +2,7 @@ import figma from '@figma/code-connect';
 import { Card } from '@patternfly/react-core';
 
 // TODO: FIGMA: Separate Clicked and Clickable
+// Documentation for Card can be found at https://www.patternfly.org/components/card
 
 figma.connect(
   Card,
@@ -9,19 +10,14 @@ figma.connect(
   {
     props: {
       // enum
+      isClickable: figma.enum('State', { Clicked: true }), // if a card is clicked, it is clickable
       isClicked: figma.enum('State', { Clicked: true }),
-      state: figma.enum('State', {
-        Default: undefined,
-        Hover: 'hover',
-        Clicked: 'clicked'
-      }),
       variant: figma.enum('Type', { Secondary: 'secondary' }),
 
       children: figma.children('*')
     },
     example: (props) => (
-      // Documentation for Card can be found at https://www.patternfly.org/components/card
-      <Card isClicked={props.isClicked} variant={props.variant}>
+      <Card isClickable={props.isClickable} isClicked={props.isClicked} variant={props.variant}>
         {props.children}
       </Card>
     )

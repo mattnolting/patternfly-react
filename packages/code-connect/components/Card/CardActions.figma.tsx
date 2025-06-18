@@ -3,10 +3,11 @@ import { CardHeader } from '@patternfly/react-core';
 
 // TODO: FIGMA: Add separate CardHeader actions
 // TODO: FIGMA: Use MenuToggle for dropdown
+// Documentation for Card can be found at https://www.patternfly.org/components/card
 
 figma.connect(
   CardHeader,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=3144-17097&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=3144-17097',
   {
     props: {
       actions: figma.children('*')
