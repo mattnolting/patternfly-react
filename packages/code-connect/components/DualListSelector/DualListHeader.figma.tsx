@@ -52,7 +52,7 @@ figma.connect(
             aria-label="Sort Chosen"
             key="chosenSortButton"
             isDisabled={isDisabled}
-            icon={<TimesIcon />}
+            /* icon={props.icon} */
           />,
           <Button
             variant={ButtonVariant.plain}
@@ -60,7 +60,7 @@ figma.connect(
             aria-label="Sort Available"
             key="availableSortButton"
             isDisabled={isDisabled}
-            icon={<TimesIcon />}
+            /* icon={props.icon} */
           />
         ]
       }),

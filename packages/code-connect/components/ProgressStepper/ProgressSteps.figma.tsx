@@ -40,7 +40,7 @@ figma.connect(
     example: (props) => (
       <ProgressStep
         popoverRender={props.popoverRender}
-        icon={props.icon}
+        /* icon={props.icon} */
         description={props.description}
         variant={props.variant}
       >

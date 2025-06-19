@@ -5,7 +5,6 @@ import {
   DescriptionListTermHelpTextButton,
   Popover
 } from '@patternfly/react-core';
-import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
 
 /*
   Note: I added a boolean prop to Description List Term to serve as an example for how to properly use booleans and render alternative component configurations.
@@ -21,11 +20,10 @@ figma.connect(
   DescriptionListTerm,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=36279-2532',
   {
-    variant: { 'Has help text': false },
     props: {
       label: figma.string('✏️ Label')
     },
-    example: (props) => <DescriptionListTerm icon={<TimesIcon />}>{props.label}</DescriptionListTerm>
+    example: (props) => <DescriptionListTerm>{props.label}</DescriptionListTerm>
   }
 );
 

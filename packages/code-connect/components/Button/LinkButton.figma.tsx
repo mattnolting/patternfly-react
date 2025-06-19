@@ -40,9 +40,9 @@ figma.connect(
         isClicked={props.isClicked}
         isDisabled={props.isDisabled}
         size={props.size}
-        icon={props.icon}
+        /* icon={props.icon} */
       >
-        {props.icon}
+        {/* {props.icon} */}
         {props.buttonText}
       </Button>
     )

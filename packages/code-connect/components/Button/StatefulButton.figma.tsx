@@ -24,7 +24,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
-      <Button icon={props.icon} state={props.state} variant="stateful">
+      <Button state={props.state} variant="stateful" /* icon={props.icon} */>
         {props.children}
       </Button>
     )

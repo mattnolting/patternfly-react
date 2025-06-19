@@ -1,12 +1,10 @@
 import figma from '@figma/code-connect';
-import { DataListItem } from '@patternfly/react-core';
+import { DataListItemRow } from '@patternfly/react-core';
 
-/**
- * PatternFly DataListItem component integration for Figma Code Connect
- */
+// Documentation for DataListItem can be found at https://www.patternfly.org/components/data-list
 
 figma.connect(
-  DataListItem,
+  DataListItemRow,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=6649-69488',
   {
     props: {
@@ -19,10 +17,6 @@ figma.connect(
 
       children: figma.children('*')
     },
-    example: (props) => (
-      <DataListItem aria-labelledby="<data-list-row-id>" isExpanded={props.isExpanded} selected={props.isSelected}>
-        {props.children}
-      </DataListItem>
-    )
+    example: (props) => <DataListItemRow>{props.children}</DataListItemRow>
   }
 );

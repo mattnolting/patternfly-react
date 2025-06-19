@@ -21,7 +21,6 @@ figma.connect(
     },
     example: (props) => {
       <>
-        {/* The 'toggleModal' function can be placed on any button in a UI to open and close the AboutModal. */}
         <Button variant="primary" onClick={() => {}}>
           Show about modal
         </Button>

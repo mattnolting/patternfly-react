@@ -2,6 +2,7 @@ import figma from '@figma/code-connect';
 import { ActionList } from '@patternfly/react-core';
 
 // TODO: FIGMA: Add ActionListGroup component
+// TODO: FIGMA: Add ActionListItem component
 // Documentation for ActionList can be found at https://www.patternfly.org/components/action-list
 
 figma.connect(

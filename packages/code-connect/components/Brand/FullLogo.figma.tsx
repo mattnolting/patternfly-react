@@ -7,6 +7,8 @@ figma.connect(
   Brand,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2104-3689',
   {
-    example: () => <Brand src={`pfLogo`} alt="Patternfly" widths={{ default: '200px', md: '400px', xl: '600px' }} />
+    example: () => (
+      <Brand src="<path-to-logo>" alt="Patternfly" widths={{ default: '200px', md: '400px', xl: '600px' }} />
+    )
   }
 );

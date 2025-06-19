@@ -9,7 +9,7 @@ figma.connect(
       // string
       content: figma.string('✏️ Content'),
 
-      children: figma.children('*')
+      children: figma.children('Term label')
     },
 
     example: (props) => (

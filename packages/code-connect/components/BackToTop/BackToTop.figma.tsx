@@ -10,6 +10,6 @@ figma.connect(
     props: {
       text: figma.string('Text')
     },
-    example: (props) => <BackToTop title={props.text} />
+    example: (props) => <BackToTop isAlwaysVisible title={props.text} />
   }
 );
