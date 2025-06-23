@@ -3,11 +3,12 @@ import { ExpandableSection } from '@patternfly/react-core';
 
 // TODO: FIGMA: This component needs to be overhauled. Using the base component approach present in
 // other components would significantly reduce complexity.
+// TODO: FIGMA: Create toggle component
+// onToggle={() => {}} // only required if the user wants to be able to have other side effects when opening/closing
+// isExpanded={() => {}} // only required if the user wants to be able to have other side effects when opening/closing
 
-// TODO: FIGMA:
 // Documentation for ExpandableSection can be found at https://www.patternfly.org/components/expandable-section
 
-// TODO: FIGMA: Create toggle component
 const toggleContent = `
     <div>
     <span>You can also use icons </span>
@@ -24,13 +25,7 @@ figma.connect(
   {
     props: {
       // enum
-      expandedContentSectionText: figma.enum('State', {
-        'Expanded Basic': figma.string('Expanded Text'),
-        'Expand Detached': figma.string('Expanded Text'),
-        'Expanded Indent': figma.string('Expanded Text'),
-        'Expanded Custom Content': figma.string('Expanded Text'),
-        'Expanded Custom with Component swap': figma.string('Expanded Text')
-      }),
+      expandedContentSectionText: figma.string('Expanded Text'),
       isDetached: figma.enum('State', { 'Expand Detached': true }),
       isExpanded: figma.enum('State', {
         'Expanded Basic': true,
@@ -60,15 +55,12 @@ figma.connect(
     },
     example: (props) => (
       <ExpandableSection
-        // onToggle={() => {}} // only required if the user wants to be able to have other side effects when opening/closing
-        // isExpanded={() => {}} // only required if the user wants to be able to have other side effects when opening/closing
         isDetached={props.isDetached}
         isExpanded={props.isExpanded}
         isIndented={props.isIndented}
         toggleContent={props.toggleContent}
-        toggleTextCollapsed={props.toggleTextCollapsed}
+        toggleText={props.toggleTextCollapsed}
         toggleTextExpanded={props.toggleTextExpanded}
-        variant="truncate"
       >
         {props.expandedContentSectionText}
       </ExpandableSection>

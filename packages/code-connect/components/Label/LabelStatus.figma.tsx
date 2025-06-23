@@ -10,6 +10,7 @@ figma.connect(
     props: {
       // string
       text: figma.string('Text'),
+      children: figma.children('*'),
 
       // enum
       isCompact: figma.enum('Size', { Compact: true }),
@@ -17,7 +18,7 @@ figma.connect(
         Filled: 'filled',
         Outlined: 'outline'
       }),
-      status: figma.enum('State', {
+      status: figma.enum('Status', {
         Danger: 'danger',
         Warning: 'warning',
         Success: 'success',

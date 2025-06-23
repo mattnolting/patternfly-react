@@ -9,10 +9,25 @@ figma.connect(
   {
     props: {
       // string
-      text: figma.string('Text'),
+      labelText: figma.string('Text'),
 
       // boolean
       isEditable: figma.boolean('Is Editable'),
+      onEditCancel: figma.boolean('Is Editable', {
+        true: `{() => {}}`,
+        false: undefined
+      }),
+      onEditComplete: figma.boolean('Is Editable', {
+        true: `{() => {}}`,
+        false: undefined
+      }),
+      editableProps: figma.boolean('Is Editable', {
+        true: {
+          'aria-label': 'Editable label props',
+          id: 'editable-label'
+        },
+        false: undefined
+      }),
 
       // enum
       isCompact: figma.enum('Type', { Compact: true }),
@@ -28,11 +43,22 @@ figma.connect(
       variant: figma.enum('Type', {
         Filled: 'filled',
         Outlined: 'outline'
-      })
+      }),
+
+      children: figma.children('*')
     },
     example: (props) => (
-      <Label isCompact={props.isCompact} isEditable={props.isEditable} color={props.color} variant={props.variant}>
-        {props.text}
+      <Label
+        isCompact={props.isCompact}
+        isEditable={props.isEditable}
+        onEditCancel={props.onEditCancel}
+        onEditComplete={props.onEditComplete}
+        editableProps={props.editableProps}
+        color={props.color}
+        variant={props.variant}
+      >
+        {props.children}
+        {props.labelText}
       </Label>
     )
   }

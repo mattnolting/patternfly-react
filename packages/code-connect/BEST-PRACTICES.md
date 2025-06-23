@@ -17,9 +17,57 @@ react-core
         └── ...
 ```
 
+## ⚠️ Critical Limitations of Figma Code Connect
+
+Figma Code Connect has significant limitations that affect how you can implement component integrations:
+
+### Literal String Rendering
+**ALL dynamic content in example functions renders as literal strings**, including:
+- Conditional logic: `{condition && <Component />}`
+- Variable references: `{props.variable}`
+- Function calls: `{someFunction()}`
+- Template literals: `` `${props.text}` ``
+
+### What Actually Works
+Only these patterns work correctly:
+- **Static JSX**: Hardcoded JSX content
+- **Enum prop values**: When enums contain pre-defined JSX
+- **Instance props**: `figma.instance()` values
+
+```typescript
+// ❌ ALL OF THESE render as literal strings:
+example: (props) => (
+  <Component>
+    {props.showElement && <Element />}     // "{props.showElement && <Element />}"
+    {props.text}                           // "{props.text}"
+    {props.items.map(item => <Item />)}    // "{props.items.map(item => <Item />)}"
+  </Component>
+)
+
+// ✅ ONLY THIS WORKS:
+props: {
+  content: figma.enum('Content', {
+    'Option 1': <Element>Pre-defined content</Element>,
+    'Option 2': <Element>Different content</Element>
+  })
+},
+example: (props) => (
+  <Component>
+    {props.content}  // This works because it's from an enum
+  </Component>
+)
+```
+
+### Required Implementation Strategy
+Due to these limitations, you must:
+1. **Pre-define all JSX content** in `figma.enum()` mappings
+2. **Avoid all conditional logic** in example functions
+3. **Use static JSX only** in example functions
+4. **Map complex variations** to enum options with pre-defined JSX
+
 ## Implementation Patterns
 
-### Basic Template
+### Basic Template (Updated for Limitations)
 
 ```typescript
 import figma from '@figma/code-connect';
@@ -34,24 +82,27 @@ figma.connect(
   "https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=XXX-XXX&m=dev",
   {
     props: {
-      // Property mappings here
+      // Use enums with pre-defined JSX for any dynamic content
+      content: figma.enum('Content Type', {
+        'Option 1': <ChildComponent>Pre-defined content 1</ChildComponent>,
+        'Option 2': <ChildComponent>Pre-defined content 2</ChildComponent>
+      }),
+      // Direct property mappings work fine
+      variant: figma.enum('Variant', {
+        Primary: 'primary',
+        Secondary: 'secondary'
+      })
     },
-    example: (props) => {
-      // Compute values outside JSX
-
-      return (
-        <ComponentName
-          // Apply props here
-        >
-          {/* Children if needed */}
-        </ComponentName>
-      );
-    },
+    example: (props) => (
+      <ComponentName variant={props.variant}>
+        {props.content}
+      </ComponentName>
+    ),
   },
 );
 ```
 
-### Property Mapping Patterns
+## Implementation Patterns
 
 #### 1. Direct Property Mapping
 
@@ -173,190 +224,46 @@ menuType: figma.enum("Menu Type", {
 
 This approach requires individual `.figma.tsx` files for each child component type, which must be connected separately.
 
-### Conditional Rendering Guidelines
+### Conditional Content Guidelines
 
-While property mappings should handle most variations, conditional rendering in JSX is appropriate in certain cases. The key is to determine when to use property mapping versus conditional rendering in your JSX.
+**IMPORTANT**: Due to Figma Code Connect's limitations, traditional conditional rendering **does not work**. All conditional logic renders as literal strings.
 
-### When to Use Conditional Rendering
-
-Use conditional rendering in these specific cases:
-
-#### 1. Structural Variations
-
-When component structure changes significantly based on properties:
+### ❌ What Doesn't Work
 
 ```typescript
-// Example: Different button structures based on type
-example: (props) => {
-  // Compute all values outside JSX
-  const isIconOnly = props.buttonType === "icon-only";
-
-  return (
-    <ActionListItem>
-      {isIconOnly ? (
-        // Icon-only button has completely different structure
-        <Button variant="plain" aria-label={props.accessibleLabel}>
-          <EditIcon />
-        </Button>
-      ) : (
-        // Regular button has text content
-        <Button variant={props.buttonVariant}>
-          {props.buttonText}
-        </Button>
-      )}
-    </ActionListItem>
-  );
-}
+// All of these render as literal strings:
+example: (props) => (
+  <Component>
+    {props.showElement && <Element />}           // Literal string
+    {props.condition ? <A /> : <B />}            // Literal string
+    {props.items.map(item => <Item />)}          // Literal string
+  </Component>
+)
 ```
 
-#### 2. Optional Elements
+### ✅ What Actually Works: Enum-Based Pre-defined Content
 
-For elements that are either present or absent based on properties:
+Instead of conditional rendering, use enum mappings with pre-defined JSX:
 
 ```typescript
-// Example: Optional helper text in a form field
-example: (props) => {
-  // Compute all values outside JSX
-  const hasHelperText = props.showHelperText;
-
-  return (
-    <FormGroup>
-      <Label>{props.label}</Label>
-      <Input value={props.value} />
-      {hasHelperText && (
-        <HelperText>
-          {props.helperText}
-        </HelperText>
-      )}
-    </FormGroup>
-  );
-}
+props: {
+  elementType: figma.enum('Element Type', {
+    'None': undefined,
+    'Basic': <Element>Basic content</Element>,
+    'Advanced': <Element advanced>Advanced content</Element>
+  }),
+  layoutType: figma.enum('Layout', {
+    'Horizontal': <div className="horizontal"><Item />Item /></div>,
+    'Vertical': <div className="vertical"><Item /><Item /></div>
+  })
+},
+example: (props) => (
+  <Component>
+    {props.elementType}
+    {props.layoutType}
+  </Component>
+)
 ```
-
-#### 3. Hierarchical Components
-
-For components with variable child structures:
-
-```typescript
-// Example: Navigation with conditional sections
-example: (props) => {
-  // Compute all values outside JSX
-  const hasSecondaryItems = props.showSecondaryNav;
-
-  return (
-    <Navigation>
-      <NavigationSection title="Primary">
-        <NavigationItem>Item 1</NavigationItem>
-        <NavigationItem>Item 2</NavigationItem>
-      </NavigationSection>
-
-      {hasSecondaryItems && (
-        <NavigationSection title="Secondary">
-          <NavigationItem>Secondary 1</NavigationItem>
-          <NavigationItem>Secondary 2</NavigationItem>
-        </NavigationSection>
-      )}
-    </Navigation>
-  );
-}
-```
-
-### Best Practices for Conditional Rendering
-
-1. **Compute All Values Outside JSX**
-
-   Always compute conditional values before the JSX return statement:
-
-   ```typescript
-   // Good
-   example: (props) => {
-     // Compute outside JSX
-     const isExpanded = props.state === "expanded";
-
-     return (
-       <Component isExpanded={isExpanded} />
-     );
-   }
-
-   // Bad - Don't do this
-   example: (props) => (
-     <Component isExpanded={props.state === "expanded"} />
-   )
-   ```
-
-2. **Use Simple Conditionals**
-
-   Use the most readable form of conditional for each case:
-
-   - For optional elements: `{condition && <Element />}`
-   - For binary choices: `{condition ? <ElementA /> : <ElementB />}`
-   - For multiple options: Use computed values and simple conditionals
-
-3. **Keep Conditionals Focused**
-
-   Each conditional should control one aspect of the component's rendering:
-
-   ```typescript
-   // Good - Focused conditionals
-   example: (props) => {
-     const hasIcon = props.showIcon;
-     const hasLabel = props.showLabel;
-
-     return (
-       <Button>
-         {hasIcon && <Icon name={props.iconName} />}
-         {hasLabel && <span>{props.label}</span>}
-       </Button>
-     );
-   }
-
-   // Bad - Mixed concerns
-   example: (props) => {
-     return (
-       <Button>
-         {props.showIcon && props.showLabel ? (
-           <>
-             <Icon name={props.iconName} />
-             <span>{props.label}</span>
-           </>
-         ) : props.showIcon ? (
-           <Icon name={props.iconName} />
-         ) : props.showLabel ? (
-           <span>{props.label}</span>
-         ) : null}
-       </Button>
-     );
-   }
-   ```
-
-4. **Comment Complex Conditionals**
-
-   For more complex conditionals, add comments to explain the rendering logic:
-
-   ```typescript
-   example: (props) => {
-     // Determine navigation behavior based on user role and permissions
-     const canAccessAdmin = props.userRole === "admin";
-     const showRestricted = props.hasSpecialPermission && props.isActiveUser;
-
-     return (
-       <Navigation>
-         {/* Standard navigation for all users */}
-         <NavItem to="/home">Home</NavItem>
-
-         {/* Admin-only navigation */}
-         {canAccessAdmin && (
-           <NavItem to="/admin">Admin Dashboard</NavItem>
-         )}
-
-         {/* Special access content requiring multiple conditions */}
-         {showRestricted && (
-           <NavItem to="/restricted">Restricted Area</NavItem>
-         )}
-       </Navigation>
-     );
-   }
-   ```
 
 ## Implementation Strategy
 

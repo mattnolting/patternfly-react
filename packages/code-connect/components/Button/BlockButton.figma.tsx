@@ -19,7 +19,7 @@ figma.connect(
       isDisabled: figma.enum('State', { Disabled: true })
     },
     example: (props) => (
-      <Button isClicked={props.isClicked} isDisabled={props.isDisabled} isBlock /* icon={props.icon} */>
+      <Button isClicked={props.isClicked} isDisabled={props.isDisabled} isBlock icon={() => {}}>
         {props.text}
       </Button>
     )

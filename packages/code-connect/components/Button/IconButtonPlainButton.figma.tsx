@@ -21,7 +21,7 @@ figma.connect(
         isClicked={props.isClicked}
         isDisabled={props.isDisabled}
         variant="control"
-        /* icon={props.icon} */
+        icon={() => {}} // placeholder icon
       />
     )
   }

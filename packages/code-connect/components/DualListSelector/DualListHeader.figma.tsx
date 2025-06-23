@@ -2,31 +2,11 @@ import figma from '@figma/code-connect';
 import { Button, ButtonVariant, DualListSelectorPane } from '@patternfly/react-core';
 import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
 
-// TODO: FIGMA: Add sort button
-// TODO: FIGMA: Add search bar
-// TODO: FIGMA: Add <DualListSelectorPane>
-// TODO: FIGMA: Add <DragDropSort>
-{
-  /* <DragDropSort>
-  items={chosenOptions.map((option, index) => ({
-    ...option,
-    props: {
-      key: option.props.key,
-      isSelected: option.props.isSelected,
-      onOptionSelect: (e) => onOptionSelect(e, index, true)
-    }
-  }))}
-  onDrop={(_, newItems) => {
-    setChosenOptions(newItems);
-  }}
-  variant="DualListSelectorList"
-> */
-}
 // Documentation for DualListHeader can be found at https://www.patternfly.org/components/dual-list-selector
 
 figma.connect(
   DualListSelectorPane,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=21279-116172&t=IzSunfrnw18ti37Y-11',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=21279-116172',
   {
     props: {
       icon: <TimesIcon />, // placeholder icon
@@ -51,7 +31,7 @@ figma.connect(
             onClick={() => {}}
             aria-label="Sort Chosen"
             key="chosenSortButton"
-            isDisabled={isDisabled}
+            isDisabled={false}
             /* icon={props.icon} */
           />,
           <Button
@@ -59,7 +39,7 @@ figma.connect(
             onClick={() => {}}
             aria-label="Sort Available"
             key="availableSortButton"
-            isDisabled={isDisabled}
+            isDisabled={false}
             /* icon={props.icon} */
           />
         ]
@@ -70,7 +50,7 @@ figma.connect(
     example: (props) => (
       // Documentation for DualListHeader can be found at https://www.patternfly.org/components/dual-list-selector
       <DualListSelectorPane
-        actions={props.actions}
+        // actions={props.actions}
         listMinHeight="300px"
         onSearch={props.onSearch}
         searchInput={props.isSearchable}

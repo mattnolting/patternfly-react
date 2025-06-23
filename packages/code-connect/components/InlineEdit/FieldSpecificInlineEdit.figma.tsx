@@ -1,11 +1,11 @@
 import figma from '@figma/code-connect';
 
+// Inline edit is NOT a React component
 // Documentation for InlineEdit can be found at https://www.patternfly.org/components/inline-edit
 
 figma.connect('https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1664-8856', {
   props: {},
   example: () => (
-    // Inline edit is NOT a React component
     <form className="pf-v6-c-inline-edit" id="single-inline-edit-example">
       <div className="pf-v6-c-inline-edit__group">
         <div className="pf-v6-c-inline-edit__value" id="single-inline-edit-example-label">

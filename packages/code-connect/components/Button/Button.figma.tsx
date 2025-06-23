@@ -1,6 +1,5 @@
 import figma from '@figma/code-connect';
 import { Button } from '@patternfly/react-core';
-// import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
 
 // TODO: FIGMA: Define Icon left/right intent
 // Ex: Are the icons different or just on different sides?
@@ -50,6 +49,7 @@ figma.connect(
         size={props.size}
         variant={props.variant}
         countOptions={props.countOptions}
+        icon={() => {}} // placeholder icon
       >
         {props.buttonText}
       </Button>

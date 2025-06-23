@@ -8,6 +8,7 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=157-2778',
   {
     props: {
+      // enum
       isChecked: figma.enum('State', {
         Checked: true,
         'Checked Disabled': true
