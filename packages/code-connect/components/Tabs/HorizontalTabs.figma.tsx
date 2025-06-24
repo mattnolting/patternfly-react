@@ -10,12 +10,11 @@ figma.connect(
     props: {
       children: figma.children('*'),
       isBox: figma.enum('Type', {
-        Boxed: false,
+        Boxed: true,
         'Boxed Light': true
       })
     },
     example: (props) => (
-      // Documentation for Tabs can be found at https://www.patternfly.org/components/tabs
       <Tabs onSelect={() => {}} isBox={props.isBox} aria-label="Tabs example" role="region">
         {props.children}
       </Tabs>

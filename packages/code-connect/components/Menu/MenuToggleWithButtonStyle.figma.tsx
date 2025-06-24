@@ -13,7 +13,7 @@ figma.connect(
       showBadge: figma.boolean('Show Badge'),
       showCheckbox: figma.boolean('Show Checkbox'),
       showAvatar: figma.boolean('Show Avatar'),
-      style: figma.enum('Style', {
+      variant: figma.enum('Style', {
         Primary: 'primary',
         Secondary: 'secondary'
       }),
@@ -25,8 +25,8 @@ figma.connect(
       })
     },
     example: (props) => (
-      <MenuToggle>
-        <Button variant={props.style}>{props.toggleText}</Button>
+      <MenuToggle variant={props.variant}>
+        <Button>{props.toggleText}</Button>
       </MenuToggle>
     )
   }

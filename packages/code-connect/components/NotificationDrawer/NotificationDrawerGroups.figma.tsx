@@ -2,11 +2,10 @@ import figma from '@figma/code-connect';
 import { NotificationDrawerGroup, NotificationDrawerList } from '@patternfly/react-core';
 
 // TODO: FIGMA: Split unread count into a separate prop
-// Documentation for NotificationDrawerGroup can be found at https://www.patternfly.org/components/notification-drawer
 
 figma.connect(
   NotificationDrawerGroup,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=3172-18190',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=3172-18190&m=dev',
   {
     props: {
       showUnreadCount: figma.boolean('Has count', {
