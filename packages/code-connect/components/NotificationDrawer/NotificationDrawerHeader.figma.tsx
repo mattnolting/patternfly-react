@@ -1,5 +1,6 @@
-import { NotificationDrawerHeader } from '@patternfly/react-core';
 import figma from '@figma/code-connect';
+import { Button, Dropdown, NotificationDrawerHeader } from '@patternfly/react-core';
+import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/ellipsis-v-icon';
 
 // Documentation for NotificationDrawerHeader can be found at https://www.patternfly.org/components/notification-drawer
 
@@ -12,7 +13,18 @@ figma.connect(
         true: 3,
         false: NaN
       }),
-      hasActionsMenu: figma.boolean('Has actions menu'),
+      hasActionsMenu: figma.boolean('Has actions menu', {
+        true: (
+          <Dropdown
+            isOpen={false}
+            onSelect={() => {}}
+            onOpenChange={() => {}}
+            toggle={() => <Button variant="plain" aria-label="Actions" icon={<EllipsisVIcon />} />}
+            dropdownItems={['Item 1', 'Item 2', 'Item 3']}
+          />
+        ),
+        false: undefined
+      }),
       unreadCount: figma.string('Unread count'),
       headingText: figma.string('Heading text'),
       children: figma.children('*')
