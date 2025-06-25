@@ -2,7 +2,7 @@
   "codeConnect": {
     "parser": "react",
     "include": [
-      "components/TreeView/*.figma.tsx"
+      "components/Wizard/*.figma.tsx"
     ],
     "paths": {
       "@patternfly/react-core": "/Users/mnolting/Web/patternfly-react/packages/react-core/src",

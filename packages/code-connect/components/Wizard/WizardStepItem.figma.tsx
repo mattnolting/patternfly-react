@@ -1,6 +1,7 @@
 import figma from '@figma/code-connect';
 import { WizardStep } from '@patternfly/react-core';
 
+// TODO: FIGMA: Add "With drawer" should be an enum if we expect to conditionally render the variant
 // Documentation for WizardStep can be found at https://www.patternfly.org/components/wizard
 
 figma.connect(
@@ -12,20 +13,38 @@ figma.connect(
       name: figma.string('✏️ Nav item'),
 
       // boolean
-      expandable: figma.boolean('Expandable'),
+      isExpandable: figma.boolean('Expandable'),
 
       // enum
-      isDisabled: figma.enum('State', { Disabled: true }),
+      isDisabled: figma.enum('State', {
+        Disabled: true,
+        Enabled: false
+      }),
+
+      hasSteps: figma.enum('Expansion', {
+        'No expansion': undefined,
+        'Expandable - Open': [
+          <WizardStep name="Substep A" id="expand-steps-sub-a" key="expand-steps-sub-a">
+            Substep A content
+          </WizardStep>,
+          <WizardStep name="Substep B" id="expand-steps-sub-b" key="expand-steps-sub-b">
+            Substep B content
+          </WizardStep>
+        ],
+        'Expandable - Close': undefined
+      })
 
       // children
-      steps: figma.children('Wizard step item'),
-      children: figma.children('*')
     },
-    // id, name, isDisabled
-    // body, isHidden, navItem, footer, status
     example: (props) => (
-      <WizardStep isDisabled={props.isDisabled} name={props.name} id="<your-id>" steps={[props.steps]}>
-        {props.children}
+      <WizardStep
+        isDisabled={props.isDisabled}
+        isExpandable={props.isExpandable}
+        name={props.name}
+        id="<your-id>"
+        steps={props.hasSteps}
+      >
+        Step content
       </WizardStep>
     )
   }
