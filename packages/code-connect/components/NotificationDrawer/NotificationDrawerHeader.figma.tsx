@@ -1,6 +1,6 @@
 import figma from '@figma/code-connect';
 import { Dropdown, DropdownItem, DropdownList, MenuToggle, NotificationDrawerHeader } from '@patternfly/react-core';
-import { EllipsisVIcon } from '@patternfly/react-icons/dist/esm/icons/ellipsis-v-icon';
+import EllipsisVIcon from '@patternfly/react-icons/icons/ellipsis-v-icon/dist/esm/icons/ellipsis-v-icon';
 
 figma.connect(
   NotificationDrawerHeader,
