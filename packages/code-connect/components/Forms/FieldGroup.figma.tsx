@@ -8,7 +8,7 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=17114-21566',
   {
     props: {
-      children: figma.children('*')
+      children: figma.children(['Text inputs', 'HelperText'])
     },
     example: (props) => <FormFieldGroupExpandable>{props.children}</FormFieldGroupExpandable>
   }

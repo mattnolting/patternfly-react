@@ -23,17 +23,15 @@ figma.connect(
     },
 
     example: (props) => (
-      <>
-        <TextInput
-          value={props.value}
-          type="text"
-          aria-label="Text input example"
-          validated={props.validated}
-          isDisabled={props.isDisabled}
-          readOnly={props.isReadOnly}
-          readOnlyVariant={props.isReadOnlyPlain}
-        />
-      </>
+      <TextInput
+        aria-label="Text input example"
+        isDisabled={props.isDisabled}
+        placeholder={props.value}
+        type="text"
+        validated={props.validated}
+        readOnly={props.isReadOnly}
+        readOnlyVariant={props.isReadOnlyPlain}
+      />
     )
   }
 );

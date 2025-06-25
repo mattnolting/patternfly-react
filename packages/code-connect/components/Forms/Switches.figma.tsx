@@ -5,7 +5,7 @@ import { Switch } from '@patternfly/react-core';
 
 figma.connect(
   Switch,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=157-2878&t=IzSunfrnw18ti37Y-11',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=157-2878',
   {
     props: {
       // boolean
@@ -23,7 +23,7 @@ figma.connect(
     },
     example: (props) => (
       <Switch
-        id="switch1"
+        id="switch"
         aria-label="Switch input"
         hasCheckIcon={props.hasCheckIcon}
         isDisabled={props.isDisabled}

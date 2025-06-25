@@ -12,13 +12,12 @@ figma.connect(
       label: figma.nestedProps('Input Label', { text: figma.string('✏️ Label text') }),
 
       // children
-      children: figma.children('*'),
-      inputLabel: figma.children('Input Label')
+      children: figma.children('Text inputs')
     },
 
     example: (props) => (
       <FormGroup label={props.label.text} type="text" aria-label="Text input example">
-        {props.inputLabel}
+        {props.children}
       </FormGroup>
     )
   }

@@ -16,16 +16,14 @@ figma.connect(
       })
     },
     example: (props) => (
-      <>
-        <SearchInput
-          placeholder={props.placeholder}
-          value=""
-          onChange={() => {}}
-          onClear={() => {}}
-          onSearch={() => {}}
-        />
-        {props.inputGroupItems}
-      </>
+      <SearchInput
+        placeholder={props.placeholder}
+        value=""
+        onChange={() => {}}
+        onClear={() => {}}
+        onSearch={() => {}}
+      />
+      // {props.inputGroupItems}
     )
   }
 );

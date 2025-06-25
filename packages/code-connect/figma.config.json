@@ -2,8 +2,7 @@
   "codeConnect": {
     "parser": "react",
     "include": [
-      "components/NotificationDrawer/*.figma.tsx",
-      "components/Tabs/*.figma.tsx"
+      "components/Forms/*.figma.tsx"
     ],
     "paths": {
       "@patternfly/react-core": "/Users/mnolting/Web/patternfly-react/packages/react-core/src",

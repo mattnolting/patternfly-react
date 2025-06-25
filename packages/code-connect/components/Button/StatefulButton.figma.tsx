@@ -10,7 +10,14 @@ figma.connect(
   {
     props: {
       // boolean
-      text: figma.boolean('Show text', { true: figma.string('Text ✏️') }),
+      showIcon: figma.boolean('Show Icon', {
+        true: <BellIcon />,
+        false: undefined
+      }),
+      showText: figma.boolean('Show text', {
+        true: figma.string('Text ✏️'),
+        false: undefined
+      }),
 
       // enum
       state: figma.enum('Type', {
@@ -22,8 +29,8 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
-      <Button icon={<BellIcon />} state={props.state} variant="stateful">
-        {props.children}
+      <Button icon={props.showIcon} state={props.state} variant="stateful">
+        {props.showText}
       </Button>
     )
   }

@@ -1,13 +1,14 @@
 import figma from '@figma/code-connect';
 import { FormGroup, FormGroupLabelHelp, Popover } from '@patternfly/react-core';
 
-// Documentation for CheckboxGroup can be found at https://www.patternfly.org/components/forms/checkbox-group
+// Documentation for FormGroup can be found at https://www.patternfly.org/components/forms/radio
 
 figma.connect(
   FormGroup,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1577-4455',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=1577-4497&m=dev',
   {
     props: {
+      // boolean
       label: figma.boolean('Label', {
         true: figma.nestedProps('Input Label', {
           isRequired: figma.boolean('Required', {
@@ -30,24 +31,23 @@ figma.connect(
         true: figma.children('HelperText'),
         false: undefined
       }),
-      isInline: figma.enum('Layout', {
-        Horizontal: true,
-        'Default (vertical)': false
-      }),
 
-      checkboxes: figma.children('Checkbox')
+      // enum
+      isInline: figma.enum('Layout', { Horizontal: true }),
+
+      radios: figma.children('Radio Button')
     },
     example: (props) => (
       <FormGroup
         fieldId="form-checkbox-group"
         isInline={props.isInline}
-        isRequired={props.label?.isRequired}
-        label={props.label?.text}
+        isRequired={props.label.isRequired}
+        label={props.label.text}
         labelInfo="Additional label info"
         role="group"
-        labelHelp={props.label?.hasHelperText}
+        labelHelp={props.label.hasHelperText}
       >
-        {props.checkboxes}
+        {props.radios}
       </FormGroup>
     )
   }

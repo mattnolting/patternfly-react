@@ -1,5 +1,6 @@
 import figma from '@figma/code-connect';
 import { Button } from '@patternfly/react-core';
+import ExternalLinkSquareAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-square-alt-icon';
 
 // Documentation for Button can be found at https://www.patternfly.org/components/button
 
@@ -11,11 +12,17 @@ figma.connect(
       // strings
       text: figma.string('Text'),
 
+      // boolean
+      hasIcon: figma.enum('Type', {
+        'Inline link external': <ExternalLinkSquareAltIcon />,
+        false: undefined
+      }),
+
       // state
       isDisabled: figma.enum('State', { Disabled: true })
     },
     example: (props) => (
-      <Button isInline variant="link" isDisabled={props.isDisabled}>
+      <Button icon={props.hasIcon} isInline isDisabled={props.isDisabled} variant="link">
         {props.text}
       </Button>
     )

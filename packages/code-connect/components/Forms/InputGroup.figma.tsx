@@ -1,5 +1,5 @@
 import figma from '@figma/code-connect';
-import { InputGroup, InputGroupItem } from '@patternfly/react-core';
+import { InputGroup } from '@patternfly/react-core';
 
 // TODO: FIGMA: InputGroupItems is not using TextInput, it's using text layers
 // For this component to work properly, components should be nested within the InputGroupItem component
@@ -13,10 +13,6 @@ figma.connect(
     props: {
       children: figma.children('*')
     },
-    example: (props) => (
-      <InputGroup>
-        <InputGroupItem>{props.children}</InputGroupItem>
-      </InputGroup>
-    )
+    example: (props) => <InputGroup>{props.children}</InputGroup>
   }
 );

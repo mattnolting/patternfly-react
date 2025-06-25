@@ -5,28 +5,42 @@ import { Radio } from '@patternfly/react-core';
 
 figma.connect(
   Radio,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=157-2778',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=157-3354',
   {
     props: {
-      // enum
-      isChecked: figma.enum('State', {
-        Checked: true,
-        'Checked Disabled': true
-      }),
-      isDisabled: figma.enum('State', {
-        Disabled: true,
-        'Checked Disabled': true
+      // nested props
+      isChecked: figma.nestedProps('Radio button', {
+        checked: figma.enum('State', {
+          Checked: true,
+          'Checked Disabled': true
+        })
       }),
 
-      children: figma.children('*')
+      // boolean
+      description: figma.boolean('Description', {
+        true: figma.string('✏️ Description'),
+        false: undefined
+      }),
+
+      // enum
+      ariaLabel: figma.enum('Type', { Standalone: 'Standalone input' }),
+      isDisabled: figma.enum('State', {
+        'Checked Disabled': true,
+        Disabled: true
+      }),
+      labelPlacement: figma.enum('Label placement', { Reversed: 'start' }),
+      toggleLabel: figma.enum('Type', { 'With Label': figma.string('✏️ Toggle label') })
     },
     example: (props) => (
       <Radio
-        id="radio1"
-        label="Radio input"
-        name="radio1"
-        isChecked={props.isChecked}
+        aria-label={props.ariaLabel}
+        description={props.description}
+        id="radio"
+        isChecked={props.isChecked.checked}
         isDisabled={props.isDisabled}
+        labelPosition={props.labelPlacement}
+        label={props.toggleLabel}
+        name="radio"
         onChange={() => {}}
       />
     )
