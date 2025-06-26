@@ -2,7 +2,7 @@
   "codeConnect": {
     "parser": "react",
     "include": [
-      "components/Wizard/*.figma.tsx"
+      "components/Card/*.figma.tsx"
     ],
     "paths": {
       "@patternfly/react-core": "/Users/mnolting/Web/patternfly-react/packages/react-core/src",
