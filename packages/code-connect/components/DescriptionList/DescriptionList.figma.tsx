@@ -16,7 +16,7 @@ figma.connect(
         'Horizontal - Fluid': true
       }),
 
-      children: figma.children('Description list item')
+      children: figma.children('*')
     },
     example: (props) => (
       <DescriptionList isFluid={props.isFluid} isCompact={props.isCompact} isHorizontal={props.isHorizontal}>
