@@ -14,19 +14,28 @@ figma.connect(
     example: (props) => (
       <AlertGroup isLiveRegion hasAnimations onOverflowClick={() => {}} overflowMessage={props.overflowMessage}>
         <Alert
+          variant="info"
           title="Alert one"
           actionClose={<AlertActionCloseButton title="Close alert" variantLabel="Alert one" onClose={() => {}} />}
           key={1}
         />
         <Alert
+          variant="success"
           title="Alert two"
           actionClose={<AlertActionCloseButton title="Close alert" variantLabel="Alert two" onClose={() => {}} />}
           key={2}
         />
         <Alert
+          variant="warning"
           title="Alert three"
-          actionClose={<AlertActionCloseButton title="Close alert" variantLabel="Alert one" onClose={() => {}} />}
+          actionClose={<AlertActionCloseButton title="Close alert" variantLabel="Alert three" onClose={() => {}} />}
           key={3}
+        />
+        <Alert
+          variant="danger"
+          title="Alert four"
+          actionClose={<AlertActionCloseButton title="Close alert" variantLabel="Alert four" onClose={() => {}} />}
+          key={4}
         />
       </AlertGroup>
     )
