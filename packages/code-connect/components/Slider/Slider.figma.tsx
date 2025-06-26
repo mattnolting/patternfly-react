@@ -13,35 +13,33 @@ figma.connect(
     props: {
       // boolean
       isInputVisible: figma.boolean('Value input'),
-      minmaxValues: figma.boolean('Min/max values'),
-      valueInput: figma.boolean('Value input'),
+      showBoundaries: figma.boolean('Min/max values'),
       startActions: figma.boolean('Left action', {
-        true: <Button variant="plain" aria-label="Minus" onClick={onMinusClick} icon={<MinusIcon />} />,
+        true: <Button variant="plain" aria-label="Minus" onClick={() => {}} icon={<MinusIcon />} />,
         false: undefined
       }),
       endActions: figma.boolean('Right action', {
-        true: <Button variant="plain" aria-label="Plus" onClick={onPlusClick} icon={<PlusIcon />} />,
+        true: <Button variant="plain" aria-label="Plus" onClick={() => {}} icon={<PlusIcon />} />,
         false: undefined
       }),
+
       // enum
-      isActive: figma.enum('State', { Active: true }),
-      isContinuous: figma.enum('Type', { Continuous: true }),
+      areCustomStepsContinuous: figma.enum('Type', { Continuous: true }),
       isDisabled: figma.enum('State', { Disabled: true }),
       showTicks: figma.enum('Type', { Discrete: true })
     },
     example: (props) => (
       <Slider
-        areCustomStepsContinuous={props.isContinuous}
-        isActive={props.isActive}
         isInputVisible={props.isInputVisible}
+        showBoundaries={props.showBoundaries}
+        startActions={props.startActions}
+        endActions={props.endActions}
+        areCustomStepsContinuous={props.areCustomStepsContinuous}
         isDisabled={props.isDisabled}
+        showTicks={props.showTicks}
         max={200}
         step={50}
         value={100}
-        showBoundaries={props.minmaxValues}
-        showTicks={props.showTicks}
-        startActions={props.startActions}
-        endActions={props.endActions}
       />
     )
   }

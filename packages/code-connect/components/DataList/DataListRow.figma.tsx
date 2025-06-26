@@ -8,15 +8,8 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=6649-69488',
   {
     props: {
-      // boolean
-      isExpanded: figma.boolean('Expanded'),
-      isSelected: figma.boolean('Selected'),
-
-      // enum
-      isCompact: figma.enum('Size', { Compact: true }),
-
       children: figma.children('*')
     },
-    example: (props) => <DataListItemRow>{props.children}</DataListItemRow>
+    example: (props) => <DataListItemRow aria-label="Data list item row">{props.children}</DataListItemRow>
   }
 );

@@ -11,7 +11,7 @@ figma.connect(
       children: figma.children('*')
     },
     example: (props) => (
-      <AlertGroup isLiveRegion hasAnimations>
+      <AlertGroup isInline isLiveRegion hasAnimations>
         {props.children}
       </AlertGroup>
     )

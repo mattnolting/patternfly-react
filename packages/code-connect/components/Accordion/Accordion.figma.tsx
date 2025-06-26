@@ -9,11 +9,11 @@ figma.connect(
   {
     props: {
       // enum
+      displaySize: figma.enum('Type', { 'Large Bordered': 'lg' }),
       isBordered: figma.enum('Type', {
         Bordered: true,
         'Large Bordered': true
       }),
-      displaySize: figma.enum('Type', { 'Large Bordered': 'lg' }),
       togglePosition: figma.enum('Caret position', { Left: 'start' }),
 
       children: figma.children('*')
