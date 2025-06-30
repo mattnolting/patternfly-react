@@ -11,7 +11,7 @@ import {
   DrawerPanelDescription
 } from '@patternfly/react-core';
 
-// TODO: FIGMA: Drawer is not using base components, rather it's using layers. Layers should be replaced with base components.
+// TODO: DESIGN: Drawer is not using base components, rather it's using layers. Layers should be replaced with base components.
 // Panel content is currently static. Once updated to components, it will be updated to be dynamic.
 // Documentation for Drawer can be found at https://www.patternfly.org/components/drawer
 
@@ -61,7 +61,7 @@ figma.connect(
             </DrawerPanelContent>
           }
         >
-          <DrawerContentBody>Drawer content</DrawerContentBody>
+          <DrawerContentBody>Drawer body content</DrawerContentBody>
         </DrawerContent>
       </Drawer>
     )

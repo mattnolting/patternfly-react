@@ -1,26 +1,46 @@
-// import figma from '@figma/code-connect';
-// import { MenuTypeaheadToggle } from '@patternfly/react-core';
+import figma from '@figma/code-connect';
+import { MenuToggle, Avatar } from '@patternfly/react-core';
+import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 
-// // Documentation for MenuTypeaheadToggle can be found at https://www.patternfly.org/components/menu-typeahead-toggle
+// Documentation for MenuToggle can be found at https://www.patternfly.org/components/menu-typeahead-toggle
 
-// figma.connect(
-//   MenuTypeaheadToggle,
-//   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2689-49976',
-//   {
-//     props: {
-//       toggleText: figma.boolean('Toggle text'),
-//       showCustomIcon: figma.boolean('Show Custom Icon'),
-//       showBadge: figma.boolean('Show Badge'),
-//       showCheckbox: figma.boolean('Show Checkbox'),
-//       showAvatar: figma.boolean('Show Avatar'),
-//       toggleText: figma.string('✏️ Toggle Text'),
-//       showChips: figma.boolean('Show Chips'),
-//       state: figma.enum('State', {
-//         Default: 'default',
-//         Hover: 'hover',
-//         Selected: 'selected'
-//       })
-//     },
-//     example: (props) => <MenuTypeaheadToggle />
-//   }
-// );
+figma.connect(
+  MenuToggle,
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2689-49976',
+  {
+    props: {
+      // boolean
+      hasCheckbox: figma.boolean('Show Checkbox'),
+      showBadge: figma.boolean('Show Badge', {
+        true: figma.children('Badge'),
+        false: undefined
+      }),
+      showCustomIcon: figma.boolean('Show Custom Icon', {
+        true: <CogIcon />,
+        false: undefined
+      }),
+      showAvatar: figma.boolean('Show Avatar', {
+        true: <Avatar src={imgAvatar} alt="avatar" />,
+        false: undefined
+      }),
+      toggleText: figma.boolean('Toggle text', {
+        true: figma.string('✏️ Toggle Text'),
+        false: undefined
+      }),
+
+      // enum
+      isSelected: figma.enum('State', { Selected: true })
+    },
+    example: (props) => (
+      <MenuToggle
+        badge={props.showBadge}
+        customIcon={props.showCustomIcon}
+        hasCheckbox={props.hasCheckbox}
+        icon={props.showAvatar}
+        isSelected={props.isSelected}
+      >
+        {props.toggleText}
+      </MenuToggle>
+    )
+  }
+);

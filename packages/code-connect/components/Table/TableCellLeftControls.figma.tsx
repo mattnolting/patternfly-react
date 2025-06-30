@@ -1,9 +1,9 @@
 import figma from '@figma/code-connect';
 import { Td } from '@patternfly/react-table';
 
-// TODO: FIGMA: Isolate select td
-// TODO: FIGMA: Isolate draggable td
-// TODO: FIGMA: Isolate expandable td
+// TODO: DESIGN: Isolate select td
+// TODO: DESIGN: Isolate draggable td
+// TODO: DESIGN: Isolate expandable td
 // Documentation for Table can be found at https://www.patternfly.org/components/table
 
 figma.connect('https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2930-36766', {

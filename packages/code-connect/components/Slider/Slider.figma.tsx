@@ -3,7 +3,7 @@ import { Button, Slider } from '@patternfly/react-core';
 import MinusIcon from '@patternfly/react-icons/dist/esm/icons/minus-icon';
 import PlusIcon from '@patternfly/react-icons/dist/esm/icons/plus-icon';
 
-// TODO: FIGMA: Define left/right actions
+// TODO: DESIGN: Define left/right actions
 // Documentation for Slider can be found at https://www.patternfly.org/components/slider
 
 figma.connect(

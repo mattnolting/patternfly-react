@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect';
 import { WizardStep } from '@patternfly/react-core';
 
-// TODO: FIGMA: Add "With drawer" should be an enum if we expect to conditionally render the variant
+// TODO: DESIGN: Add "With drawer" should be an enum if we expect to conditionally render the variant
 // Documentation for WizardStep can be found at https://www.patternfly.org/components/wizard
 
 figma.connect(

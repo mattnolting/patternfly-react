@@ -9,8 +9,8 @@ import {
   WizardHeader
 } from '@patternfly/react-core';
 
-// TODO: FIGMA: Update left panel to a semantic name or component
-// TODO: FIGMA: Add 'Wizard step content' prop to Wizard Step Item
+// TODO: DESIGN: Update left panel to a semantic name or component
+// TODO: DESIGN: Add 'Wizard step content' prop to Wizard Step Item
 // Documentation for Wizard can be found at https://www.patternfly.org/components/wizard
 
 figma.connect(

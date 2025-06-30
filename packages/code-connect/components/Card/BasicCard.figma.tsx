@@ -1,9 +1,9 @@
 import figma from '@figma/code-connect';
 import { Card, CardBody, CardFooter, CardHeader, CardTitle } from '@patternfly/react-core';
 
-// TODO: FIGMA: Auto-layouts are not consistently retrievablewith Code Connect
-// TODO: FIGMA: Add separate CardHeader actions
-// TODO: FIGMA: Use MenuToggle for dropdown
+// TODO: DESIGN: Auto-layouts are not consistently retrievablewith Code Connect
+// TODO: DESIGN: Add separate CardHeader actions
+// TODO: DESIGN: Use MenuToggle for dropdown
 
 // Documentation for Card can be found at https://www.patternfly.org/components/card
 

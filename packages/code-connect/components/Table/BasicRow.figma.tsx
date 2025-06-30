@@ -1,8 +1,8 @@
 import figma from '@figma/code-connect';
 import { Tr } from '@patternfly/react-table';
 
-// TODO: FIGMA: Define "Show Left/Right Actions/Controls"
-// TODO: FIGMA: Configure isSelectable, currently does not exist
+// TODO: DESIGN: Define "Show Left/Right Actions/Controls"
+// TODO: DESIGN: Configure isSelectable, currently does not exist
 // Show left actions should be 'Expandable'
 // Show right actions should be an action cell
 // Documentation for Table can be found at https://www.patternfly.org/components/table

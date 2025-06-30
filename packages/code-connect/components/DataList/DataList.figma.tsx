@@ -13,6 +13,10 @@ figma.connect(
 
       children: figma.children('*')
     },
-    example: (props) => <DataList isCompact={props.isCompact}>{props.children}</DataList>
+    example: (props) => (
+      <DataList aria-label="DataList example" isCompact={props.isCompact}>
+        {props.children}
+      </DataList>
+    )
   }
 );

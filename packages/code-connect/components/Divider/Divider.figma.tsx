@@ -2,7 +2,6 @@ import { Divider } from '@patternfly/react-core';
 import figma from '@figma/code-connect';
 
 // Documentation for Divider can be found at https://www.patternfly.org/components/divider
-// Note: Vertical dividers must be wrapped in a flex container to be visible
 
 figma.connect(
   Divider,
@@ -16,8 +15,17 @@ figma.connect(
       }),
       // TODO: This is a good example of how properties in Figma and props in React would benefit from naming consistency
       // React is looking for orientation, figma is defining orientation as 'Direction'
-      orientation: figma.enum('Direction', { Vertical: { default: 'vertical' } })
+      orientation: figma.enum('Direction', {
+        Horizontal: { default: undefined },
+        Vertical: { default: 'vertical' }
+      })
     },
-    example: (props) => <Divider orientation={props.orientation} inset={props.inset} />
+    example: (props) => (
+      <Divider
+        orientation={props.orientation}
+        inset={props.inset}
+        /* Note: Vertical dividers must be wrapped in a flex container to be visible */
+      />
+    )
   }
 );

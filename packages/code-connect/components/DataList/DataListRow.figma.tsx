@@ -1,7 +1,8 @@
 import figma from '@figma/code-connect';
 import { DataListItemRow } from '@patternfly/react-core';
 
-// Documentation for DataListItem can be found at https://www.patternfly.org/components/data-list
+// TODO: DESIGN: Define "show left/right actions" intent
+// Documentation for DataListItemRow can be found at https://www.patternfly.org/components/data-list
 
 figma.connect(
   DataListItemRow,

@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect';
 import { Card } from '@patternfly/react-core';
 
-// TODO: FIGMA: Separate Clicked and Clickable
+// TODO: DESIGN: Separate Clicked and Clickable
 // Documentation for Card can be found at https://www.patternfly.org/components/card
 
 figma.connect(

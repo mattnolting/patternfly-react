@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect';
 import { Progress } from '@patternfly/react-core';
 
-// TODO: FIGMA: Add "value" prop to progress bar
+// TODO: DESIGN: Add "value" prop to progress bar
 // Documentation for Progress can be found at https://www.patternfly.org/components/progress
 
 figma.connect(

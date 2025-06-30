@@ -16,7 +16,7 @@ figma.connect(
       }),
       togglePosition: figma.enum('Caret position', { Left: 'start' }),
 
-      children: figma.children('*')
+      children: figma.children('Accordion toggle')
     },
     example: (props) => (
       <Accordion togglePosition={props.togglePosition} isBordered={props.isBordered} displaySize={props.displaySize}>

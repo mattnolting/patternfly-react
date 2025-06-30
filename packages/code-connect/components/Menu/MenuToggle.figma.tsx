@@ -11,12 +11,9 @@ figma.connect(
   {
     props: {
       // boolean
+      hasCheckbox: figma.boolean('Show Checkbox'),
       showAvatar: figma.boolean('Show Avatar', {
         true: <Avatar src={imgAvatar} alt="avatar" />,
-        false: undefined
-      }),
-      toggleText: figma.boolean('Toggle text', {
-        true: figma.string('✏️ Toggle Text'),
         false: undefined
       }),
       showBadge: figma.boolean('Show Badge', {
@@ -27,37 +24,32 @@ figma.connect(
         true: <CogIcon />,
         false: undefined
       }),
+      toggleText: figma.boolean('Toggle text', {
+        true: figma.string('✏️ Toggle Text'),
+        false: undefined
+      }),
 
       // enum
       isDisabled: figma.enum('State', { Disabled: true }),
-      state: figma.enum('State', {
-        Default: 'default',
-        Disabled: 'disabled',
-        Selected: 'selected',
-        Hover: 'hover',
-        Danger: 'danger',
-        Warning: 'warning',
-        Success: 'success'
-      }),
       status: figma.enum('State', {
         Danger: 'danger',
         Warning: 'warning',
         Success: 'success'
       }),
-      style: figma.enum('Style', {
-        Default: 'default',
-        'Plain - Icon': 'plain---icon',
-        'Plain text': 'plain'
+      variant: figma.enum('Style', {
+        'Plain - Icon': 'plain',
+        'Plain text': 'plainText'
       })
     },
     example: (props) => (
       <MenuToggle
         badge={props.showBadge}
         customIcon={props.showCustomIcon}
+        hasCheckbox={props.hasCheckbox}
         icon={props.showAvatar}
-        status={props.status}
         isDisabled={props.isDisabled}
-        hasCheckbox={props.showCheckbox}
+        status={props.status}
+        variant={props.variant}
       >
         {props.toggleText}
       </MenuToggle>
