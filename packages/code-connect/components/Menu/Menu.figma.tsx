@@ -215,7 +215,7 @@ figma.connect(
           onDrillOut: () => {},
           drilldownMenu: drilldownMenuModel,
           onGetMenuHeight: () => {},
-          onSelect: undefined
+          onSelect: () => {}
         },
         'Drill Down Start': {
           containsDrilldown: true,
@@ -225,7 +225,8 @@ figma.connect(
           onDrillIn: () => {},
           onDrillOut: () => {},
           drilldownMenu: drilldownMenuModel,
-          onGetMenuHeight: () => {}
+          onGetMenuHeight: () => {},
+          onSelect: () => {}
         },
         'Drill Down Return': {
           containsDrilldown: true,
@@ -235,7 +236,8 @@ figma.connect(
           onDrillIn: () => {},
           onDrillOut: () => {},
           drilldownMenu: drilldownMenuModel,
-          onGetMenuHeight: () => {}
+          onGetMenuHeight: () => {},
+          onSelect: () => {}
         }
       }),
 
