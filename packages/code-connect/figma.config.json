@@ -2,8 +2,7 @@
   "codeConnect": {
     "parser": "react",
     "include": [
-      "components/AboutModal/*.figma.tsx",
-      "components/Menu/*.figma.tsx"
+      "components/Table/*.figma.tsx"
     ],
     "paths": {
       "@patternfly/react-core": "/Users/mnolting/Web/patternfly-react/packages/react-core/src",

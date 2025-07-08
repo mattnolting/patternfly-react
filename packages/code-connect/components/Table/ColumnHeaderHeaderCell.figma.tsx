@@ -30,7 +30,7 @@ figma.connect(Th, 'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFl
     isEmpty: figma.enum('State', { Empty: true }),
 
     // children
-    thText: figma.textContent('Header'),
+    thText: figma.textContent('Column Header/Header cell'),
     children: figma.children('*')
   },
   example: (props) => (

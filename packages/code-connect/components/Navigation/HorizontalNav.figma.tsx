@@ -8,8 +8,13 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=7514-12157',
   {
     props: {
-      children: figma.children('*')
+      isSubnav: figma.enum('Type', { Subnav: true }),
+      children: figma.children(['Horizontal Subnav item', 'Horizontal Nav item'])
     },
-    example: (props) => <Nav>{props.children}</Nav>
+    example: (props) => (
+      <Nav isHorizontal aria-label="Horizontal subnav">
+        {props.children}
+      </Nav>
+    )
   }
 );

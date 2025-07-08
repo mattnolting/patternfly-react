@@ -1,7 +1,27 @@
 import figma from '@figma/code-connect';
-import { Toolbar, ToolbarGroup } from '@patternfly/react-core';
+import { Button, Toolbar, ToolbarGroup, ToolbarItem } from '@patternfly/react-core';
 
 // Documentation for Toolbar can be found at https://www.patternfly.org/components/toolbar
+
+const filterGroup = (
+  <ToolbarGroup>
+    <ToolbarItem>
+      <Button>Filter button 1</Button>
+    </ToolbarItem>
+    <ToolbarItem>
+      <Button>Filter button 2</Button>
+    </ToolbarItem>
+    <ToolbarItem>
+      <Button>Filter button 3</Button>
+    </ToolbarItem>
+  </ToolbarGroup>
+);
+
+const bulkSelector = (
+  <ToolbarItem>
+    <Button>test</Button>
+  </ToolbarItem>
+);
 
 figma.connect(
   Toolbar,
@@ -9,14 +29,25 @@ figma.connect(
   {
     props: {
       // boolean
-      bulkSelector: figma.boolean('Bulk Selector'),
+      bulkSelector: figma.boolean('Bulk Selector', {
+        true: bulkSelector,
+        false: undefined
+      }),
       buttonGroup: figma.boolean('Button group'),
       filterChips: figma.boolean('Filter chips'),
-      filterGroup: figma.boolean('Filter group'),
+
+      filterGroup: figma.boolean('Filter group', {
+        true: filterGroup,
+        false: undefined
+      }),
+
       iconButtonGroup: figma.boolean('Icon button group'),
       linkButtons: figma.boolean('Link buttons'),
       overflowMenu: figma.boolean('Overflow menu'),
-      pagination: figma.boolean('Pagination'),
+      pagination: figma.boolean('Pagination', {
+        true: figma.children('Pagination'),
+        false: undefined
+      }),
       searchFilter: figma.boolean('Search filter'),
       hasNoBackground: figma.boolean('Transparent Background', {
         true: 'no-background',
@@ -27,7 +58,10 @@ figma.connect(
     },
     example: (props) => (
       <Toolbar id="toolbar-example" colorVariant={props.hasNoBackground}>
-        <ToolbarGroup>{props.children}</ToolbarGroup>
+        {props.bulkSelector}
+        {props.filterGroup}
+        {props.pagination}
+        {/* <ToolbarGroup>{props.children}</ToolbarGroup> */}
       </Toolbar>
     )
   }

@@ -143,7 +143,6 @@ figma.connect(
         isSelected={props.isSelected}
         itemId="<item-id>"
         drilldownMenu={props.isDrilldown}
-        // description={props.description} // TODO: DESIGN: File bug with Figma CC. The description prop is not working as expected, I assume is due to api, string manipulation.
         description="This is a description."
       >
         {props.menuItemText}

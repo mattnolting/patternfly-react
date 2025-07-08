@@ -5,7 +5,7 @@ import { NavItem } from '@patternfly/react-core';
 
 figma.connect(
   NavItem,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2104-7254&m=dev',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2104-7269&t=hMptQArGE2pqir6N-11',
   {
     props: {
       navItemText: figma.textContent('Nav item')
