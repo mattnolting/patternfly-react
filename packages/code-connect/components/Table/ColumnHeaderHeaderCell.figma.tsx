@@ -17,30 +17,37 @@ figma.connect(Th, 'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFl
       true: { tooltip: 'More information' },
       false: undefined
     }),
-    sort: figma.boolean('Sortable', {
+    onSort: figma.boolean('Sortable', {
       true: () => {},
       false: undefined
     }),
-    sortBy: figma.enum('State', {
-      'Sorted - Ascending': { direction: 'asc' },
-      'Sorted - Descending': { direction: 'desc' }
+    sortBy: figma.boolean('Sortable', {
+      true: {
+        index: 1,
+        direction: figma.enum('State', {
+          'Sorted - Ascending': 'asc',
+          'Sorted - Descending': 'desc'
+        })
+      },
+      false: undefined
+    }),
+    sortDirection: figma.boolean('Sortable', {
+      true: figma.enum('State', {
+        'Sorted - Ascending': 'asc',
+        'Sorted - Descending': 'desc'
+      }),
+      false: undefined
     }),
 
-    // enum
-    isEmpty: figma.enum('State', { Empty: true }),
-
-    // children
-    thText: figma.textContent('Column Header/Header cell'),
-    children: figma.children('*')
+    thText: 'Header'
   },
   example: (props) => (
     <Th
-      isEmpty={props.isEmpty}
       info={props.info}
-      sort={props.sort}
-      sortBy={{
-        direction: props.sortBy.direction,
-        index: 1
+      sort={{
+        onSort: props.onSort,
+        sortBy: { index: props.sortBy.index, direction: props.sortDirection },
+        columnIndex: 1
       }}
     >
       {props.thText}

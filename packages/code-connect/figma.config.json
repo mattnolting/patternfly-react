@@ -2,7 +2,7 @@
   "codeConnect": {
     "parser": "react",
     "include": [
-      "components/Table/*.figma.tsx"
+      "components/Drawer/*.figma.tsx"
     ],
     "paths": {
       "@patternfly/react-core": "/Users/mnolting/Web/patternfly-react/packages/react-core/src",
@@ -27,6 +27,6 @@
         "enabled": false
       }
     },
-    "exclude": ["node_modules/**", "scripts/**"]
+    "exclude": ["node_modules/**", "scripts/**", ".yarn/**"]
   }
 }

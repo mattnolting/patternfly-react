@@ -20,7 +20,7 @@ figma.connect(
       }),
       variant: figma.enum('Size', { Compact: 'compact' }),
 
-      children: figma.children('*')
+      children: figma.children(['Table header row', 'Basic Row'])
     },
     example: (props) => (
       // Documentation for Table can be found at https://www.patternfly.org/components/table

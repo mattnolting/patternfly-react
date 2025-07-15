@@ -22,6 +22,10 @@ figma.connect(
     props: {
       // boolean
       isExpanded: true,
+      isSecondary: figma.enum('Background', {
+        Secondary: 'secondary',
+        Primary: undefined
+      }),
 
       // enum
       isInline: figma.enum('Type', { Inline: true }),
@@ -30,8 +34,8 @@ figma.connect(
         'Right - Full Page': undefined,
         'Left - Full Page': 'start',
         'Right Full Page': undefined,
-        'Bottom Full Page': 'end',
-        'Bottom In Main Content Area': 'end',
+        'Bottom Full Page': 'bottom',
+        'Bottom In Main Content Area': 'bottom',
         'Right In Main Content Area': undefined
       })
 
@@ -45,6 +49,7 @@ figma.connect(
         isInline={props.isInline}
         isStatic={false}
         position={props.position}
+        colorVariant={props.isSecondary}
         onExpand={() => {}}
       >
         <DrawerContent

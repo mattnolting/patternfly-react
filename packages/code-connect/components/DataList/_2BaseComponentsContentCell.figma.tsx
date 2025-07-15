@@ -26,16 +26,16 @@ figma.connect(
       secondaryContent: figma.children('Second content block')
     },
     example: (props) => (
-      <DataListItem aria-labelledby="<row-id>">
+      <DataListItem aria-labelledby="item1">
         <DataListItemRow>
           <DataListItemCells
-            rowid="<row-id>"
-            aria-labelledby="<row-id>"
             dataListCells={[
               <DataListCell isIcon={true} key="icon-content">
                 {props.iconContent}
               </DataListCell>,
-              <DataListCell key="primary-content">{props.primaryContent}</DataListCell>,
+              <DataListCell key="primary-content">
+                <span id="item1">{props.primaryContent}</span>
+              </DataListCell>,
               <DataListCell key="secondary-content">{props.secondaryContent}</DataListCell>
             ]}
           />

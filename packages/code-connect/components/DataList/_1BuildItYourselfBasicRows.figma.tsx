@@ -6,9 +6,6 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=6649-69488&m=dev',
   {
     props: {
-      isSelectable: figma.boolean('Selected'),
-      expanded: figma.boolean('Expanded'),
-
       children: figma.children('*')
     },
     example: (props) => <DataListItemRow rowid="<row-id>">{props.children}</DataListItemRow>
