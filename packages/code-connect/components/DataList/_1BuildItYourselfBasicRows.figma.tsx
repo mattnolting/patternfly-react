@@ -1,5 +1,5 @@
 import figma from '@figma/code-connect';
-import { DataListItemRow } from '@patternfly/react-core';
+import { DataListItem, DataListItemRow } from '@patternfly/react-core';
 
 figma.connect(
   DataListItemRow,
@@ -8,6 +8,10 @@ figma.connect(
     props: {
       children: figma.children('*')
     },
-    example: (props) => <DataListItemRow rowid="<row-id>">{props.children}</DataListItemRow>
+    example: (props) => (
+      <DataListItem>
+        <DataListItemRow rowid="<row-id>">{props.children}</DataListItemRow>
+      </DataListItem>
+    )
   }
 );

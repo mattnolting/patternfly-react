@@ -20,9 +20,8 @@ figma.connect(
         'Filled - Link text': true
       }),
 
-      primaryContent: figma.children('Main content'),
-      secondaryContent: figma.children('Second content block'),
-      children: figma.children('*')
+      primaryContent: 'Main content',
+      secondaryContent: 'Second content block'
     },
     example: (props) => (
       <DataListItem aria-labelledby="item1">

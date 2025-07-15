@@ -12,7 +12,7 @@ figma.connect(
     },
     example: (props) => (
       <DataListAction aria-labelledby="item1 action1" id="action1" aria-label="Actions">
-        {props.children}
+        'Action'
       </DataListAction>
     )
   }
