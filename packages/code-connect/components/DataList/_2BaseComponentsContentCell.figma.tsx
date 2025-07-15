@@ -1,5 +1,5 @@
 import figma from '@figma/code-connect';
-import { DataListCell, DataListItem, DataListItemCells, DataListItemRow } from '@patternfly/react-core';
+import { Icon, DataListCell, DataListItem, DataListItemCells, DataListItemRow } from '@patternfly/react-core';
 
 // TODO: DESIGN: Either name layers uniquely or create a dataListCell component to house
 // Documentation for DataList can be found at https://www.patternfly.org/components/data-list
@@ -20,10 +20,9 @@ figma.connect(
         'Filled - Link text': true
       }),
 
-      children: figma.children('*'),
-      iconContent: figma.children('IconWrapper'),
       primaryContent: figma.children('Main content'),
-      secondaryContent: figma.children('Second content block')
+      secondaryContent: figma.children('Second content block'),
+      children: figma.children('*')
     },
     example: (props) => (
       <DataListItem aria-labelledby="item1">
@@ -31,7 +30,7 @@ figma.connect(
           <DataListItemCells
             dataListCells={[
               <DataListCell isIcon={true} key="icon-content">
-                {props.iconContent}
+                <Icon name="info" />
               </DataListCell>,
               <DataListCell key="primary-content">
                 <span id="item1">{props.primaryContent}</span>
