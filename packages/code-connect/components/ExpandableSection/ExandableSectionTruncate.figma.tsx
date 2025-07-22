@@ -12,25 +12,37 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2769-146',
   {
     props: {
-      // enum
-      isIndented: figma.enum('State', { 'Expanded Indent': true }),
-      toggleTextCollapsed: figma.enum('State', { Collapsed: figma.string('Toggle Text More') }),
-      toggleTextExpanded: figma.enum('State', { Expanded: figma.string('Toggle Text Less') }),
-
-      // boolean
-      expandedContentSectionText: figma.enum('State', {
-        Default: figma.string('Default Truncate Text'),
-        Expanded: figma.string('Expanded Truncate Text')
-      })
+      toggleText: figma.string('Toggle Text More')
     },
     example: (props) => (
       <ExpandableSection
-        isIndented={props.isIndented}
-        toggleTextCollapsed={props.toggleTextCollapsed}
-        toggleTextExpanded={props.toggleTextExpanded}
+        isExpanded={isExpanded}
+        onToggle={() => {}}
+        toggleText={isExpanded ? 'Show less basic example content' : `${props.toggleText}`}
+      >
+        This content is visible only when the component is expanded.
+      </ExpandableSection>
+    )
+  }
+);
+
+figma.connect(
+  ExpandableSection,
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2769-146',
+  {
+    variant: { State: 'Expanded' },
+    props: {
+      toggleText: figma.string('Toggle Text Less'),
+      defaultContentSectionText: figma.string('Default Truncate Text')
+    },
+    example: (props) => (
+      <ExpandableSection
+        isExpanded={isExpanded}
+        onToggle={() => {}}
+        toggleText={isExpanded ? 'Show less basic example content' : `${props.toggleText}`}
         variant="truncate"
       >
-        {props.expandedContentSectionText}
+        {props.defaultContentSectionText}
       </ExpandableSection>
     )
   }

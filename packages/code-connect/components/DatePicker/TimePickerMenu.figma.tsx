@@ -5,11 +5,8 @@ import { TimePicker } from '@patternfly/react-core';
 
 figma.connect(
   TimePicker,
-  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=7958-136824',
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=7958-136828',
   {
-    props: {
-      children: figma.children('*')
-    },
-    example: (props) => <TimePicker>{props.children}</TimePicker>
+    example: () => <TimePicker time="3:35 AM" onChange={() => {}} />
   }
 );

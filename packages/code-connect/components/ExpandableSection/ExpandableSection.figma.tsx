@@ -1,5 +1,5 @@
 import figma from '@figma/code-connect';
-import { ExpandableSection } from '@patternfly/react-core';
+import { ExpandableSection, ExpandableSectionToggle, Stack, StackItem } from '@patternfly/react-core';
 
 // TODO: DESIGN: This component needs to be overhauled. Using the base component approach present in
 // other components would significantly reduce complexity.
@@ -9,7 +9,7 @@ import { ExpandableSection } from '@patternfly/react-core';
 
 // Documentation for ExpandableSection can be found at https://www.patternfly.org/components/expandable-section
 
-const toggleContent = `
+const customToggleContent = `
     <div>
     <span>You can also use icons </span>
     <CheckCircleIcon />
@@ -24,45 +24,134 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2404-21',
   {
     props: {
-      // enum
-      expandedContentSectionText: figma.string('Expanded Text'),
-      isDetached: figma.enum('State', { 'Expand Detached': true }),
-      isExpanded: figma.enum('State', {
-        'Expanded Basic': true,
-        'Expand Detached': true,
-        'Expanded Indent': true,
-        'Expanded Custom Content': true,
-        'Expanded Custom with Component swap': true
-      }),
-      isIndented: figma.enum('State', { 'Expanded Indent': true }),
-      toggleContent: figma.enum('State', {
-        'Default Custom Content': toggleContent,
-        'Expanded Custom Content': toggleContent,
-        'Expanded Custom with Component swap': toggleContent
-      }),
-      toggleTextCollapsed: figma.enum('State', {
-        Default: figma.string('Toggle Text More'),
-        Hover: figma.string('Toggle Text More'),
-        'Default Custom Content': figma.string('Toggle Text More')
-      }),
-      toggleTextExpanded: figma.enum('State', {
-        'Expanded Basic': figma.string('Toggle Text Less'),
-        'Expand Detached': figma.string('Toggle Text Less'),
-        'Expanded Indent': figma.string('Toggle Text Less'),
-        'Expanded Custom Content': figma.string('Toggle Text Less'),
-        'Expanded Custom with Component swap': figma.string('Toggle Text Less')
-      })
+      toggleText: figma.string('Toggle Text More')
     },
     example: (props) => (
       <ExpandableSection
-        isDetached={props.isDetached}
-        isExpanded={props.isExpanded}
-        isIndented={props.isIndented}
-        toggleContent={props.toggleContent}
-        toggleText={props.toggleTextCollapsed}
-        toggleTextExpanded={props.toggleTextExpanded}
+        onToggle={() => {}}
+        toggleText={isExpanded ? 'Show less basic example content' : `${props.toggleText}`}
+      >
+        This content is visible only when the component is expanded.
+      </ExpandableSection>
+    )
+  }
+);
+
+figma.connect(
+  ExpandableSection,
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2404-21',
+  {
+    variant: { State: 'Expanded Basic' },
+    props: {
+      // enum
+      expandedContentSectionText: figma.string('Expanded Text'),
+      toggleText: figma.string('Toggle Text Less')
+    },
+    example: (props) => (
+      <ExpandableSection
+        isExpanded
+        onToggle={() => {}}
+        toggleText={isExpanded ? `${props.toggleText}` : 'Show less basic example content'}
       >
         {props.expandedContentSectionText}
+      </ExpandableSection>
+    )
+  }
+);
+
+figma.connect(
+  ExpandableSection,
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2404-21',
+  {
+    variant: { State: 'Expand Detached' },
+    props: {
+      // enum
+      expandedContentSectionText: figma.string('Expanded Text'),
+      toggleText: figma.string('Toggle Text Less'),
+      toggleId: 'toggle-id',
+      contentId: 'content-id'
+    },
+    example: (props) => (
+      <Stack hasGutter>
+        <StackItem>
+          <ExpandableSection isExpanded={false} isDetached toggleId={props.toggleId} contentId={props.contentId}>
+            {props.expandedContentSectionText}
+          </ExpandableSection>
+        </StackItem>
+        <StackItem>
+          <ExpandableSectionToggle
+            onToggle={() => {}}
+            toggleId={props.toggleId}
+            contentId={props.contentId}
+            direction="up"
+          >
+            {isExpanded ? `${props.toggleText}` : 'Show less basic example content'}
+          </ExpandableSectionToggle>
+        </StackItem>
+      </Stack>
+    )
+  }
+);
+
+figma.connect(
+  ExpandableSection,
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2404-21',
+  {
+    variant: { State: 'Expanded Indent' },
+    props: {
+      // enum
+      expandedContentSectionText: figma.string('Expanded Text'),
+      toggleText: figma.string('Toggle Text Less'),
+      toggleId: 'toggle-id',
+      contentId: 'content-id'
+    },
+    example: (props) => (
+      <ExpandableSection
+        toggleText={isExpanded ? `${props.toggleText}` : 'Show less indented example content'}
+        isExpanded={isExpanded}
+        isIndented
+        onToggle={() => {}}
+      >
+        {props.expandedContentSectionText}
+      </ExpandableSection>
+    )
+  }
+);
+
+figma.connect(
+  ExpandableSection,
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2404-21',
+  {
+    variant: { State: 'Default Custom Content' },
+    example: () => (
+      <ExpandableSection toggleContent={customToggleContent} isExpanded={isExpanded} onToggle={() => {}}>
+        This content is visible only when the component is expanded.
+      </ExpandableSection>
+    )
+  }
+);
+
+figma.connect(
+  ExpandableSection,
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2404-21',
+  {
+    variant: { State: 'Expanded Custom Content' },
+    example: () => (
+      <ExpandableSection toggleContent={customToggleContent} isExpanded={isExpanded} onToggle={() => {}}>
+        This content is visible only when the component is expanded.
+      </ExpandableSection>
+    )
+  }
+);
+
+figma.connect(
+  ExpandableSection,
+  'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2404-21',
+  {
+    variant: { State: 'Expanded Custom with Component swap' },
+    example: () => (
+      <ExpandableSection toggleContent={customToggleContent} isExpanded={isExpanded} onToggle={() => {}}>
+        This content is visible only when the component is expanded.
       </ExpandableSection>
     )
   }
