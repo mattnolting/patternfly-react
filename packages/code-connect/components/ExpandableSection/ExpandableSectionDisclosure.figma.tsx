@@ -11,6 +11,13 @@ const customToggleContent = `
   </div>
 `;
 
+export function useExpandable(
+  initialExpanded: boolean = false
+): [boolean, React.Dispatch<React.SetStateAction<boolean>>] {
+  const [isExpanded, setIsExpanded] = React.useState(initialExpanded);
+  return [isExpanded, setIsExpanded];
+}
+
 figma.connect(
   ExpandableSection,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2810-80',

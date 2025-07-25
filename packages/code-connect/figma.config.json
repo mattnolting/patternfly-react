@@ -2,6 +2,7 @@
   "codeConnect": {
     "parser": "react",
     "include": [
+      "components/ExpandableSection/*.figma.tsx",
       "components/Label/*.figma.tsx"
     ],
     "paths": {

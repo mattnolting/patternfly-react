@@ -19,21 +19,39 @@ const customToggleContent = `
   </div>
 `;
 
+export const sharedProps = {
+  state: 'const [isExpanded, setIsExpanded] = React.useState(false)',
+  toggleTextCollapsed: figma.string('Toggle Text More'),
+  toggleTextExpanded: figma.string('Toggle Text Less'),
+  expandedContentSectionText: figma.string('Expanded Text'),
+  toggleId: 'toggle-id',
+  contentId: 'content-id'
+};
+
 figma.connect(
   ExpandableSection,
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2404-21',
   {
     props: {
-      toggleText: figma.string('Toggle Text More')
+      ...sharedProps
     },
-    example: (props) => (
-      <ExpandableSection
-        onToggle={() => {}}
-        toggleText={isExpanded ? 'Show less basic example content' : `${props.toggleText}`}
-      >
-        This content is visible only when the component is expanded.
-      </ExpandableSection>
-    )
+    example: (props) => {
+      /* eslint-disable */
+      const [isExpanded, setIsExpanded] = React.useState(false);
+      /* eslint-enable */
+
+      return (
+        <ExpandableSection
+          onToggle={() => {
+            setIsExpanded(!isExpanded);
+          }}
+          toggleText={isExpanded ? 'Show less basic example content' : `${props.toggleTextCollapsed}`}
+        >
+          {props.state}
+          This content is visible only when the component is expanded.
+        </ExpandableSection>
+      );
+    }
   }
 );
 
@@ -43,19 +61,25 @@ figma.connect(
   {
     variant: { State: 'Expanded Basic' },
     props: {
-      // enum
-      expandedContentSectionText: figma.string('Expanded Text'),
-      toggleText: figma.string('Toggle Text Less')
+      ...sharedProps
     },
-    example: (props) => (
-      <ExpandableSection
-        isExpanded
-        onToggle={() => {}}
-        toggleText={isExpanded ? `${props.toggleText}` : 'Show less basic example content'}
-      >
-        {props.expandedContentSectionText}
-      </ExpandableSection>
-    )
+    example: (props) => {
+      /* eslint-disable */
+      const [isExpanded, setIsExpanded] = React.useState(false);
+      /* eslint-enable */
+
+      return (
+        <ExpandableSection
+          isExpanded
+          onToggle={() => {
+            setIsExpanded(!isExpanded);
+          }}
+          toggleText={isExpanded ? `${props.toggleTextExpanded}` : `${props.toggleTextCollapsed}`}
+        >
+          {props.expandedContentSectionText}
+        </ExpandableSection>
+      );
+    }
   }
 );
 
@@ -65,31 +89,35 @@ figma.connect(
   {
     variant: { State: 'Expand Detached' },
     props: {
-      // enum
-      expandedContentSectionText: figma.string('Expanded Text'),
-      toggleText: figma.string('Toggle Text Less'),
-      toggleId: 'toggle-id',
-      contentId: 'content-id'
+      ...sharedProps
     },
-    example: (props) => (
-      <Stack hasGutter>
-        <StackItem>
-          <ExpandableSection isExpanded={false} isDetached toggleId={props.toggleId} contentId={props.contentId}>
-            {props.expandedContentSectionText}
-          </ExpandableSection>
-        </StackItem>
-        <StackItem>
-          <ExpandableSectionToggle
-            onToggle={() => {}}
-            toggleId={props.toggleId}
-            contentId={props.contentId}
-            direction="up"
-          >
-            {isExpanded ? `${props.toggleText}` : 'Show less basic example content'}
-          </ExpandableSectionToggle>
-        </StackItem>
-      </Stack>
-    )
+    example: (props) => {
+      /* eslint-disable */
+      const [isExpanded, setIsExpanded] = React.useState(false);
+      /* eslint-enable */
+
+      return (
+        <Stack hasGutter>
+          <StackItem>
+            <ExpandableSection isExpanded={false} isDetached toggleId={props.toggleId} contentId={props.contentId}>
+              {props.expandedContentSectionText}
+            </ExpandableSection>
+          </StackItem>
+          <StackItem>
+            <ExpandableSectionToggle
+              onToggle={() => {
+                setIsExpanded(!isExpanded);
+              }}
+              toggleId={props.toggleId}
+              contentId={props.contentId}
+              direction="up"
+            >
+              {isExpanded ? `${props.toggleTextCollapsed}` : 'Show less basic example content'}
+            </ExpandableSectionToggle>
+          </StackItem>
+        </Stack>
+      );
+    }
   }
 );
 
@@ -99,22 +127,26 @@ figma.connect(
   {
     variant: { State: 'Expanded Indent' },
     props: {
-      // enum
-      expandedContentSectionText: figma.string('Expanded Text'),
-      toggleText: figma.string('Toggle Text Less'),
-      toggleId: 'toggle-id',
-      contentId: 'content-id'
+      ...sharedProps
     },
-    example: (props) => (
-      <ExpandableSection
-        toggleText={isExpanded ? `${props.toggleText}` : 'Show less indented example content'}
-        isExpanded={isExpanded}
-        isIndented
-        onToggle={() => {}}
-      >
-        {props.expandedContentSectionText}
-      </ExpandableSection>
-    )
+    example: (props) => {
+      /* eslint-disable */
+      const [isExpanded, setIsExpanded] = React.useState(false);
+      /* eslint-enable */
+
+      return (
+        <ExpandableSection
+          toggleText={isExpanded ? `${props.toggleTextExpanded}` : 'Show less indented example content'}
+          isExpanded={isExpanded}
+          isIndented
+          onToggle={() => {
+            setIsExpanded(!isExpanded);
+          }}
+        >
+          {props.expandedContentSectionText}
+        </ExpandableSection>
+      );
+    }
   }
 );
 
@@ -123,11 +155,17 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2404-21',
   {
     variant: { State: 'Default Custom Content' },
-    example: () => (
-      <ExpandableSection toggleContent={customToggleContent} isExpanded={isExpanded} onToggle={() => {}}>
-        This content is visible only when the component is expanded.
-      </ExpandableSection>
-    )
+    example: () => {
+      /* eslint-disable */
+      const [isExpanded, setIsExpanded] = React.useState(false);
+      /* eslint-enable */
+
+      return (
+        <ExpandableSection toggleContent={customToggleContent} isExpanded={isExpanded} onToggle={() => {}}>
+          This content is visible only when the component is expanded.
+        </ExpandableSection>
+      );
+    }
   }
 );
 
@@ -136,11 +174,17 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2404-21',
   {
     variant: { State: 'Expanded Custom Content' },
-    example: () => (
-      <ExpandableSection toggleContent={customToggleContent} isExpanded={isExpanded} onToggle={() => {}}>
-        This content is visible only when the component is expanded.
-      </ExpandableSection>
-    )
+    example: () => {
+      /* eslint-disable */
+      const [isExpanded, setIsExpanded] = React.useState(false);
+      /* eslint-enable */
+
+      return (
+        <ExpandableSection toggleContent={customToggleContent} isExpanded={isExpanded} onToggle={() => {}}>
+          This content is visible only when the component is expanded.
+        </ExpandableSection>
+      );
+    }
   }
 );
 
@@ -149,10 +193,16 @@ figma.connect(
   'https://www.figma.com/design/aEBBvq0J3EPXxHvv6WgDx9/PatternFly-6--Components-Test?node-id=2404-21',
   {
     variant: { State: 'Expanded Custom with Component swap' },
-    example: () => (
-      <ExpandableSection toggleContent={customToggleContent} isExpanded={isExpanded} onToggle={() => {}}>
-        This content is visible only when the component is expanded.
-      </ExpandableSection>
-    )
+    example: () => {
+      /* eslint-disable */
+      const [isExpanded, setIsExpanded] = React.useState(false);
+      /* eslint-enable */
+
+      return (
+        <ExpandableSection toggleContent={customToggleContent} isExpanded={isExpanded} onToggle={() => {}}>
+          This content is visible only when the component is expanded.
+        </ExpandableSection>
+      );
+    }
   }
 );
